@@ -1,4 +1,4 @@
-# GOV.UK Prototype Components
+# GOV.UK Prototype Components · [![test](https://github.com/x-govuk/govuk-prototype-components/actions/workflows/test.yml/badge.svg)](https://github.com/x-govuk/govuk-prototype-components/actions/workflows/test.yml)
 
 GOV.UK Prototype Components contains the code you need to use common or experimental components that are not yet in the GOV.UK Design System.
 
