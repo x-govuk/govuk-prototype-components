@@ -35,12 +35,12 @@
   "dependencies": {
     "accessible-autocomplete": "^2.0.4",
     "eventslibjs": "^1.2.0",
+    "govuk-frontend": "^4.0.1",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
     "ava": "^4.0.1",
     "c8": "^7.11.0",
-    "govuk-frontend": "^4.0.1",
     "nunjucks": "^3.2.3",
     "standard": "^16.0.4",
     "stylelint": "^13.13.1",
