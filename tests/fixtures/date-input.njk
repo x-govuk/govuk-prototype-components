@@ -1,0 +1,10 @@
+{% from "x-govuk/components/decorated/date-input/macro.njk" import govukDateInput with context %}
+
+{{ govukDateInput({
+  fieldset: {
+    legend: {
+      text: "When was your passport issued?"
+    }
+  },
+  decorate: "passport-issued"
+}) }}

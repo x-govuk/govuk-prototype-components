@@ -1,0 +1,8 @@
+{% from "x-govuk/components/decorated/input/macro.njk" import govukInput with context %}
+
+{{ govukInput({
+  label: {
+    text: "Email address"
+  },
+  decorate: "account.email-address"
+}) }}

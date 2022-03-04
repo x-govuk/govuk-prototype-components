@@ -1,0 +1,23 @@
+{% from "x-govuk/components/decorated/radios/macro.njk" import govukRadios with context %}
+
+{{ govukRadios({
+  fieldset: {
+    legend: {
+      text: "Where do you live?"
+    }
+  },
+  items: [{
+    text: "England"
+  }, {
+    text: "Scotland"
+  }, {
+    text: "Wales"
+  }, {
+    text: "Northern Ireland"
+  }, {
+    divider: "or"
+  }, {
+    text: "Another country"
+  }],
+  decorate: "country"
+}) }}
