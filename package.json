@@ -1,5 +1,6 @@
 {
   "name": "govuk-prototype-components",
+  "version": "0.1.1",
   "description": "GOV.UK Prototype Components contains the code you need to use common or experimental components that are not yet in the GOV.UK Design System.",
   "keywords": [
     "govuk",
@@ -7,46 +8,29 @@
     "prototyping",
     "components"
   ],
-  "version": "0.1.1",
+  "homepage": "https://github.com/x-govuk/govuk-prototype-components#readme",
+  "bugs": {
+    "url": "https://github.com/x-govuk/govuk-prototype-components/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "lib",
+    "x-govuk"
+  ],
+  "main": "x-govuk/all.js",
+  "sass": "x-govuk/all.scss",
   "repository": {
     "type": "git",
     "url": "https://github.com/x-govuk/govuk-prototype-components.git"
   },
-  "bugs": {
-    "url": "https://github.com/x-govuk/govuk-prototype-components/issues"
-  },
-  "homepage": "https://github.com/x-govuk/govuk-prototype-components#readme",
-  "license": "MIT",
   "scripts": {
     "test": "ava",
     "test:watch": "ava --watch",
     "coverage": "c8 ava"
   },
-  "c8": {
-    "reporter": [
-      "text",
-      "lcovonly"
-    ]
+  "publishConfig": {
+    "access": "public"
   },
-  "engines": {
-    "node": ">=16.0.0"
-  },
-  "main": "x-govuk/all.js",
-  "sass": "x-govuk/all.scss",
-  "exports": {
-    ".": {
-      "import": "./x-govuk/all.js",
-      "require": "./x-govuk/all.js"
-    },
-    "./decorate": {
-      "import": "./lib/decorate.js",
-      "require": "./lib/decorate.js"
-    }
-  },
-  "files": [
-    "lib",
-    "x-govuk"
-  ],
   "dependencies": {
     "accessible-autocomplete": "^2.0.4",
     "eventslibjs": "^1.2.0",
@@ -58,7 +42,23 @@
     "govuk-frontend": "^4.0.1",
     "nunjucks": "^3.2.3"
   },
-  "publishConfig": {
-    "access": "public"
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./x-govuk/all.js",
+      "require": "./x-govuk/all.js"
+    },
+    "./decorate": {
+      "import": "./lib/decorate.js",
+      "require": "./lib/decorate.js"
+    }
+  },
+  "c8": {
+    "reporter": [
+      "text",
+      "lcovonly"
+    ]
   }
 }
