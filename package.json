@@ -24,6 +24,7 @@
     "url": "https://github.com/x-govuk/govuk-prototype-components.git"
   },
   "scripts": {
+    "lint": "standard && stylelint 'x-govuk/**/*.scss'",
     "test": "ava",
     "test:watch": "ava --watch",
     "coverage": "c8 ava"
@@ -40,7 +41,10 @@
     "ava": "^4.0.1",
     "c8": "^7.11.0",
     "govuk-frontend": "^4.0.1",
-    "nunjucks": "^3.2.3"
+    "nunjucks": "^3.2.3",
+    "standard": "^16.0.4",
+    "stylelint": "^13.13.1",
+    "stylelint-config-gds": "^0.1.0"
   },
   "engines": {
     "node": ">=16.0.0"
@@ -60,5 +64,8 @@
       "text",
       "lcovonly"
     ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-gds/scss"
   }
 }
