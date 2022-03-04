@@ -4,13 +4,12 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/paulrobertlloyd/govuk-prototype-rig.git",
-    "directory": "packages/govuk-prototype-components"
+    "url": "https://github.com/x-govuk/govuk-prototype-components.git"
   },
   "bugs": {
-    "url": "https://github.com/paulrobertlloyd/govuk-prototype-rig/issues"
+    "url": "https://github.com/x-govuk/govuk-prototype-components/issues"
   },
-  "homepage": "https://govuk-prototype-rig.herokuapp.com/docs/components",
+  "homepage": "https://github.com/x-govuk/govuk-prototype-components#readme",
   "keywords": [
     "govuk",
     "design system",
