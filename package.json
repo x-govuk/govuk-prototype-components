@@ -1,6 +1,6 @@
 {
   "name": "govuk-prototype-components",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "GOV.UK Prototype Components contains the code you need to use common or experimental components that are not yet in the GOV.UK Design System.",
   "keywords": [
     "govuk",
