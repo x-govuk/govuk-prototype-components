@@ -1,19 +1,19 @@
 $x-govuk-button-shadow-size: $govuk-border-width-form-element;
-$x-govuk-button-inverse-background-colour: govuk-colour("white");
-$x-govuk-button-inverse-foreground-colour: $govuk-brand-colour;
-$x-govuk-button-inverse-shadow-colour: govuk-shade($x-govuk-button-inverse-foreground-colour, 30%);
-$x-govuk-button-inverse-hover-background-colour: govuk-tint($x-govuk-button-inverse-foreground-colour, 90%);
+$x-govuk-button-inverse-shadow-colour: govuk-shade($x-govuk-masthead-background-colour, 30%);
+$x-govuk-button-inverse-hover-background-colour: govuk-tint($x-govuk-masthead-background-colour, 90%);
 
 .x-govuk-button--inverse,
 .x-govuk-button--inverse:link,
 .x-govuk-button--inverse:visited {
-  color: $x-govuk-button-inverse-foreground-colour;
-  background-color: $x-govuk-button-inverse-background-colour;
+  @include govuk-responsive-margin(6, "top");
+  color: $x-govuk-masthead-background-colour;
+  background-color: $x-govuk-masthead-colour;
   box-shadow: 0 $x-govuk-button-shadow-size 0 $x-govuk-button-inverse-shadow-colour;
+  margin-bottom: 0;
 }
 
 .x-govuk-button--inverse:hover {
-  color: $x-govuk-button-inverse-foreground-colour;
+  color: $x-govuk-masthead-background-colour;
   background-color: $x-govuk-button-inverse-hover-background-colour;
 }
 
@@ -25,7 +25,7 @@ $x-govuk-button-inverse-hover-background-colour: govuk-tint($x-govuk-button-inve
 .x-govuk-button--inverse:active,
 .x-govuk-button--inverse:focus {
   border-color: $govuk-focus-colour;
-  color: $x-govuk-button-inverse-foreground-colour;
+  color: $x-govuk-masthead-background-colour;
   background-color: $x-govuk-button-inverse-hover-background-colour;
   box-shadow: inset 0 0 0 2px $govuk-focus-colour;
 }

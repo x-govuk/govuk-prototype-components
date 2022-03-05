@@ -1,20 +1,23 @@
+$x-govuk-masthead-background-colour: $govuk-brand-colour;
+$x-govuk-masthead-colour: govuk-colour("white");
+$x-govuk-masthead-border-colour: govuk-colour("light-blue");
+
+@import "./breadcrumbs";
 @import "./button";
+@import "./phase-banner";
+@import "./tag";
 
 .x-govuk-masthead {
-  @include govuk-responsive-margin(6, "bottom");
-  @include govuk-responsive-padding(6, "top");
   @include govuk-responsive-padding(6, "bottom");
-  color: govuk-colour("white");
-  background-color: $govuk-brand-colour;
+  padding-top: 0;
+  color: $x-govuk-masthead-colour;
+  background-color: $x-govuk-masthead-background-colour;
   margin-top: govuk-spacing(-2);
-
-  a:not(:focus) {
-    color: inherit;
-  }
 }
 
 .x-govuk-masthead__title {
   @include govuk-font($size: 36, $weight: bold);
+  @include govuk-responsive-padding(6, "top");
   margin-top: 0;
 }
 
@@ -22,9 +25,15 @@
   @include govuk-font($size: 19);
   color: inherit;
   margin-bottom: 0;
+
+  a:not(:focus) {
+    color: inherit;
+  }
 }
 
 .x-govuk-masthead__image {
+  @include govuk-responsive-padding(6, "top");
+
   img {
     max-width: 100%;
   }
