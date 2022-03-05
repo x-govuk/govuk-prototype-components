@@ -7,16 +7,13 @@
     {% endif %}
     <ul class="x-govuk-side-navigation__section">
       {% for item in items %}
-        {% set isCurrentPage = (item.href == params.current.url) %}
-        {% set isCurrentSection = (item.href == params.current.url) or (params.current.url | startsWith(item.href)) %}
-        <li class="x-govuk-side-navigation__section-item{% if isCurrentSection %} x-govuk-side-navigation__section-item--current{% endif %}">
-          <a class="x-govuk-side-navigation__link" href="{{ item.href }}"{% if isCurrentPage %} aria-current="true"{% endif %}>{{ item.text }}</a>
-          {% if (item.items) and isCurrentSection %}
+        <li class="x-govuk-side-navigation__section-item{% if item.parent %} x-govuk-side-navigation__section-item--current{% endif %}">
+          <a class="x-govuk-side-navigation__link" href="{{ item.href }}"{% if item.current %} aria-current="true"{% endif %}>{{ item.text }}</a>
+          {% if item.children and item.parent %}
             <ul class="x-govuk-side-navigation__section x-govuk-side-navigation__section--nested">
-              {% for subitem in item.items %}
-                {% set isCurrentSubPage = subitem.href == params.current.url %}
+              {% for child in item.children %}
                 <li class="x-govuk-side-navigation__section-item">
-                  <a class="x-govuk-side-navigation__link" href="{{ subitem.href }}"{% if isCurrentSubPage %} aria-current="true"{% endif %}>{{ subitem.text }}</a>
+                  <a class="x-govuk-side-navigation__link" href="{{ child.href }}"{% if child.current %} aria-current="true"{% endif %}>{{ child.text }}</a>
                 </li>
               {% endfor %}
             </ul>
