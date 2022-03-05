@@ -9,7 +9,7 @@
       {% for item in items %}
         <li class="x-govuk-side-navigation__section-item{% if item.parent %} x-govuk-side-navigation__section-item--current{% endif %}">
           <a class="x-govuk-side-navigation__link" href="{{ item.href }}"{% if item.current %} aria-current="true"{% endif %}>{{ item.text }}</a>
-          {% if item.children and item.parent %}
+          {% if item.parent and item.children | length > 0 %}
             <ul class="x-govuk-side-navigation__section x-govuk-side-navigation__section--nested">
               {% for child in item.children %}
                 <li class="x-govuk-side-navigation__section-item">
