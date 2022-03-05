@@ -7,6 +7,10 @@
   color: govuk-colour("white");
   background-color: $govuk-brand-colour;
   margin-top: govuk-spacing(-2);
+
+  a:not(:focus) {
+    color: inherit;
+  }
 }
 
 .x-govuk-masthead__title {
