@@ -4,12 +4,12 @@ GOV.UK Prototype Components contains the code you need to use common or experime
 
 | Component | Description |
 | - | - |
-| [`xGovukAutocomplete`](x-govuk/components/autocomplete/README.md) | Implements the [Accessible autocomplete pattern](https://github.com/alphagov/accessible-autocomplete) to enhance a fixed list of options provided by a `<select>` element. |
-| [`xGovukMasthead`](x-govuk/components/masthead/README.md) | Implements the masthead component [used on many GOV.UK product pages](https://github.com/alphagov/product-page-example). |
-| [`xGovukRelatedNavigation`](x-govuk/components/related-navigation/README.md) | Implements [related navigation component](https://components.publishing.service.gov.uk/component-guide/related_navigation) found in the `govuk_publishing_components`  gem. |
+| [`xGovukAutocomplete`](https://x-govuk.github.io/govuk-prototype-components/autocomplete/) | Implements the [Accessible autocomplete pattern](https://github.com/alphagov/accessible-autocomplete) to enhance a fixed list of options provided by a `<select>` element. |
+| [`xGovukMasthead`](https://x-govuk.github.io/govuk-prototype-components/masthead/) | Implements the masthead component [used on many GOV.UK product pages](https://github.com/alphagov/product-page-example). |
+| [`xGovukRelatedNavigation`](https://x-govuk.github.io/govuk-prototype-components/) | Implements [related navigation component](https://components.publishing.service.gov.uk/component-guide/related_navigation) found in the `govuk_publishing_components`  gem. |
 | `xGovukSideNavigation` | Implements the side navigation component used on the GOV.UK Design System website. |
-| [`xGovukSummaryCard`](x-govuk/components/summary-card/README.md) | Implements a component [proposed for inclusion in the GOV.UK Design System](https://github.com/alphagov/govuk-design-system-backlog/issues/210). |
-| [`xGovukTaskList`](x-govuk/components/task-list/README.md) | Implements the [task list page pattern documented on the GOV.UK Design System](https://design-system.service.gov.uk/patterns/task-list-pages/). |
+| [`xGovukSummaryCard`](https://x-govuk.github.io/govuk-prototype-components/summary-card/) | Implements a component [proposed for inclusion in the GOV.UK Design System](https://github.com/alphagov/govuk-design-system-backlog/issues/210). |
+| [`xGovukTaskList`](https://x-govuk.github.io/govuk-prototype-components/task-list/) | Implements the [task list page pattern documented on the GOV.UK Design System](https://design-system.service.gov.uk/patterns/task-list-pages/). |
 
 These components are currently experimental and more research is needed to validate them.
 
@@ -94,12 +94,12 @@ GOVUKPrototypeComponents.initAll()
 Import the component macros as you would those provided by GOV.UK Frontend:
 
 ```njk
-{% from "x-govuk/components/autocomplete/macro.njk" import xGovukAutocomplete with context %}
+{% raw %}{% from "x-govuk/components/autocomplete/macro.njk" import xGovukAutocomplete with context %}
 {% from "x-govuk/components/masthead/macro.njk" import xGovukMasthead %}
 {% from "x-govuk/components/related-navigation/macro.njk" import xGovukRelatedNavigation %}
 {% from "x-govuk/components/side-navigation/macro.njk" import xGovukSideNavigation %}
 {% from "x-govuk/components/summary-card/macro.njk" import xGovukSummaryCard %}
-{% from "x-govuk/components/task-list/macro.njk" import xGovukTaskList %}
+{% from "x-govuk/components/task-list/macro.njk" import xGovukTaskList %}{% endraw %}
 ```
 
 #### Use the decorated form component macros
@@ -107,6 +107,7 @@ Import the component macros as you would those provided by GOV.UK Frontend:
 1. Replace GOV.UK Frontend macro imports with those provided by this package:
 
     ```diff
+    {% raw %}
     - {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
     + {% from "x-govuk/components/decorated/checkboxes/macro.njk" import govukCheckboxes with context %}
     - {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
@@ -120,7 +121,7 @@ Import the component macros as you would those provided by GOV.UK Frontend:
     - {% from "govuk/components/select/macro.njk" import govukSelect %}
     + {% from "x-govuk/components/decorated/select/macro.njk" import govukSelect with context %}
     - {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-    + {% from "x-govuk/components/decorated/textarea/macro.njk" import govukTextarea with context %}
+    + {% from "x-govuk/components/decorated/textarea/macro.njk" import govukTextarea with context %}{% endraw %}
     ```
 
 2. Add the `decorate` global function to your Nunjucks environment:
