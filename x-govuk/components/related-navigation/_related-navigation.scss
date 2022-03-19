@@ -1,6 +1,6 @@
 .x-govuk-related-navigation {
   @include govuk-text-colour;
-  border-top: 2px solid govuk-colour("blue");
+  border-top: 2px solid $govuk-brand-colour;
 }
 
 .x-govuk-related-navigation__main-heading {
