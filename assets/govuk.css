@@ -7870,7 +7870,7 @@ a:focus .x-govuk-code--inline {
     margin-bottom: 30px;
   }
 }
-.app-article__body figure > .govuk-link img {
+.app-article__body figure img {
   display: block;
   outline: 1px solid rgba(177, 180, 182, 0.5);
 }
@@ -8507,9 +8507,9 @@ a[aria-describedby=footnotes-label]:after {
 }
 
 .app-header__logotype--large {
-  margin: -3px 0 -7px;
+  margin: -3px 0 -8px;
 }
-.govuk-header__link--homepage:hover .app-header__logotype--large {
+.govuk-header__link--homepage:not(:focus):hover .app-header__logotype--large {
   background-color: #0b0c0c;
 }
 
