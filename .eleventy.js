@@ -50,7 +50,7 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: 'x-govuk/components',
       output: 'public',
-      layouts: './../../node_modules/govuk-eleventy-plugin/app/layouts'
+      layouts: '../../node_modules/govuk-eleventy-plugin/layouts'
     },
     pathPrefix
   }
