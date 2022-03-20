@@ -2,7 +2,7 @@
 <html lang="en" class="govuk-template no-js">
   <head>
     <meta charset="utf-8">
-    <title>Task list - Prototype Components - X-GOVUK</title>
+    <title>Related navigation - Prototype Components - X-GOVUK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c"> 
     
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="/govuk-prototype-components/assets/govuk.css">
 
   <meta property="og:url" content="https://x-govuk.github.io/govuk-prototype-components/">
-  <meta property="og:title" content="Task list">
+  <meta property="og:title" content="Related navigation">
     
     
     <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
@@ -75,14 +75,14 @@
         <li class="x-govuk-side-navigation__section-item">
           <a class="x-govuk-side-navigation__link" href="/govuk-prototype-components/masthead/">Masthead</a>
         </li>
-        <li class="x-govuk-side-navigation__section-item">
-          <a class="x-govuk-side-navigation__link" href="/govuk-prototype-components/related navigation/">Related navigation</a>
-        </li>
-        <li class="x-govuk-side-navigation__section-item">
-          <a class="x-govuk-side-navigation__link" href="/govuk-prototype-components/summary card/">Summary card</a>
-        </li>
         <li class="x-govuk-side-navigation__section-item x-govuk-side-navigation__section-item--current">
-          <a class="x-govuk-side-navigation__link" href="/govuk-prototype-components/task list/" aria-current="true">Task list</a>
+          <a class="x-govuk-side-navigation__link" href="/govuk-prototype-components/related-navigation/" aria-current="true">Related navigation</a>
+        </li>
+        <li class="x-govuk-side-navigation__section-item">
+          <a class="x-govuk-side-navigation__link" href="/govuk-prototype-components/summary-card/">Summary card</a>
+        </li>
+        <li class="x-govuk-side-navigation__section-item">
+          <a class="x-govuk-side-navigation__link" href="/govuk-prototype-components/task-list/">Task list</a>
         </li>
     </ul>
 </nav>
@@ -92,62 +92,31 @@
 <article class="app-article">
   <header class="app-article__header">
     <h1 class="app-article__title govuk-heading-xl">
-      Task list
+      Related navigation
     </h1>
   </header>
 
 
   <div class="app-article__body">
         
-<p class="govuk-body">The task list page pattern is documented on the GOV.UK Design System, yet the required component is not provided by GOV.UK Frontend, only as <a href="https://govuk-prototype-kit.herokuapp.com/docs/templates/task-list" class="govuk-link">a coded example in the GOV.UK Prototype Kit</a>.</p>
-<p class="govuk-body">Find out when to use a task list in your service in the <a href="https://design-system.service.gov.uk/patterns/task-list-pages/" class="govuk-link">GOV.UK Design System</a>.</p>
+<p class="govuk-body">The related navigation component is <a href="https://components.publishing.service.gov.uk/component-guide/related_navigation" class="govuk-link">a GOV.UK Publishing specific component</a>.</p>
+<p class="govuk-body">This component may be useful if you are prototyping guidance pages that could be published on GOV.UK, or if your service needs to show related navigation.</p>
 <h2 id="example-usage" tabindex="-1" class="govuk-heading-l"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#example-usage" class="govuk-link">Example usage</a></h2>
-<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--njk" tabindex="0"><code><span class="x-govuk-code__punctuation">{</span><span class="x-govuk-code__punctuation">{</span> xGovukTaskList(<span class="x-govuk-code__punctuation">{</span>
+<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--njk" tabindex="0"><code><span class="x-govuk-code__punctuation">{</span><span class="x-govuk-code__punctuation">{</span> xGovukRelatedNavigation(<span class="x-govuk-code__punctuation">{</span>
 <span class="x-govuk-code__symbol">  sections:</span> [<span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">    titleText:</span> <span class="x-govuk-code__string">&quot;Check before you start&quot;</span>,
 <span class="x-govuk-code__symbol">    items:</span> [<span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">      text:</span> <span class="x-govuk-code__string">&quot;Check eligibility&quot;</span>,
-<span class="x-govuk-code__symbol">      href:</span> <span class="x-govuk-code__string">&quot;#&quot;</span>,
-<span class="x-govuk-code__symbol">      tag:</span> <span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">        text:</span> <span class="x-govuk-code__string">&quot;Completed&quot;</span>
-      <span class="x-govuk-code__punctuation">}</span>
+<span class="x-govuk-code__symbol">      text:</span> <span class="x-govuk-code__string">&quot;Find and compare schools in England&quot;</span>,
+<span class="x-govuk-code__symbol">      href:</span> <span class="x-govuk-code__string">&quot;/school-performance-tables&quot;</span>
     <span class="x-govuk-code__punctuation">}</span>, <span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">      text:</span> <span class="x-govuk-code__string">&quot;Read declaration&quot;</span>,
-<span class="x-govuk-code__symbol">      href:</span> <span class="x-govuk-code__string">&quot;#&quot;</span>,
-<span class="x-govuk-code__symbol">      tag:</span> <span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">        text:</span> <span class="x-govuk-code__string">&quot;Completed&quot;</span>
-      <span class="x-govuk-code__punctuation">}</span>
-    <span class="x-govuk-code__punctuation">}</span>]
-  <span class="x-govuk-code__punctuation">}</span>, <span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">    titleText:</span> <span class="x-govuk-code__string">&quot;Prepare application&quot;</span>,
-<span class="x-govuk-code__symbol">    items:</span> [<span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">      text:</span> <span class="x-govuk-code__string">&quot;Company information&quot;</span>,
-<span class="x-govuk-code__symbol">      href:</span> <span class="x-govuk-code__string">&quot;#&quot;</span>,
-<span class="x-govuk-code__symbol">      tag:</span> <span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">        text:</span> <span class="x-govuk-code__string">&quot;Completed&quot;</span>
-      <span class="x-govuk-code__punctuation">}</span>
-    <span class="x-govuk-code__punctuation">}</span>, <span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">      text:</span> <span class="x-govuk-code__string">&quot;Your contact details&quot;</span>,
-<span class="x-govuk-code__symbol">      href:</span> <span class="x-govuk-code__string">&quot;#&quot;</span>,
-<span class="x-govuk-code__symbol">      tag:</span> <span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">        colour:</span> <span class="x-govuk-code__string">&quot;blue&quot;</span>,
-<span class="x-govuk-code__symbol">        text:</span> <span class="x-govuk-code__string">&quot;In progress&quot;</span>
-      <span class="x-govuk-code__punctuation">}</span>
-    <span class="x-govuk-code__punctuation">}</span>, <span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">      text:</span> <span class="x-govuk-code__string">&quot;Provide financial evidence&quot;</span>,
-<span class="x-govuk-code__symbol">      tag:</span> <span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">        colour:</span> <span class="x-govuk-code__string">&quot;grey&quot;</span>,
-<span class="x-govuk-code__symbol">        text:</span> <span class="x-govuk-code__string">&quot;Cannot start yet&quot;</span>
-      <span class="x-govuk-code__punctuation">}</span>
-    <span class="x-govuk-code__punctuation">}</span>]
-  <span class="x-govuk-code__punctuation">}</span>, <span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">    titleText:</span> <span class="x-govuk-code__string">&quot;Apply&quot;</span>,
-<span class="x-govuk-code__symbol">    items:</span> [<span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">      text:</span> <span class="x-govuk-code__string">&quot;Submit and pay&quot;</span>,
-<span class="x-govuk-code__symbol">      tag:</span> <span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">        colour:</span> <span class="x-govuk-code__string">&quot;grey&quot;</span>,
-<span class="x-govuk-code__symbol">        text:</span> <span class="x-govuk-code__string">&quot;Cannot start yet&quot;</span>
-      <span class="x-govuk-code__punctuation">}</span>
+<span class="x-govuk-code__symbol">      text:</span> <span class="x-govuk-code__string">&quot;Types of school&quot;</span>,
+<span class="x-govuk-code__symbol">      href:</span> <span class="x-govuk-code__string">&quot;/types-of-school&quot;</span>
+    <span class="x-govuk-code__punctuation">}</span>],
+<span class="x-govuk-code__symbol">    subsections:</span> [<span class="x-govuk-code__punctuation">{</span>
+<span class="x-govuk-code__symbol">      title:</span> <span class="x-govuk-code__string">&quot;Explore the topic&quot;</span>,
+<span class="x-govuk-code__symbol">      items:</span> [<span class="x-govuk-code__punctuation">{</span>
+<span class="x-govuk-code__symbol">        text:</span> <span class="x-govuk-code__string">&quot;Schools and curriculum&quot;</span>,
+<span class="x-govuk-code__symbol">        href:</span> <span class="x-govuk-code__string">&quot;/browse/education/school-life&quot;</span>
+      <span class="x-govuk-code__punctuation">}</span>]
     <span class="x-govuk-code__punctuation">}</span>]
   <span class="x-govuk-code__punctuation">}</span>]
 <span class="x-govuk-code__punctuation">}</span>) <span class="x-govuk-code__punctuation">}</span><span class="x-govuk-code__punctuation">}</span>
@@ -174,27 +143,17 @@
 <tr class="govuk-table__row">
 <td style="text-align:left" class="govuk-table__cell"><strong>classes</strong></td>
 <td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell">Classes to add to the task list.</td>
+<td style="text-align:left" class="govuk-table__cell">Classes to add to the related navigation.</td>
 </tr>
 <tr class="govuk-table__row">
 <td style="text-align:left" class="govuk-table__cell"><strong>attributes</strong></td>
 <td style="text-align:left" class="govuk-table__cell">object</td>
-<td style="text-align:left" class="govuk-table__cell">HTML attributes (for example data attributes) to add to the task list.</td>
-</tr>
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>items</strong></td>
-<td style="text-align:left" class="govuk-table__cell">array</td>
-<td style="text-align:left" class="govuk-table__cell">An array of tasks within the task list. See <a href="#options-for-items" class="govuk-link">items</a>. If you set <code class="x-govuk-code x-govuk-code--inline">sections</code>, the <code class="x-govuk-code x-govuk-code--inline">items</code> option is ignored.</td>
+<td style="text-align:left" class="govuk-table__cell">HTML attributes (for example data attributes) to add to the related navigation.</td>
 </tr>
 <tr class="govuk-table__row">
 <td style="text-align:left" class="govuk-table__cell"><strong>sections</strong></td>
 <td style="text-align:left" class="govuk-table__cell">array</td>
-<td style="text-align:left" class="govuk-table__cell">An array of sections within the task list. See <a href="#options-for-sections" class="govuk-link">sections</a>.</td>
-</tr>
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>disableSectionNumbering</strong></td>
-<td style="text-align:left" class="govuk-table__cell">boolean</td>
-<td style="text-align:left" class="govuk-table__cell">If set to <code class="x-govuk-code x-govuk-code--inline">true</code>, sections will not be numbered.</td>
+<td style="text-align:left" class="govuk-table__cell">An array of sections within the related navigation. See <a href="#options-for-sections" class="govuk-link">sections</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -209,19 +168,41 @@
 </thead>
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>titleText</strong></td>
+<td style="text-align:left" class="govuk-table__cell"><strong>title</strong></td>
 <td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. The title text that displays above the list of tasks. You can use any string with this option. If you set <code class="x-govuk-code x-govuk-code--inline">titleHtml</code>, this option is not required and is ignored.</td>
-</tr>
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>titleHtml</strong></td>
-<td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. The title HTML that displays above the list of tasks. You can use any string with this option. Use this option to set text that contains HTML. If you set <code class="x-govuk-code x-govuk-code--inline">titleHtml</code>, the <code class="x-govuk-code x-govuk-code--inline">titleText</code> option is ignored.</td>
+<td style="text-align:left" class="govuk-table__cell">The title text that displays above the list of navigation links. Default is <code class="x-govuk-code x-govuk-code--inline">Related content</code>.</td>
 </tr>
 <tr class="govuk-table__row">
 <td style="text-align:left" class="govuk-table__cell"><strong>items</strong></td>
 <td style="text-align:left" class="govuk-table__cell">array</td>
-<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. An array of tasks within the section. See <a href="#options-for-items" class="govuk-link">items</a>.</td>
+<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. An array of navigation links within the section. See <a href="#options-for-items" class="govuk-link">items</a>.</td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>subsections</strong></td>
+<td style="text-align:left" class="govuk-table__cell">array</td>
+<td style="text-align:left" class="govuk-table__cell">An array of sub-sections within the section. See <a href="#options-for-subsections" class="govuk-link">subsections</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="options-for-subsections" tabindex="-1" class="govuk-heading-m"><a class="govuk-link govuk-link--no-underline govuk-link--text-colour" href="#options-for-subsections" class="govuk-link">Options for subsections</a></h3>
+<table tabindex="0" class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th style="text-align:left" class="govuk-table__header">Name</th>
+<th style="text-align:left" class="govuk-table__header">Type</th>
+<th style="text-align:left" class="govuk-table__header">Description</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>title</strong></td>
+<td style="text-align:left" class="govuk-table__cell">string</td>
+<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. The title text that displays above the list of navigation links.</td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>items</strong></td>
+<td style="text-align:left" class="govuk-table__cell">array</td>
+<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. An array of navigation links within the section. See <a href="#options-for-items" class="govuk-link">items</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -238,37 +219,12 @@
 <tr class="govuk-table__row">
 <td style="text-align:left" class="govuk-table__cell"><strong>text</strong></td>
 <td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. Text of the task item.</td>
+<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. Text of the navigation link.</td>
 </tr>
 <tr class="govuk-table__row">
 <td style="text-align:left" class="govuk-table__cell"><strong>href</strong></td>
 <td style="text-align:left" class="govuk-table__cell">array</td>
-<td style="text-align:left" class="govuk-table__cell">The value of the link’s <code class="x-govuk-code x-govuk-code--inline">href</code> attribute for an task item.</td>
-</tr>
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>tag.colour</strong></td>
-<td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell">Tag colour. One of either <code class="x-govuk-code x-govuk-code--inline">grey</code>, <code class="x-govuk-code x-govuk-code--inline">green</code>, <code class="x-govuk-code x-govuk-code--inline">turquoise</code>, <code class="x-govuk-code x-govuk-code--inline">blue</code>, <code class="x-govuk-code x-govuk-code--inline">purple</code>, <code class="x-govuk-code x-govuk-code--inline">pink</code>, <code class="x-govuk-code x-govuk-code--inline">red</code>, <code class="x-govuk-code x-govuk-code--inline">orange</code> or <code class="x-govuk-code x-govuk-code--inline">yellow</code>.</td>
-</tr>
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>tag.text</strong></td>
-<td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell"><strong>Required.</strong> If <code class="x-govuk-code x-govuk-code--inline">tag.html</code> is set, this is not required. Text to use within the tag component. If <code class="x-govuk-code x-govuk-code--inline">tag.html</code> is provided, the <code class="x-govuk-code x-govuk-code--inline">tag.text</code> argument will be ignored.</td>
-</tr>
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>tag.html</strong></td>
-<td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell"><strong>Required.</strong> If <code class="x-govuk-code x-govuk-code--inline">tag.text</code> is set, this is not required. HTML to use within the tag component. If <code class="x-govuk-code x-govuk-code--inline">tag.html</code> is provided, the <code class="x-govuk-code x-govuk-code--inline">tag.text</code> argument will be ignored.</td>
-</tr>
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>tag.classes</strong></td>
-<td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell">Classes to add to the tag.</td>
-</tr>
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>tag.attributes</strong></td>
-<td style="text-align:left" class="govuk-table__cell">object</td>
-<td style="text-align:left" class="govuk-table__cell">HTML attributes (for example data attributes) to add to the tag.</td>
+<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. The value of the navigation link’s <code class="x-govuk-code x-govuk-code--inline">href</code> attribute for an navigation item.</td>
 </tr>
 </tbody>
 </table>
