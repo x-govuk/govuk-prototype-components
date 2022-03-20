@@ -1,10 +1,12 @@
-const capitalise = (string) => {
+const humanise = (string) => {
+  string = string.replace('/README', '').replace('/', '')
+  string = string.replace('-', ' ')
   string = string.trim().replace(/^\w/, (c) => c.toUpperCase())
   return string
 }
 
-const humanise = (string) => {
-  string = string.replace('/README', '').replace('/', '').replace('-', ' ')
+const slugify = (string) => {
+  string = string.replace('/README', '').replace('/', '')
   return string
 }
 
@@ -12,9 +14,8 @@ module.exports = {
   layout: 'side-navigation',
   tags: ['component'],
   eleventyComputed: {
-    slug: data => humanise(data.page.filePathStem),
-    title: data => `${capitalise(data.slug)}`,
-    permalink: data => `/${data.slug}/`
+    title: data => humanise(data.page.filePathStem),
+    permalink: data => `${slugify(data.page.filePathStem)}/`
   },
   eleventyNavigation: {
     parent: 'GOV.UK Prototype Components'
