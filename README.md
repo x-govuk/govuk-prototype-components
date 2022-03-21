@@ -13,7 +13,7 @@ GOV.UK Prototype Components contains the code you need to use common or experime
 
 These components are currently experimental and more research is needed to validate them.
 
-Versions of each form component available in GOV.UK Frontend are also provided. These allow you to [replace the multiple parameters needed for saving data with a single `decorate` parameter](https://govuk-prototype-rig.herokuapp.com/docs/using-data/form-components).
+Versions of each form component available in GOV.UK Frontend are also provided. These allow you to [replace the multiple parameters needed for saving data with a single `decorate` parameter](https://x-govuk.github.io/govuk-prototype-rig/using-data/form-components/).
 
 ## Requirements
 
