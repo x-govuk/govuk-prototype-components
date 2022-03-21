@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
     },
     homeKey: 'GOV.UK Prototype Components',
     parentSite: {
-      url: 'https://x-govuk.github.io',
+      url: 'https://x-govuk.github.io/#shared-projects',
       name: 'X-GOVUK shared projects'
     },
     pathPrefix,
