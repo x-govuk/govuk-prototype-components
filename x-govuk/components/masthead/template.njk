@@ -23,7 +23,7 @@
     }) if params.breadcrumbs }}
     {{- caller() if caller -}}
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds-from-desktop">
+      <div class="{{ params.gridClass.start or 'govuk-grid-column-two-thirds-from-desktop' }}">
       {% if params.title %}
         <h1 class="x-govuk-masthead__title{%- if params.title.classes %} {{ params.title.classes }}{% endif %}">
           {{ params.title.html | safe if params.title.html else params.title.text }}
@@ -47,7 +47,7 @@
       {% endif %}
       </div>
       {% if params.image %}
-      <div class="govuk-grid-column-one-third-from-desktop">
+      <div class="{{ params.gridClass.end or 'govuk-grid-column-one-third-from-desktop' }}">
         <div class="x-govuk-masthead__image">
           <img src="{{ params.image.src }}" alt="{{ params.image.alt }}"{% if not params.image.alt %} role="presentation"{% endif %}>
         </div>
