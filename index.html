@@ -12,7 +12,7 @@
   <link rel="mask-icon" href="https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-mask-icon.svg?raw=true" color="#0b0c0c">
   <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-apple-touch-icon.png">
 
-  <link rel="stylesheet" href="/govuk-prototype-components/assets/govuk.css">
+  <link rel="stylesheet" href="https://x-govuk.github.io/govuk-prototype-components/assets/govuk.css">
 
   <meta property="og:url" content="https://x-govuk.github.io/govuk-prototype-components/">
   <meta property="og:title" content="GOV.UK Prototype Components">
@@ -120,30 +120,30 @@
 </table>
 <p class="govuk-body">These components are currently experimental and more research is needed to validate them.</p>
 <p class="govuk-body">Versions of each form component available in GOV.UK Frontend are also provided. These allow you to <a href="https://x-govuk.github.io/govuk-prototype-rig/using-data/form-components/" class="govuk-link">replace the multiple parameters needed for saving data with a single <code class="x-govuk-code x-govuk-code--inline">decorate</code> parameter</a>.</p>
-<h2 id="requirements" tabindex="-1" class="govuk-heading-l"><a class="app-heading-anchor" href="#requirements" class="govuk-link">Requirements</a></h2>
+<h2 id="requirements" tabindex="-1" class="govuk-heading-l">Requirements</h2>
 <p class="govuk-body">Node.js v16 or later.</p>
-<h2 id="installation" tabindex="-1" class="govuk-heading-l"><a class="app-heading-anchor" href="#installation" class="govuk-link">Installation</a></h2>
+<h2 id="installation" tabindex="-1" class="govuk-heading-l">Installation</h2>
 <p class="govuk-body"><code class="x-govuk-code x-govuk-code--inline">npm install govuk-prototype-components --save</code></p>
-<h2 id="usage" tabindex="-1" class="govuk-heading-l"><a class="app-heading-anchor" href="#usage" class="govuk-link">Usage</a></h2>
-<h3 id="css" tabindex="-1" class="govuk-heading-m"><a class="app-heading-anchor" href="#css" class="govuk-link">CSS</a></h3>
-<h4 id="import-all-the-css" tabindex="-1" class="govuk-heading-s"><a class="app-heading-anchor" href="#import-all-the-css" class="govuk-link">Import all the CSS</a></h4>
+<h2 id="usage" tabindex="-1" class="govuk-heading-l">Usage</h2>
+<h3 id="css" tabindex="-1" class="govuk-heading-m">CSS</h3>
+<h4 id="import-all-the-css" tabindex="-1" class="govuk-heading-s">Import all the CSS</h4>
 <p class="govuk-body">To import all the Sass rules from GOV.UK Prototype Components, add the following to your Sass file:</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--scss" tabindex="0"><code><span class="x-govuk-code__keyword">@import</span> <span class="x-govuk-code__string">&quot;govuk-prototype-components/x-govuk/all&quot;</span>;
 </code></pre>
 
-<h4 id="import-an-individual-component%E2%80%99s-css-using-a-single-import" tabindex="-1" class="govuk-heading-s"><a class="app-heading-anchor" href="#import-an-individual-component%E2%80%99s-css-using-a-single-import" class="govuk-link">Import an individual component’s CSS using a single import</a></h4>
+<h4 id="import-an-individual-component%E2%80%99s-css-using-a-single-import" tabindex="-1" class="govuk-heading-s">Import an individual component’s CSS using a single import</h4>
 <p class="govuk-body">You can also import a component and all its dependencies without importing <code class="x-govuk-code x-govuk-code--inline">node_modules/govuk-prototype-components/x-govuk/all</code> first.</p>
 <p class="govuk-body">To import the masthead component for example, add the following to your Sass file:</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--scss" tabindex="0"><code><span class="x-govuk-code__keyword">@import</span> <span class="x-govuk-code__string">&quot;node_modules/govuk-prototype-components/x-govuk/components/masthead/masthead&quot;</span>;
 </code></pre>
 
-<h3 id="javascript" tabindex="-1" class="govuk-heading-m"><a class="app-heading-anchor" href="#javascript" class="govuk-link">JavaScript</a></h3>
+<h3 id="javascript" tabindex="-1" class="govuk-heading-m">JavaScript</h3>
 <p class="govuk-body">To import the JavaScript for the GOV.UK Prototype Components, you can either:</p>
 <ul class="govuk-list govuk-list--bullet">
 <li>add the GOV.UK Prototype Components JavaScript file to your HTML</li>
 <li>import the JavaScript using a bundler like <a href="https://webpack.js.org/" class="govuk-link">Webpack</a></li>
 </ul>
-<h4 id="add-the-javascript-file-to-your-html" tabindex="-1" class="govuk-heading-s"><a class="app-heading-anchor" href="#add-the-javascript-file-to-your-html" class="govuk-link">Add the JavaScript file to your HTML</a></h4>
+<h4 id="add-the-javascript-file-to-your-html" tabindex="-1" class="govuk-heading-s">Add the JavaScript file to your HTML</h4>
 <p class="govuk-body">If you decide to add the JavaScript to your HTML, first either:</p>
 <ul class="govuk-list govuk-list--bullet">
 <li>set up your routing so that requests for the JavaScript file are served from <code class="x-govuk-code x-govuk-code--inline">node_modules/govuk-prototype-components/x-govuk/all.js</code></li>
@@ -159,7 +159,7 @@
 <span class="x-govuk-code__tag">&lt;/<span class="x-govuk-code__name">body</span>&gt;</span>
 </code></pre>
 
-<h4 id="import-javascript-using-a-bundler" tabindex="-1" class="govuk-heading-s"><a class="app-heading-anchor" href="#import-javascript-using-a-bundler" class="govuk-link">Import JavaScript using a bundler</a></h4>
+<h4 id="import-javascript-using-a-bundler" tabindex="-1" class="govuk-heading-s">Import JavaScript using a bundler</h4>
 <p class="govuk-body">If you decide to import using a bundler, use <code class="x-govuk-code x-govuk-code--inline">import</code> to import all GOV.UK Prototype Components, then run the <code class="x-govuk-code x-govuk-code--inline">initAll</code> function to initialise them:</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--js" tabindex="0"><code><span class="x-govuk-code__keyword">import</span> { initAll } <span class="x-govuk-code__keyword">from</span> <span class="x-govuk-code__string">&#x27;govuk-prototype-components&#x27;</span>
 <span class="x-govuk-code__title function_">initAll</span>()
@@ -170,8 +170,8 @@
 <span class="x-govuk-code__title class_">GOVUKPrototypeComponents</span>.<span class="x-govuk-code__title function_">initAll</span>()
 </code></pre>
 
-<h3 id="nunjucks" tabindex="-1" class="govuk-heading-m"><a class="app-heading-anchor" href="#nunjucks" class="govuk-link">Nunjucks</a></h3>
-<h4 id="import-experimental-component-macros" tabindex="-1" class="govuk-heading-s"><a class="app-heading-anchor" href="#import-experimental-component-macros" class="govuk-link">Import experimental component macros</a></h4>
+<h3 id="nunjucks" tabindex="-1" class="govuk-heading-m">Nunjucks</h3>
+<h4 id="import-experimental-component-macros" tabindex="-1" class="govuk-heading-s">Import experimental component macros</h4>
 <p class="govuk-body">Import the component macros as you would those provided by GOV.UK Frontend:</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--njk" tabindex="0"><code>{% <span class="x-govuk-code__keyword">from</span> <span class="x-govuk-code__string">&quot;x-govuk/components/autocomplete/macro.njk&quot;</span> <span class="x-govuk-code__keyword">import</span> xGovukAutocomplete <span class="x-govuk-code__keyword">with</span> context %}
 {% <span class="x-govuk-code__keyword">from</span> <span class="x-govuk-code__string">&quot;x-govuk/components/masthead/macro.njk&quot;</span> <span class="x-govuk-code__keyword">import</span> xGovukMasthead %}
@@ -181,7 +181,7 @@
 {% <span class="x-govuk-code__keyword">from</span> <span class="x-govuk-code__string">&quot;x-govuk/components/task-list/macro.njk&quot;</span> <span class="x-govuk-code__keyword">import</span> xGovukTaskList %}
 </code></pre>
 
-<h4 id="use-the-decorated-form-component-macros" tabindex="-1" class="govuk-heading-s"><a class="app-heading-anchor" href="#use-the-decorated-form-component-macros" class="govuk-link">Use the decorated form component macros</a></h4>
+<h4 id="use-the-decorated-form-component-macros" tabindex="-1" class="govuk-heading-s">Use the decorated form component macros</h4>
 <ol class="govuk-list govuk-list--number">
 <li>
 <p class="govuk-body">Replace GOV.UK Frontend macro imports with those provided by this package:</p>
