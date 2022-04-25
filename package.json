@@ -37,7 +37,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^1.0.1",
     "accessible-autocomplete": "^2.0.4",
     "eventslibjs": "^1.2.0",
     "govuk-eleventy-plugin": "^2.0.0-beta",
