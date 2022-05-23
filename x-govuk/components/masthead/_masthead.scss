@@ -8,7 +8,7 @@ $x-govuk-masthead-colour: govuk-colour("white");
 @import "./tag";
 
 .x-govuk-masthead {
-  @include govuk-responsive-padding(6, "bottom");
+  @include govuk-responsive-padding(7, "bottom");
   padding-top: 0;
   color: $x-govuk-masthead-colour;
   background-color: $x-govuk-masthead-background-colour;
