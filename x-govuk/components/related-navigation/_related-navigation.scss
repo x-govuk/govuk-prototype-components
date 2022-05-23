@@ -11,7 +11,6 @@
 
 .x-govuk-related-navigation__sub-heading {
   @include govuk-font(16);
-  border-top: 1px solid govuk-colour("mid-grey");
   margin: 0;
   padding-top: govuk-spacing(3);
 }
@@ -30,6 +29,7 @@
 }
 
 .x-govuk-related-navigation__nav-section {
+  border-top: 1px solid govuk-colour("mid-grey");
   margin-bottom: govuk-spacing(6);
 }
 

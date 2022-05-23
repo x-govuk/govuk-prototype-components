@@ -54,7 +54,7 @@ If you’re using Nunjucks macros in production with `html` options, or ones end
 
 | Name | Type | Description |
 | :--- | :--- | :---------- |
-| **title** | string | **Required**. The title text that displays above the list of navigation links. |
+| **title** | string | The title text that displays above the list of navigation links. |
 | **items** | array | **Required**. An array of navigation links within the section. See [items](#options-for-items). |
 
 ### Options for items
