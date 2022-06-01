@@ -31,6 +31,10 @@
 .x-govuk-related-navigation__nav-section {
   border-top: 1px solid govuk-colour("mid-grey");
   margin-bottom: govuk-spacing(6);
+
+  &:first-child {
+    border-top: none;
+  }
 }
 
 .x-govuk-related-navigation__link-list {
