@@ -6853,7 +6853,7 @@ x:-moz-any-link {
 }
 
 .x-govuk-masthead {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   padding-top: 0;
   color: #ffffff;
   background-color: #28a;
@@ -6861,7 +6861,7 @@ x:-moz-any-link {
 }
 @media (min-width: 40.0625em) {
   .x-govuk-masthead {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
   }
 }
 
@@ -7053,7 +7053,6 @@ x:-moz-any-link {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.1428571429;
-  border-top: 1px solid #b1b4b6;
   margin: 0;
   padding-top: 15px;
 }
@@ -7114,6 +7113,7 @@ x:-moz-any-link {
 }
 
 .x-govuk-related-navigation__nav-section {
+  border-top: 1px solid #b1b4b6;
   margin-bottom: 30px;
 }
 
@@ -7958,6 +7958,80 @@ a:focus .x-govuk-code--inline {
 }
 .app-article__footer .govuk-body-s {
   color: #505a5f;
+}
+
+.app-aside {
+  margin-bottom: 20px;
+  color: #0b0c0c;
+  border-top: 2px solid #28a;
+}
+@media (min-width: 40.0625em) {
+  .app-aside {
+    margin-bottom: 30px;
+  }
+}
+@media print {
+  .app-aside {
+    color: #000000;
+  }
+}
+
+.app-aside__heading {
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+@media print {
+  .app-aside__heading {
+    font-family: sans-serif;
+  }
+}
+@media (min-width: 40.0625em) {
+  .app-aside__heading {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+  }
+}
+@media print {
+  .app-aside__heading {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+.app-aside__body > * {
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.1428571429;
+}
+@media print {
+  .app-aside__body > * {
+    font-family: sans-serif;
+  }
+}
+@media (min-width: 40.0625em) {
+  .app-aside__body > * {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+@media print {
+  .app-aside__body > * {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
 }
 
 .app-contents-list {
