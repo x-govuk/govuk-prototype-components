@@ -1,5 +1,6 @@
 const Autocomplete = require('./autocomplete/autocomplete.js')
 const Edge = require('./edge/edge.js')
+const WarnOnUnsavedChanges = require('./warn-on-unsaved-changes/warn-on-unsaved-changes.js')
 
 /**
  * Get module name.
@@ -51,6 +52,7 @@ module.exports = (function () {
   // Add component modules to GOVUKPrototypeComponents object
   GOVUKPrototypeComponents.Autocomplete = Autocomplete
   GOVUKPrototypeComponents.Edge = Edge
+  GOVUKPrototypeComponents.WarnOnUnsavedChanges = WarnOnUnsavedChanges
 
   // Add GOVUKPrototypeComponents to window global
   window.GOVUKPrototypeComponents = GOVUKPrototypeComponents
