@@ -2,7 +2,7 @@
 <html lang="en" class="govuk-template no-js">
   <head>
     <meta charset="utf-8">
-    <title>Related navigation - Prototype Components - X-GOVUK</title>
+    <title>Side navigation - Prototype Components - X-GOVUK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c"> 
     
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://x-govuk.github.io/govuk-prototype-components/assets/govuk.css">
 
   <meta property="og:url" content="https://x-govuk.github.io/govuk-prototype-components/">
-  <meta property="og:title" content="Related navigation">
+  <meta property="og:title" content="Side navigation">
     
     
     <meta property="og:image" content="https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-opengraph-image.png">
@@ -75,11 +75,11 @@
         <li class="x-govuk-side-navigation__section-item">
           <a class="x-govuk-side-navigation__link" href="/govuk-prototype-components/masthead/">Masthead</a>
         </li>
-        <li class="x-govuk-side-navigation__section-item x-govuk-side-navigation__section-item--current">
-          <a class="x-govuk-side-navigation__link" href="" aria-current="true">Related navigation</a>
-        </li>
         <li class="x-govuk-side-navigation__section-item">
-          <a class="x-govuk-side-navigation__link" href="/govuk-prototype-components/side-navigation/">Side navigation</a>
+          <a class="x-govuk-side-navigation__link" href="/govuk-prototype-components/related-navigation/">Related navigation</a>
+        </li>
+        <li class="x-govuk-side-navigation__section-item x-govuk-side-navigation__section-item--current">
+          <a class="x-govuk-side-navigation__link" href="" aria-current="true">Side navigation</a>
         </li>
         <li class="x-govuk-side-navigation__section-item">
           <a class="x-govuk-side-navigation__link" href="/govuk-prototype-components/summary-card/">Summary card</a>
@@ -97,34 +97,34 @@
     <div class="govuk-grid-column-three-quarters-from-desktop">
       <header class="app-document-header">
   <h1 class="app-document-header__title govuk-heading-xl">
-    Related navigation
+    Side navigation
   </h1>
 </header>
 
 
 
       <div class="app-prose-scope">
-<p class="govuk-body">The related navigation component is <a href="https://components.publishing.service.gov.uk/component-guide/related_navigation" class="govuk-link">a GOV.UK Publishing specific component</a>.</p>
-<p class="govuk-body">This component may be useful if you are prototyping guidance pages that could be published on GOV.UK, or if your service needs to show related navigation.</p>
+<p class="govuk-body">Implements the side navigation component used on the left hand side of the GOV.UK Design System website.</p>
 <h2 id="example-usage" tabindex="-1" class="govuk-heading-l">Example usage</h2>
-<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--njk" tabindex="0"><code><span class="x-govuk-code__punctuation">{</span><span class="x-govuk-code__punctuation">{</span> xGovukRelatedNavigation(<span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">  sections:</span> [<span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">    items:</span> [<span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">      text:</span> <span class="x-govuk-code__string">&quot;Find and compare schools in England&quot;</span>,
-<span class="x-govuk-code__symbol">      href:</span> <span class="x-govuk-code__string">&quot;/school-performance-tables&quot;</span>
-    <span class="x-govuk-code__punctuation">}</span>, <span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">      text:</span> <span class="x-govuk-code__string">&quot;Types of school&quot;</span>,
-<span class="x-govuk-code__symbol">      href:</span> <span class="x-govuk-code__string">&quot;/types-of-school&quot;</span>
-    <span class="x-govuk-code__punctuation">}</span>],
-<span class="x-govuk-code__symbol">    subsections:</span> [<span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">      title:</span> <span class="x-govuk-code__string">&quot;Explore the topic&quot;</span>,
-<span class="x-govuk-code__symbol">      items:</span> [<span class="x-govuk-code__punctuation">{</span>
-<span class="x-govuk-code__symbol">        text:</span> <span class="x-govuk-code__string">&quot;Schools and curriculum&quot;</span>,
-<span class="x-govuk-code__symbol">        href:</span> <span class="x-govuk-code__string">&quot;/browse/education/school-life&quot;</span>
-      <span class="x-govuk-code__punctuation">}</span>]
-    <span class="x-govuk-code__punctuation">}</span>]
-  <span class="x-govuk-code__punctuation">}</span>]
-<span class="x-govuk-code__punctuation">}</span>) <span class="x-govuk-code__punctuation">}</span><span class="x-govuk-code__punctuation">}</span>
+<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--njk" tabindex="0"><code>{{ <span class="x-govuk-code__title function_ invoke__">xGovukSideNavigation</span>({
+  <span class="x-govuk-code__attr">visuallyHiddenTitle</span>: <span class="x-govuk-code__string">&#x27;Navigation&#x27;</span>,
+  <span class="x-govuk-code__attr">items</span>: [{
+    <span class="x-govuk-code__attr">text</span>: <span class="x-govuk-code__string">&quot;About this project&quot;</span>,
+    <span class="x-govuk-code__attr">href</span>: <span class="x-govuk-code__string">&quot;/about&quot;</span>
+  }, {
+    <span class="x-govuk-code__attr">text</span>: <span class="x-govuk-code__string">&quot;Contact us&quot;</span>,
+    <span class="x-govuk-code__attr">href</span>: <span class="x-govuk-code__string">&quot;/contact&quot;</span>,
+    <span class="x-govuk-code__attr">current</span>: <span class="x-govuk-code__literal">true</span>,
+    <span class="x-govuk-code__attr">parent</span>: <span class="x-govuk-code__literal">true</span>,
+    <span class="x-govuk-code__attr">children</span>: [{
+      <span class="x-govuk-code__attr">text</span>: <span class="x-govuk-code__string">&quot;By email&quot;</span>,
+      <span class="x-govuk-code__attr">href</span>: <span class="x-govuk-code__string">&quot;/contact/email&quot;</span>,
+    }, {
+      <span class="x-govuk-code__attr">text</span>: <span class="x-govuk-code__string">&quot;By telephone&quot;</span>,
+      <span class="x-govuk-code__attr">href</span>: <span class="x-govuk-code__string">&quot;/contact/telephone&quot;</span>,
+    }]
+  }]
+}) }}
 </code></pre>
 
 <h2 id="component-options" tabindex="-1" class="govuk-heading-l">Component options</h2>
@@ -141,9 +141,9 @@
 </thead>
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>headingLevel</strong></td>
-<td style="text-align:left" class="govuk-table__cell">integer</td>
-<td style="text-align:left" class="govuk-table__cell">Heading level, from <code class="x-govuk-code x-govuk-code--inline">1</code> to <code class="x-govuk-code x-govuk-code--inline">6</code>. Default is <code class="x-govuk-code x-govuk-code--inline">2</code>.</td>
+<td style="text-align:left" class="govuk-table__cell"><strong>items</strong></td>
+<td style="text-align:left" class="govuk-table__cell">array</td>
+<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. An array of navigation links within the side navigation. See <a href="#options-for-items" class="govuk-link">items</a>.</td>
 </tr>
 <tr class="govuk-table__row">
 <td style="text-align:left" class="govuk-table__cell"><strong>classes</strong></td>
@@ -156,58 +156,9 @@
 <td style="text-align:left" class="govuk-table__cell">HTML attributes (for example data attributes) to add to the related navigation.</td>
 </tr>
 <tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>sections</strong></td>
-<td style="text-align:left" class="govuk-table__cell">array</td>
-<td style="text-align:left" class="govuk-table__cell">An array of sections within the related navigation. See <a href="#options-for-sections" class="govuk-link">sections</a>.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="options-for-sections" tabindex="-1" class="govuk-heading-m">Options for sections</h3>
-<table tabindex="0" class="govuk-table">
-<thead class="govuk-table__head">
-<tr class="govuk-table__row">
-<th style="text-align:left" class="govuk-table__header">Name</th>
-<th style="text-align:left" class="govuk-table__header">Type</th>
-<th style="text-align:left" class="govuk-table__header">Description</th>
-</tr>
-</thead>
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>title</strong></td>
+<td style="text-align:left" class="govuk-table__cell"><strong>visuallyHiddenTitle</strong></td>
 <td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell">The title text that displays above the list of navigation links. Default is <code class="x-govuk-code x-govuk-code--inline">Related content</code>.</td>
-</tr>
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>items</strong></td>
-<td style="text-align:left" class="govuk-table__cell">array</td>
-<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. An array of navigation links within the section. See <a href="#options-for-items" class="govuk-link">items</a>.</td>
-</tr>
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>subsections</strong></td>
-<td style="text-align:left" class="govuk-table__cell">array</td>
-<td style="text-align:left" class="govuk-table__cell">An array of sub-sections within the section. See <a href="#options-for-subsections" class="govuk-link">subsections</a>.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="options-for-subsections" tabindex="-1" class="govuk-heading-m">Options for subsections</h3>
-<table tabindex="0" class="govuk-table">
-<thead class="govuk-table__head">
-<tr class="govuk-table__row">
-<th style="text-align:left" class="govuk-table__header">Name</th>
-<th style="text-align:left" class="govuk-table__header">Type</th>
-<th style="text-align:left" class="govuk-table__header">Description</th>
-</tr>
-</thead>
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>title</strong></td>
-<td style="text-align:left" class="govuk-table__cell">string</td>
-<td style="text-align:left" class="govuk-table__cell">The title text that displays above the list of navigation links.</td>
-</tr>
-<tr class="govuk-table__row">
-<td style="text-align:left" class="govuk-table__cell"><strong>items</strong></td>
-<td style="text-align:left" class="govuk-table__cell">array</td>
-<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. An array of navigation links within the section. See <a href="#options-for-items" class="govuk-link">items</a>.</td>
+<td style="text-align:left" class="govuk-table__cell">A hidden title for the side navigation.</td>
 </tr>
 </tbody>
 </table>
@@ -229,7 +180,54 @@
 <tr class="govuk-table__row">
 <td style="text-align:left" class="govuk-table__cell"><strong>href</strong></td>
 <td style="text-align:left" class="govuk-table__cell">array</td>
-<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. The value of the navigation link’s <code class="x-govuk-code x-govuk-code--inline">href</code> attribute for an navigation item.</td>
+<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. The value of the navigation link’s <code class="x-govuk-code x-govuk-code--inline">href</code> attribute.</td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>current</strong></td>
+<td style="text-align:left" class="govuk-table__cell">boolean</td>
+<td style="text-align:left" class="govuk-table__cell">Indicate that the item is the current page.</td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>parent</strong></td>
+<td style="text-align:left" class="govuk-table__cell">boolean</td>
+<td style="text-align:left" class="govuk-table__cell">Indicate if the item is a parent. Use when the current item or any of its children are active.</td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>theme</strong></td>
+<td style="text-align:left" class="govuk-table__cell">string</td>
+<td style="text-align:left" class="govuk-table__cell">A name to group items by. If several navigation items share the same theme, they will appear together under that name.</td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>children</strong></td>
+<td style="text-align:left" class="govuk-table__cell">string</td>
+<td style="text-align:left" class="govuk-table__cell">An array of items as child navigation links. See <a href="#options-for-children" class="govuk-link">children</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="options-for-children" tabindex="-1" class="govuk-heading-m">Options for children</h3>
+<table tabindex="0" class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th style="text-align:left" class="govuk-table__header">Name</th>
+<th style="text-align:left" class="govuk-table__header">Type</th>
+<th style="text-align:left" class="govuk-table__header">Description</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>text</strong></td>
+<td style="text-align:left" class="govuk-table__cell">string</td>
+<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. Text of the navigation link.</td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>href</strong></td>
+<td style="text-align:left" class="govuk-table__cell">array</td>
+<td style="text-align:left" class="govuk-table__cell"><strong>Required</strong>. The value of the navigation link’s <code class="x-govuk-code x-govuk-code--inline">href</code> attribute.</td>
+</tr>
+<tr class="govuk-table__row">
+<td style="text-align:left" class="govuk-table__cell"><strong>current</strong></td>
+<td style="text-align:left" class="govuk-table__cell">boolean</td>
+<td style="text-align:left" class="govuk-table__cell">Indicate that the item is the current page.</td>
 </tr>
 </tbody>
 </table>
