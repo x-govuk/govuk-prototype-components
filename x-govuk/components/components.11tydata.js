@@ -1,6 +1,6 @@
 const humanise = (string) => {
   string = string.replace('/README', '').replace('/', '')
-  string = string.replace('-', ' ')
+  string = string.replaceAll('-', ' ')
   string = string.trim().replace(/^\w/, (c) => c.toUpperCase())
   return string
 }
