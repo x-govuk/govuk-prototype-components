@@ -46,6 +46,19 @@ To import all the Sass rules from GOV.UK Prototype Components, add the following
 @import "govuk-prototype-components/x-govuk/all";
 ```
 
+> If you are using the GOV.UK Prototype Kit, replace the `loadPath` option for the Sass renderer with `includePaths` in `lib/build/tasks.js`:
+>
+> ```diff
+>   const result = sass.renderSync({
+>     file: `${sassPath}/${file}`,
+>     quietDeps: true,
+> -   loadPaths: [__dirname],
+> +   includePaths: [__dirname, 'node_modules'],
+>     sourceMap: true,
+>     style: 'expanded'
+>   })
+> ```
+
 #### Import an individual component’s CSS using a single import
 
 You can also import a component and all its dependencies without importing `node_modules/govuk-prototype-components/x-govuk/all` first.
@@ -112,6 +125,17 @@ Import the component macros as you would those provided by GOV.UK Frontend:
 {% from "x-govuk/components/summary-card/macro.njk" import xGovukSummaryCard %}
 {% from "x-govuk/components/task-list/macro.njk" import xGovukTaskList %}{% endraw %}
 ```
+
+> If you are using the GOV.UK Prototype Kit, add the following search location to Nunjucks path loader in `server.js`:
+>
+> ```diff
+>   // Set up App
+>   var appViews = extensions.getAppViews([
+> +   path.join(__dirname, '/node_modules/govuk-prototype-components'),
+>     path.join(__dirname, '/app/views/'),
+>     path.join(__dirname, '/lib/')
+>   ])
+> ```
 
 #### Use the decorated form component macros
 
