@@ -78,6 +78,8 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="app-prose-scope">
 <p class="govuk-body">GOV.UK Prototype Components contains the code you need to use common or experimental components that are not yet in the GOV.UK Design System.</p>
+<h2 id="components" tabindex="-1" class="govuk-heading-l">Components</h2>
+<h3 id="nunjucks" tabindex="-1" class="govuk-heading-m">Nunjucks</h3>
 <table tabindex="0" class="govuk-table">
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
@@ -87,28 +89,47 @@
 </thead>
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
-<td class="govuk-table__cell"><a href="https://x-govuk.github.io/govuk-prototype-components/autocomplete/" class="govuk-link"><code class="x-govuk-code x-govuk-code--inline">xGovukAutocomplete</code></a></td>
+<td class="govuk-table__cell"><a href="https://x-govuk.github.io/govuk-prototype-components/autocomplete/" class="govuk-link">xGovukAutocomplete</a></td>
 <td class="govuk-table__cell">Implements the <a href="https://github.com/alphagov/accessible-autocomplete" class="govuk-link">Accessible autocomplete pattern</a> to enhance a fixed list of options provided by a <code class="x-govuk-code x-govuk-code--inline">&lt;select&gt;</code> element.</td>
 </tr>
 <tr class="govuk-table__row">
-<td class="govuk-table__cell"><a href="https://x-govuk.github.io/govuk-prototype-components/masthead/" class="govuk-link"><code class="x-govuk-code x-govuk-code--inline">xGovukMasthead</code></a></td>
+<td class="govuk-table__cell"><a href="https://x-govuk.github.io/govuk-prototype-components/masthead/" class="govuk-link">xGovukMasthead</a></td>
 <td class="govuk-table__cell">Implements the masthead component <a href="https://github.com/alphagov/product-page-example" class="govuk-link">used on many GOV.UK product pages</a>.</td>
 </tr>
 <tr class="govuk-table__row">
-<td class="govuk-table__cell"><a href="https://x-govuk.github.io/govuk-prototype-components/related-navigation" class="govuk-link"><code class="x-govuk-code x-govuk-code--inline">xGovukRelatedNavigation</code></a></td>
+<td class="govuk-table__cell"><a href="https://x-govuk.github.io/govuk-prototype-components/related-navigation" class="govuk-link">xGovukRelatedNavigation</a></td>
 <td class="govuk-table__cell">Implements <a href="https://components.publishing.service.gov.uk/component-guide/related_navigation" class="govuk-link">related navigation component</a> found in the <code class="x-govuk-code x-govuk-code--inline">govuk_publishing_components</code>  gem.</td>
 </tr>
 <tr class="govuk-table__row">
-<td class="govuk-table__cell"><code class="x-govuk-code x-govuk-code--inline">xGovukSideNavigation</code></td>
+<td class="govuk-table__cell">xGovukSideNavigation</td>
 <td class="govuk-table__cell">Implements the side navigation component used on the GOV.UK Design System website.</td>
 </tr>
 <tr class="govuk-table__row">
-<td class="govuk-table__cell"><a href="https://x-govuk.github.io/govuk-prototype-components/summary-card/" class="govuk-link"><code class="x-govuk-code x-govuk-code--inline">xGovukSummaryCard</code></a></td>
+<td class="govuk-table__cell"><a href="https://x-govuk.github.io/govuk-prototype-components/summary-card/" class="govuk-link">xGovukSummaryCard</a></td>
 <td class="govuk-table__cell">Implements a component <a href="https://github.com/alphagov/govuk-design-system-backlog/issues/210" class="govuk-link">proposed for inclusion in the GOV.UK Design System</a>.</td>
 </tr>
 <tr class="govuk-table__row">
-<td class="govuk-table__cell"><a href="https://x-govuk.github.io/govuk-prototype-components/task-list/" class="govuk-link"><code class="x-govuk-code x-govuk-code--inline">xGovukTaskList</code></a></td>
+<td class="govuk-table__cell"><a href="https://x-govuk.github.io/govuk-prototype-components/task-list/" class="govuk-link">xGovukTaskList</a></td>
 <td class="govuk-table__cell">Implements the <a href="https://design-system.service.gov.uk/patterns/task-list-pages/" class="govuk-link">task list page pattern documented on the GOV.UK Design System</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="javascript" tabindex="-1" class="govuk-heading-m">Javascript</h3>
+<table tabindex="0" class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th class="govuk-table__header">Component</th>
+<th class="govuk-table__header">Description</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td class="govuk-table__cell"><a href="https://x-govuk.github.io/govuk-prototype-components/edge/" class="govuk-link">Edge</a></td>
+<td class="govuk-table__cell">Make it easy to define the edges of your prototype for research</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell"><a href="https://x-govuk.github.io/govuk-prototype-components/warn-on-unsaved-changes/" class="govuk-link">Warn on unsaved changes</a></td>
+<td class="govuk-table__cell">Warn users if they try to leave a page without saving changes to a form</td>
 </tr>
 </tbody>
 </table>
@@ -131,7 +152,7 @@
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--scss" tabindex="0"><code><span class="x-govuk-code__keyword">@import</span> <span class="x-govuk-code__string">&quot;node_modules/govuk-prototype-components/x-govuk/components/masthead/masthead&quot;</span>;
 </code></pre>
 
-<h3 id="javascript" tabindex="-1" class="govuk-heading-m">JavaScript</h3>
+<h3 id="javascript-1" tabindex="-1" class="govuk-heading-m">JavaScript</h3>
 <p class="govuk-body">To import the JavaScript for the GOV.UK Prototype Components, you can either:</p>
 <ul class="govuk-list govuk-list--bullet">
 <li>add the GOV.UK Prototype Components JavaScript file to your HTML</li>
@@ -164,7 +185,7 @@
 <span class="x-govuk-code__title class_">GOVUKPrototypeComponents</span>.<span class="x-govuk-code__title function_">initAll</span>()
 </code></pre>
 
-<h3 id="nunjucks" tabindex="-1" class="govuk-heading-m">Nunjucks</h3>
+<h3 id="nunjucks-1" tabindex="-1" class="govuk-heading-m">Nunjucks</h3>
 <h4 id="import-experimental-component-macros" tabindex="-1" class="govuk-heading-s">Import experimental component macros</h4>
 <p class="govuk-body">Import the component macros as you would those provided by GOV.UK Frontend:</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--njk" tabindex="0"><code>{% <span class="x-govuk-code__keyword">from</span> <span class="x-govuk-code__string">&quot;x-govuk/components/autocomplete/macro.njk&quot;</span> <span class="x-govuk-code__keyword">import</span> xGovukAutocomplete <span class="x-govuk-code__keyword">with</span> context %}
