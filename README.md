@@ -10,8 +10,8 @@ GOV.UK Prototype Components contains the code you need to use common or experime
 | - | - |
 | [xGovukAutocomplete](https://x-govuk.github.io/govuk-prototype-components/autocomplete/) | Implements the [Accessible autocomplete pattern](https://github.com/alphagov/accessible-autocomplete) to enhance a fixed list of options provided by a `<select>` element. |
 | [xGovukMasthead](https://x-govuk.github.io/govuk-prototype-components/masthead/) | Implements the masthead component [used on many GOV.UK product pages](https://github.com/alphagov/product-page-example). |
-| [xGovukRelatedNavigation](https://x-govuk.github.io/govuk-prototype-components/related-navigation) | Implements [related navigation component](https://components.publishing.service.gov.uk/component-guide/related_navigation) found in the `govuk_publishing_components`  gem. |
-| [xGovukSideNavigation]((https://x-govuk.github.io/govuk-prototype-components/side-navigation/)) | Implements the side navigation component used on the GOV.UK Design System website. |
+| [xGovukRelatedNavigation](https://x-govuk.github.io/govuk-prototype-components/related-navigation/) | Implements [related navigation component](https://components.publishing.service.gov.uk/component-guide/related_navigation) found in the `govuk_publishing_components` gem. |
+| [xGovukSideNavigation](https://x-govuk.github.io/govuk-prototype-components/side-navigation/) | Implements the side navigation component used on the GOV.UK Design System website. |
 | [xGovukSummaryCard](https://x-govuk.github.io/govuk-prototype-components/summary-card/) | Implements a component [proposed for inclusion in the GOV.UK Design System](https://github.com/alphagov/govuk-design-system-backlog/issues/210). |
 | [xGovukTaskList](https://x-govuk.github.io/govuk-prototype-components/task-list/) | Implements the [task list page pattern documented on the GOV.UK Design System](https://design-system.service.gov.uk/patterns/task-list-pages/). |
 
