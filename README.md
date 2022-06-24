@@ -102,7 +102,20 @@ GOVUKPrototypeComponents.initAll()
 
 #### Import experimental component macros
 
-Import the component macros as you would those provided by GOV.UK Frontend:
+Add `/node_modules/govuk-prototype-components` to the search paths in your application’s Nunjucks environment.
+
+> If you are using the GOV.UK Prototype Kit, you can add this path to `appViews` in `server.js`:
+>
+> ```diff
+>   // Set up App
+>   var appViews = extensions.getAppViews([
+> +   path.join(__dirname, '/node_modules/govuk-prototype-components'),
+>     path.join(__dirname, '/app/views/'),
+>     path.join(__dirname, '/lib/')
+>   ])
+> ```
+
+You can then import the component macros as you would those provided by GOV.UK Frontend:
 
 ```njk
 {% raw %}{% from "x-govuk/components/autocomplete/macro.njk" import xGovukAutocomplete with context %}
