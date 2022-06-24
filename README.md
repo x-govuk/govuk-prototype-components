@@ -43,14 +43,12 @@ Node.js v16 or later.
 To import all the Sass rules from GOV.UK Prototype Components, add the following to your Sass file:
 
 ```scss
-@import "govuk-prototype-components/x-govuk/all";
+@import "node_modules/govuk-prototype-components/x-govuk/all";
 ```
 
 #### Import an individual component’s CSS using a single import
 
-You can also import a component and all its dependencies without importing `node_modules/govuk-prototype-components/x-govuk/all` first.
-
-To import the masthead component for example, add the following to your Sass file:
+You can also import a styles for an individual component. For example, to import the masthead component, add the following to your Sass file:
 
 ```scss
 @import "node_modules/govuk-prototype-components/x-govuk/components/masthead/masthead";
