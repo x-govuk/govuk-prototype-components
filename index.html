@@ -186,7 +186,19 @@
 
 <h3 id="nunjucks-1" tabindex="-1" class="govuk-heading-m">Nunjucks</h3>
 <h4 id="import-experimental-component-macros" tabindex="-1" class="govuk-heading-s">Import experimental component macros</h4>
-<p class="govuk-body">Import the component macros as you would those provided by GOV.UK Frontend:</p>
+<p class="govuk-body">Add <code class="x-govuk-code x-govuk-code--inline">/node_modules/govuk-prototype-components</code> to the search paths in your application’s Nunjucks environment.</p>
+<blockquote class="govuk-inset-text govuk-!-margin-left-0">
+<p class="govuk-body">If you are using the GOV.UK Prototype Kit, you can add this path to <code class="x-govuk-code x-govuk-code--inline">appViews</code> in <code class="x-govuk-code x-govuk-code--inline">server.js</code>:</p>
+<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--diff" tabindex="0"><code>  // Set up App
+  var appViews = extensions.getAppViews([
+<span class="x-govuk-code__addition">+   path.join(__dirname, &#x27;/node_modules/govuk-prototype-components&#x27;),</span>
+    path.join(__dirname, &#x27;/app/views/&#x27;),
+    path.join(__dirname, &#x27;/lib/&#x27;)
+  ])
+</code></pre>
+
+</blockquote>
+<p class="govuk-body">You can then import the component macros as you would those provided by GOV.UK Frontend:</p>
 <pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--njk" tabindex="0"><code>{% <span class="x-govuk-code__keyword">from</span> <span class="x-govuk-code__string">&quot;x-govuk/components/autocomplete/macro.njk&quot;</span> <span class="x-govuk-code__keyword">import</span> xGovukAutocomplete <span class="x-govuk-code__keyword">with</span> context %}
 {% <span class="x-govuk-code__keyword">from</span> <span class="x-govuk-code__string">&quot;x-govuk/components/masthead/macro.njk&quot;</span> <span class="x-govuk-code__keyword">import</span> xGovukMasthead %}
 {% <span class="x-govuk-code__keyword">from</span> <span class="x-govuk-code__string">&quot;x-govuk/components/related-navigation/macro.njk&quot;</span> <span class="x-govuk-code__keyword">import</span> xGovukRelatedNavigation %}
