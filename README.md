@@ -32,7 +32,9 @@ Node.js v16 or later.
 
 ## Installation
 
-`npm install govuk-prototype-components --save`
+```shell
+npm install govuk-prototype-components --save
+```
 
 ## Usage
 
