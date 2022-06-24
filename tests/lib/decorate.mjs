@@ -22,7 +22,8 @@ test.before(t => {
         day: '31',
         month: '12',
         year: '1999'
-      }
+      },
+      status: 'published'
     }
   }
 })
@@ -73,6 +74,22 @@ test('Decorates form component with items (data stored in array)', t => {
   t.regex(result, /for="country-2"/)
   t.regex(result, /id="country".*name="\[country\].*value="england".*checked/)
   t.regex(result, /id="country-2".*name="\[country\].*value="scotland"/)
+})
+
+test('Decorates button component', t => {
+  const { nunjucks, data } = t.context
+  const result = nunjucks.render('button.njk', data)
+
+  t.regex(result, /name="\[status\]"/)
+  t.regex(result, /value="published"/)
+})
+
+test('Does not decorate button link component', t => {
+  const { nunjucks, data } = t.context
+  const result = nunjucks.render('button-href.njk', data)
+
+  t.notRegex(result, /name="\[status\]"/)
+  t.notRegex(result, /value="published"/)
 })
 
 test('Uses label text if no value given for option', t => {

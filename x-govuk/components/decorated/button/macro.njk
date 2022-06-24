@@ -1,0 +1,4 @@
+{% from "govuk/components/button/macro.njk" import govukButton as source %}
+{% macro govukButton(params) %}
+  {{ source(params) if params.href else source(decorate(params, params.decorate)) }}
+{% endmacro %}
