@@ -40,8 +40,8 @@
     "@11ty/eleventy": "^1.0.0",
     "accessible-autocomplete": "^2.0.4",
     "eventslibjs": "^1.2.0",
-    "govuk-eleventy-plugin": "^2.4.0",
-    "govuk-frontend": "^4.0.1",
+    "govuk-eleventy-plugin": "^2.6.0",
+    "govuk-frontend": "^4.1.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
