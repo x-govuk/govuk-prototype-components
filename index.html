@@ -213,7 +213,9 @@
 <ol class="govuk-list govuk-list--number">
 <li>
 <p class="govuk-body">Replace GOV.UK Frontend macro imports with those provided by this package:</p>
-<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--diff" tabindex="0"><code><span class="x-govuk-code__deletion">- {% from &quot;govuk/components/checkboxes/macro.njk&quot; import govukCheckboxes %}</span>
+<pre class="x-govuk-code x-govuk-code--block x-govuk-code__language--diff" tabindex="0"><code><span class="x-govuk-code__deletion">- {% from &quot;govuk/components/button/macro.njk&quot; import govukButton %}</span>
+<span class="x-govuk-code__addition">+ {% from &quot;x-govuk/components/decorated/button/macro.njk&quot; import govukButton with context %}</span>
+<span class="x-govuk-code__deletion">- {% from &quot;govuk/components/checkboxes/macro.njk&quot; import govukCheckboxes %}</span>
 <span class="x-govuk-code__addition">+ {% from &quot;x-govuk/components/decorated/checkboxes/macro.njk&quot; import govukCheckboxes with context %}</span>
 <span class="x-govuk-code__deletion">- {% from &quot;govuk/components/date-input/macro.njk&quot; import govukDateInput %}</span>
 <span class="x-govuk-code__addition">+ {% from &quot;x-govuk/components/decorated/date-input/macro.njk&quot; import govukDateInput with context %}</span>
