@@ -1,7 +1,3 @@
----
-eleventyExcludeFromCollections: true
----
-
 # Sub navigation
 
 Implements the sub navigation component used on the GOV.UK Design System website.

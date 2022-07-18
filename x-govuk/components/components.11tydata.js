@@ -11,7 +11,7 @@ const slugify = (string) => {
 }
 
 module.exports = {
-  layout: 'side-navigation',
+  layout: 'sub-navigation',
   tags: ['component'],
   eleventyComputed: {
     title: data => humanise(data.page.filePathStem),
