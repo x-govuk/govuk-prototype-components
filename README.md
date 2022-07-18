@@ -10,6 +10,7 @@ GOV.UK Prototype Components contains the code you need to use common or experime
 | - | - |
 | [xGovukAutocomplete](https://x-govuk.github.io/govuk-prototype-components/autocomplete/) | Implements the [Accessible autocomplete pattern](https://github.com/alphagov/accessible-autocomplete) to enhance a fixed list of options provided by a `<select>` element. |
 | [xGovukMasthead](https://x-govuk.github.io/govuk-prototype-components/masthead/) | Implements the masthead component [used on many GOV.UK product pages](https://github.com/alphagov/product-page-example). |
+| [xGovukPrimaryNavigation](https://x-govuk.github.io/govuk-prototype-components/primary-navigation/) | Implements the primary navigation component used on the GOV.UK Design System website. |
 | [xGovukRelatedNavigation](https://x-govuk.github.io/govuk-prototype-components/related-navigation/) | Implements [related navigation component](https://components.publishing.service.gov.uk/component-guide/related_navigation) found in the `govuk_publishing_components` gem. |
 | [xGovukSideNavigation](https://x-govuk.github.io/govuk-prototype-components/side-navigation/) | Implements the side navigation component used on the GOV.UK Design System website. |
 | [xGovukSummaryCard](https://x-govuk.github.io/govuk-prototype-components/summary-card/) | Implements a component [proposed for inclusion in the GOV.UK Design System](https://github.com/alphagov/govuk-design-system-backlog/issues/210). |
@@ -120,6 +121,7 @@ You can then import the component macros as you would those provided by GOV.UK F
 ```njk
 {% raw %}{% from "x-govuk/components/autocomplete/macro.njk" import xGovukAutocomplete with context %}
 {% from "x-govuk/components/masthead/macro.njk" import xGovukMasthead %}
+{% from "x-govuk/components/primary-navigation/macro.njk" import xGovukPrimaryNavigation %}
 {% from "x-govuk/components/related-navigation/macro.njk" import xGovukRelatedNavigation %}
 {% from "x-govuk/components/side-navigation/macro.njk" import xGovukSideNavigation %}
 {% from "x-govuk/components/summary-card/macro.njk" import xGovukSummaryCard %}
