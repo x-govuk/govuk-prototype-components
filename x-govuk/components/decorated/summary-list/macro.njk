@@ -1,0 +1,4 @@
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList as source -%}
+{%- macro govukSummaryList(params) -%}
+  {{- source(decorateRows(params)) -}}
+{%- endmacro %}

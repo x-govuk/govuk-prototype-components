@@ -63,6 +63,10 @@
     "./decorate": {
       "import": "./lib/decorate.js",
       "require": "./lib/decorate.js"
+    },
+    "./decorateRows": {
+      "import": "./lib/decorate-rows.js",
+      "require": "./lib/decorate-rows.js"
     }
   },
   "c8": {
