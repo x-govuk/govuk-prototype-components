@@ -136,6 +136,8 @@ You can then import the component macros as you would those provided by GOV.UK F
     {% raw %}
     - {% from "govuk/components/button/macro.njk" import govukButton %}
     + {% from "x-govuk/components/decorated/button/macro.njk" import govukButton with context %}
+    - {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+    + {% from "x-govuk/components/decorated/character-count/macro.njk" import govukCharacterCount with context %}
     - {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
     + {% from "x-govuk/components/decorated/checkboxes/macro.njk" import govukCheckboxes with context %}
     - {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
