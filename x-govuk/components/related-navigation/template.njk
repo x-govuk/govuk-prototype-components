@@ -3,8 +3,8 @@
   {%- for attribute, value in params.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
   {% for section in params.sections %}
     {% set sectionTitle = section.title or "Related content" %}
-    <nav class="x-govuk-related-navigation__nav-section" role="navigation" aria-labelledby="related-nav-{{ sectionTitle | slugify }}">
-      <h{{ headingLevel }} class="x-govuk-related-navigation__main-heading" id="related-nav-related_items-{{ sectionTitle | slugify }}">
+    <nav class="x-govuk-related-navigation__nav-section" role="navigation" aria-labelledby="related-navigation-{{ sectionTitle | slugify }}">
+      <h{{ headingLevel }} class="x-govuk-related-navigation__main-heading" id="related-navigation-{{ sectionTitle | slugify }}">
         {{ sectionTitle }}
       </h{{ headingLevel }}>
       {% if section.items %}
@@ -17,9 +17,9 @@
         </ul>
       {% endif %}
       {% for subsection in section.subsections %}
-        <nav role="navigation" class="x-govuk-related-navigation__nav-section"{% if subsection.title %} aria-labelledby="related-nav-{{ subsection.title | slugify }}"{% endif %}>
+        <nav role="navigation" class="x-govuk-related-navigation__nav-section"{% if subsection.title %} aria-labelledby="related-navigation-{{ subsection.title | slugify }}"{% endif %}>
           {% if subsection.title %}
-            <h{{ headingLevel + 1 }} class="x-govuk-related-navigation__sub-heading" id="related-nav-topics-{{ subsection.title | slugify }}">
+            <h{{ headingLevel + 1 }} class="x-govuk-related-navigation__sub-heading" id="related-navigation-{{ subsection.title | slugify }}">
               {{ subsection.title }}
             </h{{ headingLevel + 1 }}>
           {% endif %}
