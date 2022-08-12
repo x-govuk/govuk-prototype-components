@@ -17,7 +17,7 @@ module.exports = function (eleventyConfig) {
       shortcut: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-favicon.ico',
       touch: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-apple-touch-icon.png'
     },
-    ogImage: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-opengraph-image.png',
+    opengraphImageUrl: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-opengraph-image.png',
     homeKey: 'GOV.UK Prototype Components',
     parentSite: {
       url: 'https://x-govuk.github.io/#shared-projects',
@@ -31,8 +31,12 @@ module.exports = function (eleventyConfig) {
       productName: 'Prototype Components'
     },
     footer: {
-      copyright: '© X-GOVUK',
-      licence: 'Licensed under the [MIT Licence](https://github.com/x-govuk/govuk-prototype-components/blob/main/LICENSE.txt), except where otherwise stated'
+      contentLicence: {
+        html: 'Licensed under the <a class="govuk-footer__link" href="https://github.com/x-govuk/govuk-prototype-components/blob/main/LICENSE.txt">MIT Licence</a>, except where otherwise stated'
+      },
+      copyright: {
+        text: '© X-GOVUK'
+      }
     }
   })
 
