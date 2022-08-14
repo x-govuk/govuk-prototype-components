@@ -2,6 +2,10 @@ const accessibleAutocomplete = require('accessible-autocomplete')
 
 module.exports = function ($module) {
   this.init = () => {
+    if (!$module) {
+      return
+    }
+
     // Autocomplete options get passed from Nunjucks params to data attributes
     const params = $module.dataset
 

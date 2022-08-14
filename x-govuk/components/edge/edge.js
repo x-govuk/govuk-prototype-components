@@ -2,6 +2,10 @@ const events = require('eventslibjs')
 
 module.exports = function ($module) {
   this.init = () => {
+    if (!$module) {
+      return
+    }
+
     const nodes = $module.querySelectorAll('a[href="#"]')
     nodes.forEach(node => { events.on('click', node, alertUser) })
 
