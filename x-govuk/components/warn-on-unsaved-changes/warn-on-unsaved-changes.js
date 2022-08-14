@@ -1,12 +1,12 @@
 module.exports = function () {
-  this.start = ($form) => {
+  this.start = ($module) => {
     let hasChanged = false
 
-    $form.addEventListener('submit', () => {
+    $module.addEventListener('submit', () => {
       window.onbeforeunload = null
     })
 
-    $form.addEventListener('change', () => {
+    $module.addEventListener('change', () => {
       hasChanged = true
     })
 
