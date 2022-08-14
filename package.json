@@ -18,12 +18,13 @@
     "x-govuk"
   ],
   "main": "x-govuk/all.js",
-  "sass": "x-govuk/all.scss",
+  "module": "x-govuk/all.mjs",
   "repository": {
     "type": "git",
     "url": "https://github.com/x-govuk/govuk-prototype-components.git"
   },
   "scripts": {
+    "prepublishOnly": "rollup --config",
     "prebuild": "rimraf public",
     "build": "eleventy --quiet",
     "predev": "rimraf public",
@@ -45,9 +46,12 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "ava": "^4.0.1",
     "c8": "^7.11.0",
     "nunjucks": "^3.2.3",
+    "rollup": "^2.78.0",
     "standard": "^17.0.0",
     "stylelint": "^14.6.1",
     "stylelint-config-gds": "^0.2.0"
@@ -57,7 +61,8 @@
   },
   "exports": {
     ".": {
-      "import": "./x-govuk/all.js",
+      "sass": "./x-govuk/all.scss",
+      "import": "./x-govuk/all.mjs",
       "require": "./x-govuk/all.js"
     },
     "./decorate": {
