@@ -78,5 +78,10 @@
   },
   "stylelint": {
     "extends": "stylelint-config-gds/scss"
+  },
+  "standard": {
+    "ignore": [
+      "/x-govuk/all.js"
+    ]
   }
 }
