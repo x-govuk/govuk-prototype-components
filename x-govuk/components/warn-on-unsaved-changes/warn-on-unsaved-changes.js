@@ -1,4 +1,4 @@
-module.exports = function ($module) {
+export default function ($module) {
   this.init = () => {
     if (!$module) {
       return
