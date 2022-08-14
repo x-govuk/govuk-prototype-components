@@ -1,7 +1,7 @@
 const events = require('eventslibjs')
 
 module.exports = function () {
-  this.start = ($module) => {
+  this.init = ($module) => {
     const nodes = $module.querySelectorAll('a[href="#"]')
     nodes.forEach(node => { events.on('click', node, alertUser) })
 
