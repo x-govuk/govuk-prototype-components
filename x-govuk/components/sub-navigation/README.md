@@ -5,6 +5,8 @@ Implements the sub navigation component used on the GOV.UK Design System website
 ## Example usage
 
 ```njk
+{% from "x-govuk/components/sub-navigation/macro.njk" import xGovukSubNavigation %}
+
 {{ xGovukSubNavigation({
   visuallyHiddenTitle: 'Navigation',
   items: [{
