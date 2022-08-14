@@ -1,5 +1,5 @@
 module.exports = function () {
-  this.start = ($module) => {
+  this.init = ($module) => {
     let hasChanged = false
 
     $module.addEventListener('submit', () => {

@@ -43,7 +43,7 @@ module.exports = (function () {
 
       if (typeof GOVUKPrototypeComponents[name] === 'function' && !started) {
         module = new GOVUKPrototypeComponents[name]()
-        module.start(element)
+        module.init(element)
         element.dataset.moduleStarted = true
       }
     })
