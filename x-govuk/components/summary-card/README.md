@@ -7,6 +7,8 @@ Find out when to use a summary card in your service on [the GitHub issue where t
 ## Example usage
 
 ```njk
+{% from "x-govuk/components/summary-card/macro.njk" import xGovukSummaryCard %}
+
 {{ xGovukSummaryCard({
   classes: "govuk-!-margin-bottom-9",
   titleText: "Sarah Philips",

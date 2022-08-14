@@ -5,6 +5,8 @@ Implements the primary navigation component used on the GOV.UK Design System web
 ## Example usage
 
 ```njk
+{% from "x-govuk/components/primary-navigation/macro.njk" import xGovukPrimaryNavigation %}
+
 {{ xGovukPrimaryNavigation({
   visuallyHiddenTitle: 'Navigation',
   items: [{
