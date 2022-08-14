@@ -1,6 +1,6 @@
-const Autocomplete = require('./autocomplete/autocomplete.js')
-const Edge = require('./edge/edge.js')
-const WarnOnUnsavedChanges = require('./warn-on-unsaved-changes/warn-on-unsaved-changes.js')
+import Autocomplete from './autocomplete/autocomplete.js'
+import Edge from './edge/edge.js'
+import WarnOnUnsavedChanges from './warn-on-unsaved-changes/warn-on-unsaved-changes.js'
 
 /**
  * Get module name.
@@ -28,7 +28,7 @@ const _getModuleName = (string) => {
  * @example
  * [data-module="foo-bar"] initiates GOVUKPrototypeComponents.FooBar()
  */
-module.exports = (function () {
+export default (function () {
   const GOVUKPrototypeComponents = window.GOVUKPrototypeComponents || {}
 
   // Initiate all component modules
