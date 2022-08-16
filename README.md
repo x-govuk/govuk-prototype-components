@@ -2,6 +2,8 @@
 
 GOV.UK Prototype Components contains the code you need to use common or experimental components that are not yet in the GOV.UK Design System.
 
+> Prior to v1.0.0, this project included a collection of decorated form components. These can now be found in the [`govuk-decorated-components`](https://github.com/x-govuk/govuk-decorated-components) package.
+
 ## Components
 
 ### Nunjucks
