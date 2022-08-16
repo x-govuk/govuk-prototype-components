@@ -14,7 +14,6 @@
   },
   "license": "MIT",
   "files": [
-    "lib",
     "x-govuk"
   ],
   "main": "x-govuk/all.js",
@@ -30,9 +29,7 @@
     "predev": "rimraf public",
     "start": "eleventy --serve --quiet",
     "lint": "standard && stylelint 'x-govuk/**/*.scss'",
-    "test": "ava",
-    "test:watch": "ava --watch",
-    "coverage": "c8 ava"
+    "test": "npm run lint"
   },
   "publishConfig": {
     "access": "public"
@@ -42,14 +39,11 @@
     "accessible-autocomplete": "^2.0.4",
     "eventslibjs": "^1.2.0",
     "govuk-eleventy-plugin": "^3.0.0",
-    "govuk-frontend": "^4.1.0",
-    "lodash": "^4.17.21"
+    "govuk-frontend": "^4.1.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^13.3.0",
-    "ava": "^4.0.1",
-    "c8": "^7.11.0",
     "nunjucks": "^3.2.3",
     "rollup": "^2.78.0",
     "standard": "^17.0.0",
@@ -64,10 +58,6 @@
       "sass": "./x-govuk/all.scss",
       "import": "./x-govuk/all.mjs",
       "require": "./x-govuk/all.js"
-    },
-    "./decorate": {
-      "import": "./lib/decorate.js",
-      "require": "./lib/decorate.js"
     }
   },
   "c8": {
