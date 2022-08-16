@@ -25,8 +25,6 @@ GOV.UK Prototype Components contains the code you need to use common or experime
 
 These components are currently experimental and more research is needed to validate them.
 
-Versions of each form component available in GOV.UK Frontend are also provided. These allow you to [replace the multiple parameters needed for saving data with a single `decorate` parameter](https://x-govuk.github.io/govuk-prototype-rig/using-data/form-components/).
-
 ## Requirements
 
 Node.js v16 or later.
@@ -127,46 +125,3 @@ You can then import the component macros as you would those provided by GOV.UK F
 {% from "x-govuk/components/summary-card/macro.njk" import xGovukSummaryCard %}
 {% from "x-govuk/components/task-list/macro.njk" import xGovukTaskList %}{% endraw %}
 ```
-
-#### Use the decorated form component macros
-
-1. Replace GOV.UK Frontend macro imports with those provided by this package:
-
-    ```diff
-    {% raw %}
-    - {% from "govuk/components/button/macro.njk" import govukButton %}
-    + {% from "x-govuk/components/decorated/button/macro.njk" import govukButton with context %}
-    - {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
-    + {% from "x-govuk/components/decorated/character-count/macro.njk" import govukCharacterCount with context %}
-    - {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-    + {% from "x-govuk/components/decorated/checkboxes/macro.njk" import govukCheckboxes with context %}
-    - {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
-    + {% from "x-govuk/components/decorated/date-input/macro.njk" import govukDateInput with context %}
-    - {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
-    + {% from "x-govuk/components/decorated/file-upload/macro.njk" import govukFileUpload with context %}
-    - {% from "govuk/components/input/macro.njk" import govukInput %}
-    + {% from "x-govuk/components/decorated/input/macro.njk" import govukInput with context %}
-    - {% from "govuk/components/radios/macro.njk" import govukRadios %}
-    + {% from "x-govuk/components/decorated/radios/macro.njk" import govukRadios with context %}
-    - {% from "govuk/components/select/macro.njk" import govukSelect %}
-    + {% from "x-govuk/components/decorated/select/macro.njk" import govukSelect with context %}
-    - {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-    + {% from "x-govuk/components/decorated/textarea/macro.njk" import govukTextarea with context %}{% endraw %}
-    ```
-
-2. Add the `decorate` global function to your Nunjucks environment:
-
-    ```js
-    const decorate = require('govuk-prototype-components/decorate')
-    const express = require('express')
-    const nunjucks = require('nunjucks')
-
-    const app = express();
-
-    const env = nunjucks.configure('views', {
-      autoescape: true,
-      express: app
-    });
-
-    env.addGlobal('decorate', decorate)
-    ```
