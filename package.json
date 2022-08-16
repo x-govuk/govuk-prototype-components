@@ -26,7 +26,6 @@
     "prepublishOnly": "rollup --config",
     "prebuild": "rimraf public",
     "build": "eleventy --quiet",
-    "predev": "rimraf public",
     "start": "eleventy --serve --quiet",
     "lint": "standard && stylelint 'x-govuk/**/*.scss'",
     "test": "npm run lint"
