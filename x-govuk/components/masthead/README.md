@@ -7,8 +7,6 @@ This component may be useful if you are prototyping product or marketing pages.
 ## Example usage
 
 ```njk
-{% from "x-govuk/components/masthead/macro.njk" import xGovukMasthead %}
-
 {{ xGovukMasthead({
   classes: "x-govuk-masthead--large",
   phaseBanner: {

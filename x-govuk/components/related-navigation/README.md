@@ -7,8 +7,6 @@ This component may be useful if you are prototyping guidance pages that could be
 ## Example usage
 
 ```njk
-{% from "x-govuk/components/related-navigation/macro.njk" import xGovukRelatedNavigation %}
-
 {{ xGovukRelatedNavigation({
   sections: [{
     items: [{

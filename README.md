@@ -35,9 +35,21 @@ Node.js v16 or later.
 npm install govuk-prototype-components --save
 ```
 
-## Usage
+## Usage with the GOV.UK Prototype Kit
 
-Some components include JavaScript that needs to be initialised before they will work. To initialise them in the GOV.UK Prototype Kit, add the following line to `app/assets/javascript/application.js`:
+Add the component imports to `app/views/layout.html`, directly after the imports from GOV.UK Frontend:
+
+```njk
+{% raw %}{% from "x-govuk/components/autocomplete/macro.njk" import xGovukAutocomplete with context %}
+{% from "x-govuk/components/masthead/macro.njk" import xGovukMasthead %}
+{% from "x-govuk/components/primary-navigation/macro.njk" import xGovukPrimaryNavigation %}
+{% from "x-govuk/components/related-navigation/macro.njk" import xGovukRelatedNavigation %}
+{% from "x-govuk/components/sub-navigation/macro.njk" import xGovukSubNavigation %}
+{% from "x-govuk/components/summary-card/macro.njk" import xGovukSummaryCard %}
+{% from "x-govuk/components/task-list/macro.njk" import xGovukTaskList %}{% endraw %}
+```
+
+To initialise those components which use JavaScript, add the following line to `app/assets/javascript/application.js`:
 
 ```diff
   window.GOVUKPrototypeKit.documentReady(() => {
