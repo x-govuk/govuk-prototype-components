@@ -7,8 +7,6 @@ This component may be useful if you want users to pick from a number of options.
 ## Example usage
 
 ```njk
-{% from "x-govuk/components/autocomplete/macro.njk" import xGovukAutocomplete %}
-
 {{ xGovukAutocomplete({
   id: "country",
   name: "country",

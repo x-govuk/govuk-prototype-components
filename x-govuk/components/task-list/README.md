@@ -7,8 +7,6 @@ Find out when to use a task list in your service in the [GOV.UK Design System](h
 ## Example usage
 
 ```njk
-{% from "x-govuk/components/task-list/macro.njk" import xGovukTaskList %}
-
 {{ xGovukTaskList({
   sections: [{
     titleText: "Check before you start",
