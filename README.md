@@ -21,7 +21,7 @@ Two JavaScript-only modules are also provided:
 | [Edge](https://x-govuk.github.io/govuk-prototype-components/edge/) | Define the edges of your prototype for research. |
 | [Warn on unsaved changes](https://x-govuk.github.io/govuk-prototype-components/warn-on-unsaved-changes/) | Warn users if they try to leave a page without saving changes to a form. |
 
-> Prior to v1.0.0, this project included a collection of decorated form components. These can now be found in the [`govuk-decorated-components`](https://github.com/x-govuk/govuk-decorated-components) package.
+> **Note** Prior to v1.0.0, this project included a collection of decorated form components. These can now be found in the [`govuk-decorated-components`](https://github.com/x-govuk/govuk-decorated-components) package.
 
 ## Requirements
 
@@ -29,7 +29,7 @@ Node.js v16 or later.
 
 ## Installation
 
-> These components are included by default with the [GOV.UK Prototype Rig](https://x-govuk.github.io/govuk-prototype-rig/).
+> **Note** These components are included by default with the [GOV.UK Prototype Rig](https://x-govuk.github.io/govuk-prototype-rig/).
 
 ```shell
 npm install govuk-prototype-components --save
