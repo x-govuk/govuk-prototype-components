@@ -42,10 +42,10 @@
     "govuk-frontend": "^4.1.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^22.0.2",
-    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "nunjucks": "^3.2.3",
-    "rollup": "^2.78.0",
+    "rollup": "^3.2.3",
     "standard": "^17.0.0",
     "stylelint": "^14.6.1",
     "stylelint-config-gds": "^0.2.0"
