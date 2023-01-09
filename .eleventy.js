@@ -59,7 +59,6 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: false,
     dir: {
       input: 'x-govuk/components',
-      output: 'public',
       layouts: '../../node_modules/govuk-eleventy-plugin/layouts'
     },
     pathPrefix

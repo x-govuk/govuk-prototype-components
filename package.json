@@ -25,7 +25,7 @@
   },
   "scripts": {
     "prepublishOnly": "rollup --config",
-    "prebuild": "rimraf public",
+    "prebuild": "rimraf _site",
     "build": "eleventy --quiet",
     "start": "eleventy --serve --quiet",
     "lint": "standard && stylelint 'x-govuk/**/*.scss'",
