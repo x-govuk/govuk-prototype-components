@@ -37,28 +37,13 @@ npm install govuk-prototype-components --save
 
 ## Usage with the GOV.UK Prototype Kit
 
-Add the component imports to `app/views/layout.html`, directly after the imports from GOV.UK Frontend:
+GOV.UK Prototype Components are designed to work with the GOV.UK Prototype Kit.
 
-```njk
-{% raw %}{% from "x-govuk/components/autocomplete/macro.njk" import xGovukAutocomplete with context %}
-{% from "x-govuk/components/masthead/macro.njk" import xGovukMasthead %}
-{% from "x-govuk/components/primary-navigation/macro.njk" import xGovukPrimaryNavigation %}
-{% from "x-govuk/components/related-navigation/macro.njk" import xGovukRelatedNavigation %}
-{% from "x-govuk/components/sub-navigation/macro.njk" import xGovukSubNavigation %}
-{% from "x-govuk/components/summary-card/macro.njk" import xGovukSummaryCard %}
-{% from "x-govuk/components/task-list/macro.njk" import xGovukTaskList %}{% endraw %}
-```
-
-To initialise those components which use JavaScript, add the following line to `app/assets/javascript/application.js`:
-
-```diff
-  window.GOVUKPrototypeKit.documentReady(() => {
-    // Add JavaScript here
-+   window.GOVUKPrototypeComponents.initAll()
-  })
-```
+If you are using v13 or later of the kit, the components will be immediately available once you have installed the package, and can be [managed alongside other plugins in your prototype](https://prototype-kit.service.gov.uk/docs/install-and-use-plugins).
 
 ## Advanced usage
+
+If you are using an earlier version of the GOV.UK Prototype Kit, or only want to install selected components, you can do so by following the instructions below.
 
 ### CSS
 

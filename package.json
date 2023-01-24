@@ -14,8 +14,9 @@
   },
   "license": "MIT",
   "files": [
-    "x-govuk",
-    "govuk-prototype-kit.config.json"
+    "govuk-prototype-kit.config.json",
+    "govuk-prototype-kit",
+    "x-govuk"
   ],
   "main": "x-govuk/all.js",
   "module": "x-govuk/all.mjs",
