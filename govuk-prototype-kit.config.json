@@ -1,11 +1,42 @@
 {
   "nunjucksPaths": [
-    "/"
+    "/x-govuk/components/"
+  ],
+  "nunjucksMacros": [
+    {
+      "importFrom": "autocomplete/macro.njk",
+      "macroName": "xGovukAutocomplete"
+    },
+    {
+      "importFrom": "masthead/macro.njk",
+      "macroName": "xGovukMasthead"
+    },
+    {
+      "importFrom": "primary-navigation/macro.njk",
+      "macroName": "xGovukPrimaryNavigation"
+    },
+    {
+      "importFrom": "related-navigation/macro.njk",
+      "macroName": "xGovukRelatedNavigation"
+    },
+    {
+      "importFrom": "sub-navigation/macro.njk",
+      "macroName": "xGovukSubNavigation"
+    },
+    {
+      "importFrom": "summary-card/macro.njk",
+      "macroName": "xGovukSummaryCard"
+    },
+    {
+      "importFrom": "task-list/macro.njk",
+      "macroName": "xGovukTaskList"
+    }
   ],
   "sass": [
     "/x-govuk/all.scss"
   ],
   "scripts": [
-    "/x-govuk/all.js"
+    "/x-govuk/all.js",
+    "/govuk-prototype-kit/init.js"
   ]
 }
