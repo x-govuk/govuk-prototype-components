@@ -38,7 +38,7 @@
     "@11ty/eleventy": "^1.0.0",
     "accessible-autocomplete": "^2.0.4",
     "eventslibjs": "^1.2.0",
-    "govuk-eleventy-plugin": "^3.0.0",
+    "govuk-eleventy-plugin": "^4.0.0",
     "govuk-frontend": "^4.1.0"
   },
   "devDependencies": {
