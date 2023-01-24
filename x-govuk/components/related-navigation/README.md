@@ -47,6 +47,7 @@ If you’re using Nunjucks macros in production with `html` options, or ones end
 | Name | Type | Description |
 | :--- | :--- | :---------- |
 | **title** | string | The title text that displays above the list of navigation links. Default is `Related content`. |
+| **id** | string | ID attribute to add to the section container. |
 | **items** | array | **Required**. An array of navigation links within the section. See [items](#options-for-items). |
 | **subsections** | array | An array of sub-sections within the section. See [subsections](#options-for-subsections). |
 
@@ -55,6 +56,7 @@ If you’re using Nunjucks macros in production with `html` options, or ones end
 | Name | Type | Description |
 | :--- | :--- | :---------- |
 | **title** | string | The title text that displays above the list of navigation links. |
+| **id** | string | ID attribute to add to the subsection container. |
 | **items** | array | **Required**. An array of navigation links within the section. See [items](#options-for-items). |
 
 ### Options for items
