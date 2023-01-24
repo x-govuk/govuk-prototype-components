@@ -6,7 +6,7 @@ Implements the primary navigation component used on the GOV.UK Design System web
 
 ```njk
 {{ xGovukPrimaryNavigation({
-  visuallyHiddenTitle: 'Navigation',
+  visuallyHiddenTitle: "Navigation",
   items: [{
     text: "About this project",
     href: "/about"

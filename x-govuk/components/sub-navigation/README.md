@@ -6,7 +6,7 @@ Implements the sub navigation component used on the GOV.UK Design System website
 
 ```njk
 {{ xGovukSubNavigation({
-  visuallyHiddenTitle: 'Navigation',
+  visuallyHiddenTitle: "Navigation",
   items: [{
     text: "About this project",
     href: "/about"
@@ -17,10 +17,10 @@ Implements the sub navigation component used on the GOV.UK Design System website
     parent: true,
     children: [{
       text: "By email",
-      href: "/contact/email",
+      href: "/contact/email"
     }, {
       text: "By telephone",
-      href: "/contact/telephone",
+      href: "/contact/telephone"
     }]
   }]
 }) }}
