@@ -24,10 +24,6 @@
       "macroName": "xGovukSubNavigation"
     },
     {
-      "importFrom": "summary-card/macro.njk",
-      "macroName": "xGovukSummaryCard"
-    },
-    {
       "importFrom": "task-list/macro.njk",
       "macroName": "xGovukTaskList"
     }
