@@ -113,3 +113,9 @@ GOVUKPrototypeComponents.initAll()
 ```
 
 It is not possible to import individual components using CommonJS.
+
+### Contribute
+
+The project repository is public and anyone can contribute.
+
+[View this project on GitHub](https://github.com/x-govuk/govuk-prototype-components).
