@@ -36,20 +36,24 @@
     "access": "public"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
     "accessible-autocomplete": "^2.0.4",
-    "eventslibjs": "^1.2.0",
-    "govuk-eleventy-plugin": "^4.0.0",
-    "govuk-frontend": "^4.1.0"
+    "eventslibjs": "^1.2.0"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "nunjucks": "^3.2.3",
+    "govuk-eleventy-plugin": "^4.0.0",
     "rollup": "^3.2.3",
     "standard": "^17.0.0",
     "stylelint": "^14.6.1",
     "stylelint-config-gds": "^0.2.0"
+  },
+  "optionalDependencies": {
+    "govuk-prototype-kit": "^13.0.1"
+  },
+  "peerDependencies": {
+    "govuk-frontend": "^4.1.0"
   },
   "engines": {
     "node": ">=16.0.0"
