@@ -22,10 +22,6 @@
     {
       "importFrom": "sub-navigation/macro.njk",
       "macroName": "xGovukSubNavigation"
-    },
-    {
-      "importFrom": "task-list/macro.njk",
-      "macroName": "xGovukTaskList"
     }
   ],
   "sass": [
