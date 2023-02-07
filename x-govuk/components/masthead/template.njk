@@ -30,9 +30,9 @@
         </h1>
       {% endif %}
       {% if params.description %}
-        <p class="x-govuk-masthead__description{%- if params.description.classes %} {{ params.description.classes }}{% endif %}">
+        <div class="x-govuk-masthead__description{%- if params.description.classes %} {{ params.description.classes }}{% endif %}">
           {{ params.description.html | safe if params.description.html else params.description.text }}
-        </p>
+        </div>
       {% endif %}
       {% if params.startButton %}
         {{ govukButton({
