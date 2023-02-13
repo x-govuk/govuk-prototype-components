@@ -40,7 +40,7 @@
     "eventslibjs": "^1.2.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^2.0.0",
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "govuk-eleventy-plugin": "^4.0.0",
