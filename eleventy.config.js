@@ -1,13 +1,7 @@
-const govukEleventyPlugin = require('govuk-eleventy-plugin')
+const process = require('node:process')
+const govukEleventyPlugin = require('@x-govuk/govuk-eleventy-plugin')
 
 module.exports = function (eleventyConfig) {
-  const url = process.env.GITHUB_ACTIONS
-    ? 'https://x-govuk.github.io/govuk-prototype-components/'
-    : '/'
-  const pathPrefix = process.env.GITHUB_ACTIONS
-    ? '/govuk-prototype-components'
-    : '/'
-
   // Plugins
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     brandColour: '#28a',
@@ -23,8 +17,9 @@ module.exports = function (eleventyConfig) {
       url: 'https://x-govuk.github.io/#shared-projects',
       name: 'X-GOVUK shared projects'
     },
-    pathPrefix,
-    url,
+    url: process.env.GITHUB_ACTIONS
+      ? 'https://x-govuk.github.io/govuk-prototype-components/'
+      : '/',
     header: {
       organisationLogo: 'x-govuk',
       organisationName: 'X-GOVUK',
@@ -41,16 +36,16 @@ module.exports = function (eleventyConfig) {
   })
 
   // Ignores
-  eleventyConfig.ignores.add('**/*/*.js');
-  eleventyConfig.ignores.add('**/*/*.scss');
-  eleventyConfig.ignores.add('**/*/*.njk');
+  eleventyConfig.ignores.add('**/*/*.js')
+  eleventyConfig.ignores.add('**/*/*.scss')
+  eleventyConfig.ignores.add('**/*/*.njk')
 
   // Transforms
   eleventyConfig.addTransform('remove-h1', (content, outputPath) => {
     // Remove first `h1` as it repeats what’s already shown in page title
     content = content.replace(/<h1\s*.*tabindex="-1"\s*.*>\s*.*<\/h1>/, '')
-    return content;
-  });
+    return content
+  })
 
   // Config
   return {
@@ -59,8 +54,10 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: false,
     dir: {
       input: 'x-govuk/components',
-      layouts: '../../node_modules/govuk-eleventy-plugin/layouts'
+      layouts: '../../node_modules/@x-govuk/govuk-eleventy-plugin/layouts'
     },
-    pathPrefix
+    pathPrefix: process.env.GITHUB_ACTIONS
+      ? '/govuk-prototype-components'
+      : '/'
   }
 }

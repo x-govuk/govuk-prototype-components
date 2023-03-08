@@ -4,7 +4,7 @@ homepage: true
 layout: product
 includeInBreadcrumbs: true
 collection: Components
-override:tags: false
+override:tags: []
 pagination:
   data: collections.component
   size: 20
