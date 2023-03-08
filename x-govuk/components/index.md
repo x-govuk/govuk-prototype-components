@@ -10,7 +10,7 @@ pagination:
   size: 20
 eleventyComputed:
   title: GOV.UK Prototype Components
-  description: "{{ pkg.description }}"
+  description: Common and experimental components that are not yet part of the GOV.UK Design System
   permalink: "/"
 ---
 {% filter markdown %}{% include "../../README.md" %}{% endfilter %}
