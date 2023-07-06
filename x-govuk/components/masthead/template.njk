@@ -16,7 +16,7 @@
       attributes: params.phaseBanner.attributes
     }) if params.phaseBanner }}
     {{ govukBreadcrumbs({
-      classes: "x-govuk-breadcrumbs--inverse" + (" " + params.breadcrumbs.classes if params.breadcrumbs.classes),
+      classes: "govuk-breadcrumbs--inverse" + (" " + params.breadcrumbs.classes if params.breadcrumbs.classes),
       items: params.breadcrumbs.items,
       collapseOnMobile: params.breadcrumbs.collapseOnMobile,
       attributes: params.breadcrumbs.attributes
@@ -36,7 +36,7 @@
       {% endif %}
       {% if params.startButton %}
         {{ govukButton({
-          classes: "x-govuk-button--inverse" + (" " + params.startButton.classes if params.startButton.classes),
+          classes: "govuk-button--inverse" + (" " + params.startButton.classes if params.startButton.classes),
           text: params.startButton.text | default("Get started"),
           href: params.startButton.href,
           isStartButton: true,
