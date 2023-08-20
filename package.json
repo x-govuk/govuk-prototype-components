@@ -1,6 +1,6 @@
 {
   "name": "@x-govuk/govuk-prototype-components",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Common and experimental components that are not yet part of the GOV.UK Design System",
   "keywords": [
     "govuk",
