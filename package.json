@@ -50,7 +50,7 @@
     "stylelint-config-gds": "^0.3.0"
   },
   "optionalDependencies": {
-    "govuk-prototype-kit": "^13.0.1"
+    "govuk-prototype-kit": "^13.13.1"
   },
   "peerDependencies": {
     "govuk-frontend": "^4.1.0"
