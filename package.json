@@ -46,8 +46,8 @@
     "@x-govuk/govuk-eleventy-plugin": "^5.0.0",
     "rollup": "^3.2.3",
     "standard": "^17.0.0",
-    "stylelint": "^14.6.1",
-    "stylelint-config-gds": "^0.3.0"
+    "stylelint": "^15.10.3",
+    "stylelint-config-gds": "^1.0.0"
   },
   "optionalDependencies": {
     "govuk-prototype-kit": "^13.13.1"
