@@ -44,7 +44,7 @@
   padding-left: govuk-spacing(4);
 }
 
-.x-govuk-sub-navigation__section--nested .x-govuk-sub-navigation__section-item:before {
+.x-govuk-sub-navigation__section--nested .x-govuk-sub-navigation__section-item::before {
   color: govuk-colour("dark-grey");
   content: "—";
   margin-left: -(govuk-spacing(4));
