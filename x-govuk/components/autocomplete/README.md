@@ -61,6 +61,7 @@ If you’re using Nunjucks macros in production with `html` options, or ones end
 | **id** | string | **Required.** ID for each autocomplete. |
 | **name** | string | **Required.** Name property for the autocomplete. |
 | **items** | array | **Required.** Array of option items for the autocomplete. See [items](#options-for-items). |
+| **value** | string | Value for the option which should be selected. Use this as an alternative to setting the `selected` option on each individual item. |
 | **allowEmpty** | boolean | Whether to allow no answer to be given. Default is `false`. |
 | **autoselect** | boolean | Whether to highlight the first option when the user types in something and receives results. Pressing enter will select it. Default is `false`. |
 | **displayMenu** | string | Specify the way the menu should appear, whether `inline` or as an `overlay`. Default is `inline`. |
