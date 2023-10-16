@@ -53,7 +53,7 @@
     "govuk-prototype-kit": "^13.13.1"
   },
   "peerDependencies": {
-    "govuk-frontend": "^4.1.0"
+    "govuk-frontend": "^4.0.0 || ^5.0.0"
   },
   "engines": {
     "node": ">=16.0.0"
