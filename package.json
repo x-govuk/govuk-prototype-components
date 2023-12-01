@@ -26,7 +26,6 @@
   },
   "scripts": {
     "prepublishOnly": "rollup --config",
-    "prebuild": "rimraf _site",
     "build": "eleventy --quiet",
     "start": "eleventy --serve --quiet",
     "lint": "standard && stylelint 'x-govuk/**/*.scss'",
@@ -41,10 +40,8 @@
     "eventslibjs": "^1.2.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "@x-govuk/govuk-eleventy-plugin": "^5.0.6",
     "np": "^9.0.0",
     "rollup": "^4.4.0",
     "standard": "^17.0.0",

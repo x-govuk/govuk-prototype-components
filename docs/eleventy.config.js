@@ -1,8 +1,11 @@
-const process = require('node:process')
 const govukEleventyPlugin = require('@x-govuk/govuk-eleventy-plugin')
+const fs = require('fs')
+const matter = require('gray-matter')
+const hljs = require('highlight.js/lib/core');
+hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
 
-module.exports = function (eleventyConfig) {
-  // Plugins
+module.exports = function(eleventyConfig) {
+  // Register the plugin
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     brandColour: '#28a',
     fontFamily: 'system-ui, sans-serif',
@@ -31,33 +34,35 @@ module.exports = function (eleventyConfig) {
       },
       copyright: {
         text: '© X-GOVUK'
+      },
+      meta: {
+        items: []
       }
     }
   })
 
-  // Ignores
-  eleventyConfig.ignores.add('**/*/*.js')
-  eleventyConfig.ignores.add('**/*/*.scss')
-  eleventyConfig.ignores.add('**/*/*.njk')
+  eleventyConfig.addNunjucksGlobal("getNunjucksCode", function(componentName) {
+    let data = matter(fs.readFileSync(`examples/${componentName}.njk`, 'utf-8')).content
 
-  // Transforms
-  eleventyConfig.addTransform('remove-h1', (content, outputPath) => {
-    // Remove first `h1` as it repeats what’s already shown in page title
-    content = content.replace(/<h1\s*.*tabindex="-1"\s*.*>\s*.*<\/h1>/, '')
-    return content
+    data = data.replace(/\{\%\sfrom\s[^\n]+\n\n/, '')
+
+    const highlightedCode = hljs.highlight(data, { language: 'js' }).value
+
+    return highlightedCode;
   })
 
-  // Config
+  // Passthrough
+  eleventyConfig.addPassthroughCopy('./assets')
+
   return {
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: false,
+    markdownTemplateEngine: 'njk',
     dir: {
-      input: 'x-govuk/components',
-      layouts: '../../node_modules/@x-govuk/govuk-eleventy-plugin/layouts'
+      layouts: '_layouts'
     },
     pathPrefix: process.env.GITHUB_ACTIONS
       ? '/govuk-prototype-components'
       : '/'
   }
-}
+};

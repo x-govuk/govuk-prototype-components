@@ -1,10 +1,21 @@
-# Sub navigation
+---
+title: Sub navigation
+layout: sub-navigation
+order: 6
+---
+{% from "x-govuk/components/sub-navigation/macro.njk" import xGovukSubNavigation %}
+{% from "components/_example.njk" import example %}
 
 Implements the sub navigation component used on the GOV.UK Design System website.
+
+{{ example({
+  component: "sub-navigation"
+}) }}
 
 ## Example usage
 
 ```njk
+{% raw %}
 {{ xGovukSubNavigation({
   visuallyHiddenTitle: "Navigation",
   items: [{
@@ -24,6 +35,7 @@ Implements the sub navigation component used on the GOV.UK Design System website
     }]
   }]
 }) }}
+{% endraw %}
 ```
 
 ## Component options

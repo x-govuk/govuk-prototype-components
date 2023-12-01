@@ -1,37 +1,19 @@
-# Masthead
+---
+title: Masthead
+layout: sub-navigation
+order: 3
+---
+{% from "x-govuk/components/masthead/macro.njk" import xGovukMasthead %}
+{% from "components/_example.njk" import example %}
+
 
 The masthead component is based on the component used on [GOV.UK product pages](https://github.com/alphagov/product-page-example).
 
 This component may be useful if you are prototyping product or marketing pages.
 
-## Example usage
-
-```njk
-{{ xGovukMasthead({
-  classes: "x-govuk-masthead--large",
-  phaseBanner: {
-    text: "This is a new service"
-  },
-  breadcrumbs: {
-    items: [{
-      href: "/",
-      text: "Home"
-    }]
-  },
-  title: {
-    text: "Design your service using GOV.UK styles, components and patterns"
-  },
-  description: {
-    text: "Use this design system to make your service consistent with GOV.UK. Learn from the research and experience of other service teams and avoid repeating work that’s already been done."
-  },
-  startButton: {
-    href: "/get-started/"
-  },
-  image: {
-    src: "/images/homepage-illustration.svg"
-  }
+{{ example({
+  component: "masthead"
 }) }}
-```
 
 ## Component options
 

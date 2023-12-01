@@ -1,4 +1,8 @@
-# Edge
+---
+title: Edge
+layout: sub-navigation
+order: 2
+---
 
 A javascript component to make it easy to define the edges of your prototype for research.
 

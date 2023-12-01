@@ -1,0 +1,32 @@
+---
+title: Masthead example
+layout: example.njk
+eleventyExcludeFromCollections: true
+
+---
+{% from "x-govuk/components/masthead/macro.njk" import xGovukMasthead %}
+
+{{ xGovukMasthead({
+  classes: "x-govuk-masthead--large",
+  phaseBanner: {
+    text: "This is a new service"
+  },
+  breadcrumbs: {
+    items: [{
+      href: "/",
+      text: "Home"
+    }]
+  },
+  title: {
+    text: "Design your service using GOV.UK styles, components and patterns"
+  },
+  description: {
+    text: "Use this design system to make your service consistent with GOV.UK. Learn from the research and experience of other service teams and avoid repeating work that’s already been done."
+  },
+  startButton: {
+    href: "/get-started/"
+  },
+  image: {
+    src: "/images/homepage-illustration.svg"
+  }
+}) }}
