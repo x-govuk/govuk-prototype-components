@@ -12,32 +12,6 @@ Implements the sub navigation component used on the GOV.UK Design System website
   component: "sub-navigation"
 }) }}
 
-## Example usage
-
-```njk
-{% raw %}
-{{ xGovukSubNavigation({
-  visuallyHiddenTitle: "Navigation",
-  items: [{
-    text: "About this project",
-    href: "/about"
-  }, {
-    text: "Contact us",
-    href: "/contact",
-    current: true,
-    parent: true,
-    children: [{
-      text: "By email",
-      href: "/contact/email"
-    }, {
-      text: "By telephone",
-      href: "/contact/telephone"
-    }]
-  }]
-}) }}
-{% endraw %}
-```
-
 ## Component options
 
 Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
