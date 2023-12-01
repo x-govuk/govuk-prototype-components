@@ -25,7 +25,7 @@ Two JavaScript-only modules are also provided:
 | [Edge](/edge) | Define the edges of your prototype for research. |
 | [Warn on unsaved changes](/warn-on-unsaved-changes) | Warn users if they try to leave a page without saving changes to a form. |
 
-> [!NOTE]\
+> **NOTE**
 > Prior to v1.0.0, this project included a collection of decorated form components. These can now be found in the [`govuk-decorated-components`](https://github.com/x-govuk/govuk-decorated-components) package.
 
 ## Requirements
