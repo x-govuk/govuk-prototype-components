@@ -45,7 +45,7 @@
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@x-govuk/govuk-eleventy-plugin": "^5.0.6",
-    "np": "^8.0.4",
+    "np": "^9.0.0",
     "rollup": "^4.4.0",
     "standard": "^17.0.0",
     "stylelint": "^15.10.3",
