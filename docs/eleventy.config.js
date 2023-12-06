@@ -2,7 +2,7 @@ const govukEleventyPlugin = require('@x-govuk/govuk-eleventy-plugin')
 const fs = require('fs')
 const matter = require('gray-matter')
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Register the plugin
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     brandColour: '#28a',
@@ -47,13 +47,13 @@ module.exports = function(eleventyConfig) {
   // code, and there’s currently no built-in way to fetch it un-rendered.
   //
   // See https://github.com/mozilla/nunjucks/issues/788
-  eleventyConfig.addNunjucksGlobal("getNunjucksCode", function(componentName) {
+  eleventyConfig.addNunjucksGlobal('getNunjucksCode', function (componentName) {
     let nunjucksCode = matter(fs.readFileSync(`examples/${componentName}.njk`, 'utf-8')).content
 
     // Remove the `{% from "..." import ... %}` lines as those aren’t needed by users.
     nunjucksCode = nunjucksCode.replace(/\{\%\sfrom\s[^\n]+\n\n/, '')
 
-    return nunjucksCode;
+    return nunjucksCode
   })
 
   // Passthrough
@@ -70,4 +70,4 @@ module.exports = function(eleventyConfig) {
       ? '/govuk-prototype-components'
       : '/'
   }
-};
+}
