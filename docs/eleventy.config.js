@@ -39,6 +39,11 @@ module.exports = function(eleventyConfig) {
     }
   })
 
+  // This function fetches the raw nunjucks code for the given example and returns it.
+  // It’s needed as the `{% include "" %}` feature within nunjucks will render the
+  // code, and there’s currently no built-in way to fetch it un-rendered.
+  //
+  // See https://github.com/mozilla/nunjucks/issues/788
   eleventyConfig.addNunjucksGlobal("getNunjucksCode", function(componentName) {
     let nunjucksCode = matter(fs.readFileSync(`examples/${componentName}.njk`, 'utf-8')).content
 
