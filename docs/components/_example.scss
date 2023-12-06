@@ -1,0 +1,16 @@
+
+.app-example__iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  display: block;
+  border: 0;
+  background-color: govuk-colour("white");
+}
+
+.app-example__link {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-color: $govuk-border-colour;
+  padding: 10px 20px;
+}
