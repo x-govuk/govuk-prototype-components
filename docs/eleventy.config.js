@@ -1,8 +1,6 @@
 const govukEleventyPlugin = require('@x-govuk/govuk-eleventy-plugin')
 const fs = require('fs')
 const matter = require('gray-matter')
-const hljs = require('highlight.js/lib/core');
-hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
 
 module.exports = function(eleventyConfig) {
   // Register the plugin
@@ -42,13 +40,12 @@ module.exports = function(eleventyConfig) {
   })
 
   eleventyConfig.addNunjucksGlobal("getNunjucksCode", function(componentName) {
-    let data = matter(fs.readFileSync(`examples/${componentName}.njk`, 'utf-8')).content
+    let nunjucksCode = matter(fs.readFileSync(`examples/${componentName}.njk`, 'utf-8')).content
 
-    data = data.replace(/\{\%\sfrom\s[^\n]+\n\n/, '')
+    // Remove the `{% from "..." import ... %}` lines as those aren’t needed by users.
+    nunjucksCode = nunjucksCode.replace(/\{\%\sfrom\s[^\n]+\n\n/, '')
 
-    const highlightedCode = hljs.highlight(data, { language: 'js' }).value
-
-    return highlightedCode;
+    return nunjucksCode;
   })
 
   // Passthrough
