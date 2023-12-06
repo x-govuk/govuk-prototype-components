@@ -51,7 +51,7 @@ module.exports = function (eleventyConfig) {
     let nunjucksCode = matter(fs.readFileSync(`examples/${componentName}.njk`, 'utf-8')).content
 
     // Remove the `{% from "..." import ... %}` lines as those aren’t needed by users.
-    nunjucksCode = nunjucksCode.replace(/\{\%\sfrom\s[^\n]+\n\n/, '')
+    nunjucksCode = nunjucksCode.replace(/{%\sfrom\s[^\n]+\n\n/, '')
 
     return nunjucksCode
   })
