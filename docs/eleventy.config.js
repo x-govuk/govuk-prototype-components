@@ -61,6 +61,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     './node_modules/@x-govuk/govuk-prototype-components/x-govuk/*.js': './assets/x-govuk'
   })
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/iframe-resizer/js/*.js': './assets'
+  })
 
   return {
     dataTemplateEngine: 'njk',

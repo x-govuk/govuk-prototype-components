@@ -1,1 +1,8 @@
 {% extends "layouts/sub-navigation.njk" %}
+
+{% block scripts %}
+  <script src="/assets/iframeResizer.js"></script>
+  <script>
+    iFrameResize({ log: true }, `[data-module="app-example-frame"]`)
+  </script>
+{% endblock %}

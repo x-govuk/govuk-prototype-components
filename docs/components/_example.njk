@@ -9,7 +9,7 @@
 ```
 {% endset %}
 
-{%- set outputHtml %}<iframe class="app-example__iframe" src="/examples/{{ params.component }}"></iframe><p class="app-example__link govuk-body-s"><a href="/examples/{{ params.component }}" class="govuk-link" target="_blank">Open this example in a new tab</a></p>{%- endset %}
+{%- set outputHtml %}<iframe class="app-example__iframe" data-module="app-example-frame" src="/examples/{{ params.component }}"></iframe><p class="app-example__link govuk-body-s"><a href="/examples/{{ params.component }}" class="govuk-link" target="_blank">Open this example in a new tab</a></p>{%- endset %}
 
 {{ govukTabs({
   items: [
