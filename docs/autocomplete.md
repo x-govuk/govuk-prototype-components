@@ -14,7 +14,6 @@ This component may be useful if you want users to pick from a number of options.
   component: "autocomplete"
 }) }}
 
-
 ## Component options
 
 Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.

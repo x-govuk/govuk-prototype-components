@@ -14,7 +14,6 @@ This component may be useful if you are prototyping guidance pages that could be
   component: "related-navigation"
 }) }}
 
-
 ## Component options
 
 Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
