@@ -12,11 +12,11 @@ These components are currently experimental and more research is needed to valid
 
 | Component | Description |
 | - | - |
-| [xGovukAutocomplete](/autocomplete) | Implements the [Accessible autocomplete pattern](https://github.com/alphagov/accessible-autocomplete) to enhance a fixed list of options provided by a `<select>` element. |
-| [xGovukMasthead](/masthead) | Implements the masthead component [used on many GOV.UK product pages](https://github.com/alphagov/product-page-example). |
-| [xGovukPrimaryNavigation](/primary-navigation) | Implements the primary navigation component used on the GOV.UK Design System website. |
-| [xGovukRelatedNavigation](/related-navigation/) | Implements [related navigation component](https://components.publishing.service.gov.uk/component-guide/related_navigation) found in the `govuk_publishing_components` gem. |
-| [xGovukSubNavigation](/sub-navigation) | Implements the sub navigation component used on the GOV.UK Design System website. |
+| [xGovukAutocomplete](autocomplete) | Implements the [Accessible autocomplete pattern](https://github.com/alphagov/accessible-autocomplete) to enhance a fixed list of options provided by a `<select>` element. |
+| [xGovukMasthead](masthead) | Implements the masthead component [used on many GOV.UK product pages](https://github.com/alphagov/product-page-example). |
+| [xGovukPrimaryNavigation](primary-navigation) | Implements the primary navigation component used on the GOV.UK Design System website. |
+| [xGovukRelatedNavigation](related-navigation/) | Implements [related navigation component](https://components.publishing.service.gov.uk/component-guide/related_navigation) found in the `govuk_publishing_components` gem. |
+| [xGovukSubNavigation](sub-navigation) | Implements the sub navigation component used on the GOV.UK Design System website. |
 
 Two JavaScript-only modules are also provided:
 
