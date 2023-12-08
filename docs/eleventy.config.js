@@ -58,6 +58,9 @@ module.exports = function (eleventyConfig) {
 
   // Passthrough
   eleventyConfig.addPassthroughCopy('./assets')
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/@x-govuk/govuk-prototype-components/x-govuk/*.js': './assets/x-govuk'
+  })
 
   return {
     dataTemplateEngine: 'njk',

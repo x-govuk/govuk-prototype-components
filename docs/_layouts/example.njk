@@ -7,4 +7,11 @@
   {{ content }}
 {% endblock %}
 
+{% block scripts %}
+  <script src="/assets/x-govuk/all.js"></script>
+  <script>
+    window.GOVUKPrototypeComponents.initAll()
+  </script>
+{% endblock %}
+
 {% block footer %}{% endblock %}
