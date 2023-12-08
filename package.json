@@ -26,8 +26,6 @@
   },
   "scripts": {
     "prepublishOnly": "rollup --config",
-    "build": "eleventy --quiet",
-    "start": "eleventy --serve --quiet",
     "lint": "standard && stylelint 'x-govuk/**/*.scss'",
     "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin",
     "release": "np"
