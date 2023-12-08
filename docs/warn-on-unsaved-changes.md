@@ -1,4 +1,8 @@
-# Warn on unsaved changes
+---
+title: Warn on saved changes
+layout: sub-navigation
+order: 7
+---
 
 A javascript component to warn users if they try to leave a page without saving their changes to a form.
 

@@ -1,30 +1,16 @@
-# Sub navigation
+---
+title: Sub navigation
+layout: sub-navigation
+order: 6
+---
 
 Implements the sub navigation component used on the GOV.UK Design System website.
 
-## Example usage
+{% from "example/macro.njk" import appExample %}
 
-```njk
-{{ xGovukSubNavigation({
-  visuallyHiddenTitle: "Navigation",
-  items: [{
-    text: "About this project",
-    href: "/about"
-  }, {
-    text: "Contact us",
-    href: "/contact",
-    current: true,
-    parent: true,
-    children: [{
-      text: "By email",
-      href: "/contact/email"
-    }, {
-      text: "By telephone",
-      href: "/contact/telephone"
-    }]
-  }]
+{{ appExample({
+  component: "sub-navigation"
 }) }}
-```
 
 ## Component options
 

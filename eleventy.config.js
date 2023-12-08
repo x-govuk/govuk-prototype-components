@@ -1,5 +1,6 @@
-const process = require('node:process')
 const govukEleventyPlugin = require('@x-govuk/govuk-eleventy-plugin')
+const fs = require('fs')
+const matter = require('gray-matter')
 
 module.exports = function (eleventyConfig) {
   // Plugins
@@ -20,6 +21,9 @@ module.exports = function (eleventyConfig) {
     url: process.env.GITHUB_ACTIONS
       ? 'https://x-govuk.github.io/govuk-prototype-components/'
       : '/',
+    stylesheets: [
+      '/styles/application.css'
+    ],
     header: {
       organisationLogo: 'x-govuk',
       organisationName: 'X-GOVUK',
@@ -35,26 +39,44 @@ module.exports = function (eleventyConfig) {
     }
   })
 
-  // Ignores
-  eleventyConfig.ignores.add('**/*/*.js')
-  eleventyConfig.ignores.add('**/*/*.scss')
-  eleventyConfig.ignores.add('**/*/*.njk')
+  /**
+   * Fetch raw Nunjucks code for given `componentName` and return a string.
+   *
+   * This is needed as Nunjucks `include` tag parses included code, and
+   * currently provides no way to fetch it un-rendered.
+   *
+   * @param {string} componentName - Name of component
+   * @returns {string} - Rendered Nunjucks template
+   * @see {@link https://github.com/mozilla/nunjucks/issues/788}
+   */
+  eleventyConfig.addNunjucksGlobal('getNunjucksCode', (componentName) => {
+    const componentPath = `docs/examples/${componentName}.njk`
+    const componentFile = fs.readFileSync(componentPath, 'utf-8')
+    const { content } = matter(componentFile)
 
-  // Transforms
-  eleventyConfig.addTransform('remove-h1', (content, outputPath) => {
-    // Remove first `h1` as it repeats what’s already shown in page title
-    content = content.replace(/<h1\s*.*tabindex="-1"\s*.*>\s*.*<\/h1>/, '')
-    return content
+    // Remove `{% from "..." import ... %}` line as this is not needed by users
+    const nunjucksCode = content.replace(/{%\sfrom\s[^\n]+\n\n/, '')
+
+    return nunjucksCode
   })
 
-  // Config
+  // Passthrough
+  eleventyConfig.addPassthroughCopy('./assets')
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/@x-govuk/govuk-prototype-components/x-govuk/*.js': './assets/x-govuk'
+  })
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/iframe-resizer/js/*.js': './assets'
+  })
+
   return {
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: false,
+    markdownTemplateEngine: 'njk',
     dir: {
-      input: 'x-govuk/components',
-      layouts: '../../node_modules/@x-govuk/govuk-eleventy-plugin/layouts'
+      input: 'docs',
+      layouts: '_layouts',
+      includes: '_components'
     },
     pathPrefix: process.env.GITHUB_ACTIONS
       ? '/govuk-prototype-components'

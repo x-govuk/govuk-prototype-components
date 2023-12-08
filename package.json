@@ -41,11 +41,14 @@
     "eventslibjs": "^1.2.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "@x-govuk/govuk-eleventy-plugin": "^5.0.6",
+    "@x-govuk/govuk-eleventy-plugin": "^5.0.3",
+    "@x-govuk/govuk-prototype-components": "file:./",
+    "iframe-resizer": "^4.3.9",
     "np": "^9.0.0",
+    "rimraf": "^5.0.5",
     "rollup": "^4.4.0",
     "standard": "^17.0.0",
     "stylelint": "^15.0.0",

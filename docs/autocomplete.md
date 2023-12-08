@@ -1,52 +1,18 @@
-# Autocomplete
+---
+title: Autocomplete
+layout: sub-navigation
+order: 1
+---
 
 The autocomplete component implements the [Accessible autocomplete pattern](https://github.com/alphagov/accessible-autocomplete) to enhance a fixed list of options provided by a `<select>` element.
 
 This component may be useful if you want users to pick from a number of options. Unlike an autosuggest component, this component will only allow users to choose from a predetermined list of options.
 
-## Example usage
+{% from "example/macro.njk" import appExample %}
 
-```njk
-{{ xGovukAutocomplete({
-  id: "country",
-  name: "country",
-  allowEmpty: false,
-  label: {
-    classes: "govuk-label--l",
-    isPageHeading: true,
-    text: "Pick a country"
-  },
-  items: [
-    { text: "Austria" },
-    { text: "Belgium" },
-    { text: "Bulgaria" },
-    { text: "Croatia" },
-    { text: "Republic of Cyprus" },
-    { text: "Czech Republic" },
-    { text: "Denmark" },
-    { text: "Estonia" },
-    { text: "Finland" },
-    { text: "France" },
-    { text: "Germany" },
-    { text: "Greece" },
-    { text: "Hungary" },
-    { text: "Ireland" },
-    { text: "Italy" },
-    { text: "Latvia" },
-    { text: "Lithuania" },
-    { text: "Luxembourg" },
-    { text: "Malta" },
-    { text: "Netherlands" },
-    { text: "Poland" },
-    { text: "Portugal" },
-    { text: "Romania" },
-    { text: "Slovakia" },
-    { text: "Slovenia" },
-    { text: "Spain" },
-    { text: "Sweden" }
-  ]
+{{ appExample({
+  component: "autocomplete"
 }) }}
-```
 
 ## Component options
 

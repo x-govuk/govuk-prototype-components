@@ -1,0 +1,18 @@
+{% extends "layouts/base.njk" %}
+{% from "x-govuk/components/autocomplete/macro.njk" import xGovukAutocomplete %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+  {{ content }}
+{% endblock %}
+
+{% block scripts %}
+  <script src="/assets/iframeResizer.contentWindow.js"></script>
+  <script src="/assets/x-govuk/all.js"></script>
+  <script>
+    window.GOVUKPrototypeComponents.initAll()
+  </script>
+{% endblock %}
+
+{% block footer %}{% endblock %}

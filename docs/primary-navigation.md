@@ -1,21 +1,16 @@
-# Primary navigation
+---
+title: Primary navigation
+layout: sub-navigation
+order: 4
+---
 
 Implements the primary navigation component used on the GOV.UK Design System website.
 
-## Example usage
+{% from "example/macro.njk" import appExample %}
 
-```njk
-{{ xGovukPrimaryNavigation({
-  visuallyHiddenTitle: "Navigation",
-  items: [{
-    text: "About this project",
-    href: "/about"
-  }, {
-    text: "Contact us",
-    href: "/contact"
-  }]
+{{ appExample({
+  component: "primary-navigation"
 }) }}
-```
 
 ## Component options
 

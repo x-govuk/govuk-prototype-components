@@ -1,31 +1,18 @@
-# Related navigation
+---
+title: Related navigation
+layout: sub-navigation
+order: 5
+---
 
 The related navigation component is [a GOV.UK Publishing specific component](https://components.publishing.service.gov.uk/component-guide/related_navigation).
 
 This component may be useful if you are prototyping guidance pages that could be published on GOV.UK, or if your service needs to show related navigation.
 
-## Example usage
+{% from "example/macro.njk" import appExample %}
 
-```njk
-{{ xGovukRelatedNavigation({
-  sections: [{
-    items: [{
-      text: "Find and compare schools in England",
-      href: "/school-performance-tables"
-    }, {
-      text: "Types of school",
-      href: "/types-of-school"
-    }],
-    subsections: [{
-      title: "Explore the topic",
-      items: [{
-        text: "Schools and curriculum",
-        href: "/browse/education/school-life"
-      }]
-    }]
-  }]
+{{ appExample({
+  component: "related-navigation"
 }) }}
-```
 
 ## Component options
 
