@@ -10,12 +10,10 @@
 
 .x-govuk-primary-navigation__list {
   @include govuk-clearfix;
-  left: govuk-spacing(-3);
   list-style: none;
   margin: 0;
   padding: 0;
   position: relative;
-  right: govuk-spacing(-3);
   width: calc(100% + #{govuk-spacing(6)});
 }
 
@@ -23,10 +21,11 @@
   box-sizing: border-box;
   display: block;
   float: left;
-  line-height: 50px;
-  height: 50px;
+  line-height: 55px;
+  height: 55px;
   padding: 0 govuk-spacing(3);
   position: relative;
+  margin-right: govuk-spacing(6)
 }
 
 .x-govuk-primary-navigation__item--current {

@@ -1,6 +1,6 @@
 {
   "name": "@x-govuk/govuk-prototype-components",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Common and experimental components that are not yet part of the GOV.UK Design System",
   "keywords": [
     "govuk",
@@ -30,7 +30,8 @@
     "build": "eleventy --quiet",
     "start": "eleventy --serve --quiet",
     "lint": "standard && stylelint 'x-govuk/**/*.scss'",
-    "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin"
+    "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin",
+    "release": "np"
   },
   "publishConfig": {
     "access": "public"
@@ -43,20 +44,21 @@
     "@11ty/eleventy": "^2.0.0",
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "@x-govuk/govuk-eleventy-plugin": "^5.0.0",
-    "rollup": "^3.2.3",
+    "@x-govuk/govuk-eleventy-plugin": "^5.0.6",
+    "np": "^9.0.0",
+    "rollup": "^4.4.0",
     "standard": "^17.0.0",
-    "stylelint": "^15.10.3",
+    "stylelint": "^15.0.0",
     "stylelint-config-gds": "^1.0.0"
   },
   "optionalDependencies": {
-    "govuk-prototype-kit": "^13.13.1"
+    "govuk-prototype-kit": "^13.14.1"
   },
   "peerDependencies": {
     "govuk-frontend": "^4.0.0 || ^5.0.0"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "exports": {
     ".": {
