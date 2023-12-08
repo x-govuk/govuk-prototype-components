@@ -35,9 +35,6 @@ module.exports = function (eleventyConfig) {
       },
       copyright: {
         text: '© X-GOVUK'
-      },
-      meta: {
-        items: []
       }
     }
   })
