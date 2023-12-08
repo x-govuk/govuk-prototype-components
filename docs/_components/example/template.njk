@@ -1,0 +1,32 @@
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+
+{%- set nunjucksHtml %}
+
+```js
+{{ getNunjucksCode(params.component) }}
+```
+{% endset %}
+
+{%- set previewHtml -%}
+<iframe class="app-example__frame" data-module="app-example-frame" src="/examples/{{ params.component }}"></iframe>
+<p class="app-example__toolbar">
+  <a class="app-example__new-window" href="/examples/{{ params.component }}" target="_blank">Open this example in a new tab</a>
+</p>
+{%- endset %}
+
+{{ govukTabs({
+  classes: "app-example__tabs",
+  items: [{
+    label: "Preview",
+    id: "preview",
+    panel: {
+      html: previewHtml
+    }
+  }, {
+    label: "Nunjucks",
+    id: "nunjucks",
+    panel: {
+      html: nunjucksHtml
+    }
+  }]
+}) }}

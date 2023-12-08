@@ -3,14 +3,14 @@ title: Related navigation
 layout: sub-navigation
 order: 5
 ---
-{% from "x-govuk/components/related-navigation/macro.njk" import xGovukRelatedNavigation %}
-{% from "components/_example.njk" import example %}
 
 The related navigation component is [a GOV.UK Publishing specific component](https://components.publishing.service.gov.uk/component-guide/related_navigation).
 
 This component may be useful if you are prototyping guidance pages that could be published on GOV.UK, or if your service needs to show related navigation.
 
-{{ example({
+{% from "example/macro.njk" import appExample %}
+
+{{ appExample({
   component: "related-navigation"
 }) }}
 

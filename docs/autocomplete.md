@@ -3,14 +3,14 @@ title: Autocomplete
 layout: sub-navigation
 order: 1
 ---
-{% from "x-govuk/components/autocomplete/macro.njk" import xGovukAutocomplete %}
-{% from "components/_example.njk" import example %}
 
 The autocomplete component implements the [Accessible autocomplete pattern](https://github.com/alphagov/accessible-autocomplete) to enhance a fixed list of options provided by a `<select>` element.
 
 This component may be useful if you want users to pick from a number of options. Unlike an autosuggest component, this component will only allow users to choose from a predetermined list of options.
 
-{{ example({
+{% from "example/macro.njk" import appExample %}
+
+{{ appExample({
   component: "autocomplete"
 }) }}
 

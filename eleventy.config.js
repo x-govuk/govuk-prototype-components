@@ -3,7 +3,7 @@ const fs = require('fs')
 const matter = require('gray-matter')
 
 module.exports = function (eleventyConfig) {
-  // Register the plugin
+  // Plugins
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     brandColour: '#28a',
     fontFamily: 'system-ui, sans-serif',
@@ -42,16 +42,23 @@ module.exports = function (eleventyConfig) {
     }
   })
 
-  // This function fetches the raw nunjucks code for the given example and returns it.
-  // It’s needed as the `{% include "" %}` feature within nunjucks will render the
-  // code, and there’s currently no built-in way to fetch it un-rendered.
-  //
-  // See https://github.com/mozilla/nunjucks/issues/788
-  eleventyConfig.addNunjucksGlobal('getNunjucksCode', function (componentName) {
-    let nunjucksCode = matter(fs.readFileSync(`examples/${componentName}.njk`, 'utf-8')).content
+  /**
+   * Fetch raw Nunjucks code for given `componentName` and return a string.
+   *
+   * This is needed as Nunjucks `include` tag parses included code, and
+   * currently provides no way to fetch it un-rendered.
+   *
+   * @param {string} componentName - Name of component
+   * @returns {string} - Rendered Nunjucks template
+   * @see {@link https://github.com/mozilla/nunjucks/issues/788}
+   */
+  eleventyConfig.addNunjucksGlobal('getNunjucksCode', (componentName) => {
+    const componentPath = `docs/examples/${componentName}.njk`
+    const componentFile = fs.readFileSync(componentPath, 'utf-8')
+    const { content } = matter(componentFile)
 
-    // Remove the `{% from "..." import ... %}` lines as those aren’t needed by users.
-    nunjucksCode = nunjucksCode.replace(/{%\sfrom\s[^\n]+\n\n/, '')
+    // Remove `{% from "..." import ... %}` line as this is not needed by users
+    const nunjucksCode = content.replace(/{%\sfrom\s[^\n]+\n\n/, '')
 
     return nunjucksCode
   })
@@ -70,7 +77,9 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
     dir: {
-      layouts: '_layouts'
+      input: 'docs',
+      layouts: '_layouts',
+      includes: '_components'
     },
     pathPrefix: process.env.GITHUB_ACTIONS
       ? '/govuk-prototype-components'

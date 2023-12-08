@@ -3,12 +3,12 @@ title: Sub navigation
 layout: sub-navigation
 order: 6
 ---
-{% from "x-govuk/components/sub-navigation/macro.njk" import xGovukSubNavigation %}
-{% from "components/_example.njk" import example %}
 
 Implements the sub navigation component used on the GOV.UK Design System website.
 
-{{ example({
+{% from "example/macro.njk" import appExample %}
+
+{{ appExample({
   component: "sub-navigation"
 }) }}
 

@@ -3,14 +3,14 @@ title: Masthead
 layout: sub-navigation
 order: 3
 ---
-{% from "x-govuk/components/masthead/macro.njk" import xGovukMasthead %}
-{% from "components/_example.njk" import example %}
 
 The masthead component is based on the component used on [GOV.UK product pages](https://github.com/alphagov/product-page-example).
 
 This component may be useful if you are prototyping product or marketing pages.
 
-{{ example({
+{% from "example/macro.njk" import appExample %}
+
+{{ appExample({
   component: "masthead"
 }) }}
 

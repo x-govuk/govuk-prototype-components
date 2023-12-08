@@ -1,0 +1,25 @@
+.app-example__frame {
+  background: govuk-colour("white");
+  border: 0;
+  border-right: 1px solid $govuk-border-colour;
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+.app-example__new-window {
+  @include govuk-font($size: 16);
+}
+
+.app-example__tabs {
+  .govuk-tabs__panel#preview {
+    padding: 0;
+    padding-right: 1px;
+  }
+}
+
+.app-example__toolbar {
+  background: $govuk-body-background-colour;
+  border-top: 1px solid $govuk-border-colour;
+  padding: govuk-spacing(2);
+}
