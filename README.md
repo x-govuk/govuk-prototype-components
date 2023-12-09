@@ -18,7 +18,7 @@ If you are using version 13 or later of the GOV.UK Prototype Kit, the components
 
 Learn more about how to [get started](https://x-govuk.github.io/govuk-prototype-components/get-started/).
 
-> ![NOTE]
+> [!NOTE]
 > Prior to v1.0.0, this project included a collection of decorated form components. These can now be found in the [`govuk-decorated-components`](https://github.com/x-govuk/govuk-decorated-components) package.
 
 ## Contributing
@@ -39,5 +39,5 @@ npm test
 
 This command will ask you what version you want to use. It will then publish a new version on NPM, create and push a new git tag and then generate release notes ready for posting on GitHub.
 
-> ![NOTE]
+> [!NOTE]
 > Releasing a new version requires permission to publish packages to the `@x-govuk` organisation.
