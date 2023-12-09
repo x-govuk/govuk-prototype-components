@@ -7,7 +7,7 @@
     {% endif %}
     <ul class="x-govuk-sub-navigation__section">
       {% for item in items %}
-        <li class="x-govuk-sub-navigation__section-item{% if item.current %} x-govuk-sub-navigation__section-item--current{% endif %}">
+        <li class="x-govuk-sub-navigation__section-item{% if item.parent %} x-govuk-sub-navigation__section-item--current{% endif %}">
           <a class="x-govuk-sub-navigation__link" href="{{ item.href }}"{% if item.current %} aria-current="true"{% endif %}>{{ item.text }}</a>
           {% if item.parent and item.children | length > 0 %}
             <ul class="x-govuk-sub-navigation__section x-govuk-sub-navigation__section--nested">
