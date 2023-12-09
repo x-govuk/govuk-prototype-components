@@ -27,7 +27,11 @@ module.exports = function (eleventyConfig) {
     header: {
       organisationLogo: 'x-govuk',
       organisationName: 'X-GOVUK',
-      productName: 'Prototype Components'
+      productName: 'Prototype Components',
+      search: {
+        indexPath: '/search.json',
+        sitemapPath: '/sitemap'
+      }
     },
     footer: {
       contentLicence: {
