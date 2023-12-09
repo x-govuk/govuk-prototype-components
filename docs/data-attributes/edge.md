@@ -1,10 +1,11 @@
 ---
-title: Edge
 layout: sub-navigation
-order: 2
+order: 1
+title: Edge
+description: A data attribute to define the edges of your prototype for research.
+eleventyNavigation:
+  parent: Data attributes
 ---
-
-A javascript component to make it easy to define the edges of your prototype for research.
 
 Any link that points to `#` will give a customisable warning when clicked, ‘Sorry this has not been built yet’.
 

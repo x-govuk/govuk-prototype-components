@@ -1,10 +1,9 @@
 ---
-title: Sub navigation
 layout: sub-navigation
 order: 6
+title: Sub navigation
+description: Link to sibling pages in a multi-page section of your service.
 ---
-
-Implements the sub navigation component used on the GOV.UK Design System website.
 
 {% from "example/macro.njk" import appExample %}
 

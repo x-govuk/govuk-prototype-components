@@ -1,18 +1,17 @@
 ---
-title: Masthead
 layout: sub-navigation
 order: 3
+title: Masthead
+description: Introduce users to your product or service.
 ---
-
-The masthead component is based on the component used on [GOV.UK product pages](https://github.com/alphagov/product-page-example).
-
-This component may be useful if you are prototyping product or marketing pages.
 
 {% from "example/macro.njk" import appExample %}
 
 {{ appExample({
   component: "masthead"
 }) }}
+
+This component, based on the component used on [GOV.UK product pages](https://github.com/alphagov/product-page-example), can be useful if you are prototyping product or marketing pages.
 
 ## Component options
 
