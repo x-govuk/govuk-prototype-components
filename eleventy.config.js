@@ -12,7 +12,7 @@ module.exports = function (eleventyConfig) {
       shortcut: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-favicon.ico',
       touch: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-apple-touch-icon.png'
     },
-    opengraphImageUrl: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-opengraph-image.png',
+    opengraphImageUrl: 'https://x-govuk.github.io/govuk-prototype-components/assets/opengraph-image.png',
     homeKey: 'GOV.UK Prototype Components',
     parentSite: {
       url: 'https://x-govuk.github.io/#projects',
@@ -60,8 +60,20 @@ module.exports = function (eleventyConfig) {
     return nunjucksCode
   })
 
+  // Collections
+  eleventyConfig.addCollection('homepage', collection =>
+    collection.getFilteredByGlob([
+      'docs/autocomplete.md',
+      'docs/masthead.md',
+      'docs/primary-navigation.md',
+      'docs/sub-navigation.md',
+      'docs/related-navigation.md',
+      'docs/data-attributes.md'
+    ]).sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
+  )
+
   // Passthrough
-  eleventyConfig.addPassthroughCopy('./assets')
+  eleventyConfig.addPassthroughCopy('./docs/assets')
   eleventyConfig.addPassthroughCopy({
     './node_modules/@x-govuk/govuk-prototype-components/x-govuk/*.js': './assets/x-govuk'
   })

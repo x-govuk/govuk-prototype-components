@@ -1,10 +1,9 @@
 ---
-title: Primary navigation
 layout: sub-navigation
 order: 4
+title: Primary navigation
+description: Link to the primary sections of your service.
 ---
-
-Implements the primary navigation component used on the GOV.UK Design System website.
 
 {% from "example/macro.njk" import appExample %}
 

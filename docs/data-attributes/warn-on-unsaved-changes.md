@@ -1,10 +1,11 @@
 ---
-title: Warn on saved changes
 layout: sub-navigation
-order: 7
+order: 2
+title: Warn on saved changes
+description: A data attribute to warn users if they try to leave a page without saving changes to a form.
+eleventyNavigation:
+  parent: Data attributes
 ---
-
-A javascript component to warn users if they try to leave a page without saving their changes to a form.
 
 If a user makes a change then tries to close their tab, window, or click a link to navigate away, they will see a default browser message warning them about unsaved changes. This message is different on each browser and cannot be edited.
 

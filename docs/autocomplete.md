@@ -1,18 +1,19 @@
 ---
-title: Autocomplete
 layout: sub-navigation
-order: 1
+order: 2
+title: Autocomplete
+description: Help users find and select from a number of options.
 ---
-
-The autocomplete component implements the [Accessible autocomplete pattern](https://github.com/alphagov/accessible-autocomplete) to enhance a fixed list of options provided by a `<select>` element.
-
-This component may be useful if you want users to pick from a number of options. Unlike an autosuggest component, this component will only allow users to choose from a predetermined list of options.
 
 {% from "example/macro.njk" import appExample %}
 
 {{ appExample({
   component: "autocomplete"
 }) }}
+
+This component implements the [Accessible autocomplete pattern](https://github.com/alphagov/accessible-autocomplete) to enhance a fixed list of options provided by a `<select>` element.
+
+Unlike an autosuggest component, this component will only allow users to choose from a predetermined list of options.
 
 ## Component options
 
