@@ -1,0 +1,30 @@
+---
+eleventyExcludeFromCollections: true
+layout: example.njk
+title: Secondary navigation example with header
+---
+<span class="govuk-caption-l">Case #161351</span>
+<h1 class="govuk-heading-l" id="case-name">James Smith</h1>
+
+{% from "x-govuk/components/secondary-navigation/macro.njk" import xGovukSecondaryNavigation %}
+{{ xGovukSecondaryNavigation({
+  labelledBy: "case-name",
+  items: [{
+    text: "Overview",
+    href: "#"
+  }, {
+    text: "Contact details",
+    href: "#",
+    current: true
+  }, {
+    text: "Claims",
+    href: "#"
+  }, {
+    text: "Audit log",
+    href: "#"
+  }]
+}) }}
+
+<main class="govuk-main-wrapper" id="main-content" role="main">
+  <h2 class="govuk-heading-m">Contact details</h2>
+</main>

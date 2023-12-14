@@ -108,6 +108,7 @@ module.exports = function (eleventyConfig) {
         'docs/autocomplete.md',
         'docs/masthead.md',
         'docs/primary-navigation.md',
+        'docs/secondary-navigation.md',
         'docs/sub-navigation.md',
         'docs/related-navigation.md',
         'docs/data-attributes.md'

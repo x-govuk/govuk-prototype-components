@@ -1,0 +1,23 @@
+---
+eleventyExcludeFromCollections: true
+layout: example.njk
+title: Secondary navigation example
+---
+{% from "x-govuk/components/secondary-navigation/macro.njk" import xGovukSecondaryNavigation %}
+{{ xGovukSecondaryNavigation({
+  visuallyHiddenTitle: "Secondary menu",
+  items: [{
+    text: "Overview",
+    href: "#",
+    current: true
+  }, {
+    text: "Staff list",
+    href: "#"
+  }, {
+    text: "Projects",
+    href: "#"
+  }, {
+    text: "Settings",
+    href: "#"
+  }]
+}) }}
