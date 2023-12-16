@@ -9,10 +9,13 @@ module.exports = function (eleventyConfig) {
     fontFamily: 'system-ui, sans-serif',
     icons: {
       mask: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-mask-icon.svg?raw=true',
-      shortcut: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-favicon.ico',
-      touch: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-apple-touch-icon.png'
+      shortcut:
+        'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-favicon.ico',
+      touch:
+        'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-apple-touch-icon.png'
     },
-    opengraphImageUrl: 'https://x-govuk.github.io/govuk-prototype-components/assets/opengraph-image.png',
+    opengraphImageUrl:
+      'https://x-govuk.github.io/govuk-prototype-components/assets/opengraph-image.png',
     homeKey: 'GOV.UK Prototype Components',
     parentSite: {
       url: 'https://x-govuk.github.io/#projects',
@@ -21,9 +24,7 @@ module.exports = function (eleventyConfig) {
     url: process.env.GITHUB_ACTIONS
       ? 'https://x-govuk.github.io/govuk-prototype-components/'
       : '/',
-    stylesheets: [
-      '/styles/application.css'
-    ],
+    stylesheets: ['/styles/application.css'],
     header: {
       organisationLogo: 'x-govuk',
       organisationName: 'X-GOVUK',
@@ -65,21 +66,24 @@ module.exports = function (eleventyConfig) {
   })
 
   // Collections
-  eleventyConfig.addCollection('homepage', collection =>
-    collection.getFilteredByGlob([
-      'docs/autocomplete.md',
-      'docs/masthead.md',
-      'docs/primary-navigation.md',
-      'docs/sub-navigation.md',
-      'docs/related-navigation.md',
-      'docs/data-attributes.md'
-    ]).sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
+  eleventyConfig.addCollection('homepage', (collection) =>
+    collection
+      .getFilteredByGlob([
+        'docs/autocomplete.md',
+        'docs/masthead.md',
+        'docs/primary-navigation.md',
+        'docs/sub-navigation.md',
+        'docs/related-navigation.md',
+        'docs/data-attributes.md'
+      ])
+      .sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
   )
 
   // Passthrough
   eleventyConfig.addPassthroughCopy('./docs/assets')
   eleventyConfig.addPassthroughCopy({
-    './node_modules/@x-govuk/govuk-prototype-components/x-govuk/*.js': './assets/x-govuk'
+    './node_modules/@x-govuk/govuk-prototype-components/x-govuk/*.js':
+      './assets/x-govuk'
   })
   eleventyConfig.addPassthroughCopy({
     './node_modules/iframe-resizer/js/*.js': './assets'
@@ -94,8 +98,6 @@ module.exports = function (eleventyConfig) {
       layouts: '_layouts',
       includes: '_components'
     },
-    pathPrefix: process.env.GITHUB_ACTIONS
-      ? '/govuk-prototype-components'
-      : '/'
+    pathPrefix: process.env.GITHUB_ACTIONS ? '/govuk-prototype-components' : '/'
   }
 }
