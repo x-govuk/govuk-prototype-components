@@ -7,9 +7,7 @@
       "versionHistory": "https://github.com/x-govuk/govuk-prototype-components/releases"
     }
   },
-  "nunjucksPaths": [
-    "/x-govuk/components/"
-  ],
+  "nunjucksPaths": ["/x-govuk/components/"],
   "nunjucksMacros": [
     {
       "importFrom": "autocomplete/macro.njk",
@@ -32,13 +30,8 @@
       "macroName": "xGovukSubNavigation"
     }
   ],
-  "sass": [
-    "/x-govuk/all.scss"
-  ],
-  "scripts": [
-    "/x-govuk/all.js",
-    "/govuk-prototype-kit/init.js"
-  ],
+  "sass": ["/x-govuk/all.scss"],
+  "scripts": ["/x-govuk/all.js", "/govuk-prototype-kit/init.js"],
   "templates": [
     {
       "name": "Autocomplete question page",
