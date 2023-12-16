@@ -49,7 +49,6 @@ module.exports = function (eleventyConfig) {
    *
    * This is needed as Nunjucks `include` tag parses included code, and
    * currently provides no way to fetch it un-rendered.
-   *
    * @param {string} componentName - Name of component
    * @returns {string} - Rendered Nunjucks template
    * @see {@link https://github.com/mozilla/nunjucks/issues/788}

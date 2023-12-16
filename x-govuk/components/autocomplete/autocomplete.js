@@ -1,5 +1,8 @@
 import accessibleAutocomplete from 'accessible-autocomplete'
 
+/**
+ * @param {HTMLElement} $module - Module
+ */
 export default function ($module) {
   this.init = () => {
     if (!$module) {

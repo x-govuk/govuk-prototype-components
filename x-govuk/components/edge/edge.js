@@ -1,5 +1,8 @@
 import events from 'eventslibjs'
 
+/**
+ * @param {HTMLElement} $module - Module
+ */
 export default function ($module) {
   this.init = () => {
     if (!$module) {
@@ -11,6 +14,9 @@ export default function ($module) {
       events.on('click', node, alertUser)
     })
 
+    /**
+     * @param {Event} event - Event
+     */
     function alertUser(event) {
       event.preventDefault()
       const message =
