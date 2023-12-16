@@ -29,7 +29,10 @@
     "prebuild": "rimraf _site",
     "build": "eleventy --quiet",
     "start": "eleventy --serve --quiet",
-    "lint": "standard && stylelint 'x-govuk/**/*.scss'",
+    "lint:prettier": "prettier . --check",
+    "lint:js": "eslint '**/*.js'",
+    "lint:scss": "stylelint '**/*.scss'",
+    "lint": "npm run lint:prettier && npm run lint:js && npm run lint:scss",
     "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin",
     "release": "np"
   },
@@ -46,11 +49,19 @@
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@x-govuk/govuk-eleventy-plugin": "^5.0.3",
     "@x-govuk/govuk-prototype-components": "file:./",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsdoc": "^46.9.0",
+    "eslint-plugin-n": "^16.4.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.1.0",
     "iframe-resizer": "^4.3.9",
-    "np": "^9.0.0",
+    "np": "^9.2.0",
+    "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
     "rollup": "^4.4.0",
-    "standard": "^17.0.0",
     "stylelint": "^15.0.0",
     "stylelint-config-gds": "^1.0.0"
   },
@@ -61,7 +72,7 @@
     "govuk-frontend": "^4.0.0 || ^5.0.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18"
   },
   "exports": {
     ".": {
@@ -69,19 +80,5 @@
       "import": "./x-govuk/all.mjs",
       "require": "./x-govuk/all.js"
     }
-  },
-  "c8": {
-    "reporter": [
-      "text",
-      "lcovonly"
-    ]
-  },
-  "stylelint": {
-    "extends": "stylelint-config-gds/scss"
-  },
-  "standard": {
-    "ignore": [
-      "/x-govuk/all.js"
-    ]
   }
 }
