@@ -42,15 +42,15 @@ You can also import Sass rules for an individual component. For example, to impo
 
 To import the JavaScript for the GOV.UK Prototype Components, you can either:
 
-* add the GOV.UK Prototype Components JavaScript file to your HTML
-* import the JavaScript using a bundler like [Webpack](https://webpack.js.org/)
+- add the GOV.UK Prototype Components JavaScript file to your HTML
+- import the JavaScript using a bundler like [Webpack](https://webpack.js.org/)
 
 #### Add the JavaScript file to your HTML
 
 If you decide to add the JavaScript to your HTML, first either:
 
-* set up your routing so that requests for the JavaScript file are served from `node_modules/@x-govuk/govuk-prototype-components/x-govuk/all.js`
-* copy the `node_modules/@x-govuk/govuk-prototype-components/x-govuk/all.js` file into your application
+- set up your routing so that requests for the JavaScript file are served from `node_modules/@x-govuk/govuk-prototype-components/x-govuk/all.js`
+- copy the `node_modules/@x-govuk/govuk-prototype-components/x-govuk/all.js` file into your application
 
 Then import the JavaScript file before the closing `</body>` tag of your HTML page or page template, and run the `initAll` function to initialise all the components.
 
