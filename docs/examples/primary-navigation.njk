@@ -4,20 +4,19 @@ layout: example.njk
 title: Primary navigation
 ---
 {% from "x-govuk/components/primary-navigation/macro.njk" import xGovukPrimaryNavigation %}
-
 {{ xGovukPrimaryNavigation({
   visuallyHiddenTitle: "Navigation",
   items: [{
     text: "Home",
     href: "#",
     current: true
-  },{
+  }, {
     text: "Support",
     href: "#"
-  },{
+  }, {
     text: "Features",
     href: "#"
-  },{
+  }, {
     text: "Pricing",
     href: "#"
   }, {

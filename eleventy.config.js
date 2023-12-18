@@ -59,7 +59,7 @@ module.exports = function (eleventyConfig) {
     const { content } = matter(componentFile)
 
     // Remove `{% from "..." import ... %}` line as this is not needed by users
-    const nunjucksCode = content.replace(/{%\sfrom\s[^\n]+\n\n/, '')
+    const nunjucksCode = content.replaceAll(/{%\sfrom\s[^\n]+\n/g, '')
 
     return nunjucksCode
   })
