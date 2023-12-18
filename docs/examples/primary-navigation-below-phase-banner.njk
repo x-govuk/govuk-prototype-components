@@ -1,0 +1,50 @@
+---
+eleventyExcludeFromCollections: true
+layout: example-full-width.njk
+title: Primary navigation example below phase banner
+---
+<style>
+  .app-header--full-width-border {
+    border-bottom: 10px solid #2188aa;
+  }
+
+  .app-phase-banner--no-border {
+    border-bottom: none;
+  }
+</style>
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  classes: "app-header--full-width-border"
+}) }}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  classes: "app-phase-banner--no-border govuk-width-container",
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{% from "x-govuk/components/primary-navigation/macro.njk" import xGovukPrimaryNavigation %}
+{{ xGovukPrimaryNavigation({
+  visuallyHiddenTitle: "Navigation",
+  items: [{
+    text: "Home",
+    href: "#",
+    current: true
+  }, {
+    text: "Support",
+    href: "#"
+  }, {
+    text: "Features",
+    href: "#"
+  }, {
+    text: "Pricing",
+    href: "#"
+  }, {
+    text: "Contact us",
+    href: "#"
+  }]
+}) }}

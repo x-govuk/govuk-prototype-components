@@ -1,8 +1,19 @@
 ---
 eleventyExcludeFromCollections: true
 layout: example-full-width.njk
-title: Primary navigation example
+title: Primary navigation example below header
 ---
+<style>
+  .app-header--full-width-border {
+    border-bottom: 10px solid #2188aa;
+  }
+</style>
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  classes: "app-header--full-width-border"
+}) }}
+
 {% from "x-govuk/components/primary-navigation/macro.njk" import xGovukPrimaryNavigation %}
 {{ xGovukPrimaryNavigation({
   visuallyHiddenTitle: "Navigation",
