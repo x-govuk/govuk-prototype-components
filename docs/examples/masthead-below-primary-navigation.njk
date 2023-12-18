@@ -1,0 +1,51 @@
+---
+eleventyExcludeFromCollections: true
+layout: example-full-width.njk
+title: Masthead example below primary navigation
+---
+<style>
+  .app-header--full-width-border {
+    border-bottom: 10px solid #2188aa;
+  }
+</style>
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  classes: "app-header--full-width-border"
+}) }}
+
+{% from "x-govuk/components/primary-navigation/macro.njk" import xGovukPrimaryNavigation %}
+{{ xGovukPrimaryNavigation({
+  visuallyHiddenTitle: "Navigation",
+  items: [{
+    text: "Home",
+    href: "#",
+    current: true
+  }, {
+    text: "Support",
+    href: "#"
+  }, {
+    text: "Features",
+    href: "#"
+  }, {
+    text: "Pricing",
+    href: "#"
+  }, {
+    text: "Contact us",
+    href: "#"
+  }]
+}) }}
+
+{% from "x-govuk/components/masthead/macro.njk" import xGovukMasthead %}
+{{ xGovukMasthead({
+  classes: "x-govuk-masthead--large",
+  title: {
+    text: "Design your service using GOV.UK styles, components and patterns"
+  },
+  description: {
+    text: "Use this design system to make your service consistent with GOV.UK. Learn from the research and experience of other service teams and avoid repeating work that’s already been done."
+  },
+  startButton: {
+    href: "#"
+  }
+}) }}

@@ -11,7 +11,38 @@ description: Introduce users to your product or service.
   example: "masthead"
 }) }}
 
-This component, based on the component used on [GOV.UK product pages](https://github.com/alphagov/product-page-example), can be useful if you are prototyping product or marketing pages.
+## When to use this component
+
+Use the masthead component on the landing page of non-transactional, product-orientated services.
+
+Use this component to introduce users to your service and its primary benefits. Optionally provide a link to the primary call to action such as signing up or reading the instructions on how to get started.
+
+## How it works
+
+The masthead uses your service’s brand colour (set using `$govuk-brand-colour`) and can include:
+
+- a [phase banner](https://design-system.service.gov.uk/components/phase-banner/)
+- [breadcrumbs](https://design-system.service.gov.uk/components/breadcrumbs/)
+- the product name or proposition
+- a description of key benefits
+- a call to action button
+- a representative illustration
+
+It should appear directly below the header, and take up the full width of the page.
+
+To ensure there is no gap between the header and the masthead, create a modifier class to remove the bottom border from the header:
+
+{{ appExample({
+  example: "masthead-below-header"
+}) }}
+
+If your service uses [the primary navigation component](primary-navigation), this should appear directly above the masthead:
+
+{{ appExample({
+  example: "masthead-below-primary-navigation"
+}) }}
+
+You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
 
 ## Component options
 
@@ -65,3 +96,27 @@ If you’re using Nunjucks macros in production with `html` options, or ones end
 | :------ | :----- | :---------------------------------------------------------------------- |
 | **src** | string | URL of image displayed on the right of the masthead on desktop layouts. |
 | **alt** | array  | Alternative text for image.                                             |
+
+## Research on this component
+
+This component is based on the Masthead component used in the [Product Page Example](https://github.com/alphagov/product-page-example). This in turn was based on the product pages for:
+
+- [GOV.UK Design System](https://design-system.service.gov.uk)
+- [GOV.UK Forms](https://www.forms.service.gov.uk)
+- [GOV.UK GovWifi](https://www.wifi.service.gov.uk)
+- [GOV.UK Notify](https://www.notifications.service.gov.uk)
+- [GOV.UK One Login](https://www.sign-in.service.gov.uk)
+- [GOV.UK Pay](https://www.payments.service.gov.uk)
+
+Versions of this component are currently being used on these services:
+
+- [Ethnicity facts and figures](https://www.ethnicity-facts-figures.service.gov.uk)
+- [Find a Learning Aim](https://submit-learner-data.service.gov.uk/find-a-learning-aim/)
+- [Find planning and housing data in England](https://www.planning.data.gov.uk/)
+- [Gender pay gap service](https://gender-pay-gap.service.gov.uk)
+- [HMRC Developer Hub](https://developer.service.hmrc.gov.uk/api-documentation)
+- [Register trainee teachers](https://www.register-trainee-teachers.service.gov.uk)
+
+### Known issues
+
+It’s currently not possible to place this component within the `main` element when using the default Nunjucks template. If you are able to update your application’s layout, you should adjust it so that the `main` element encapsulates this component.

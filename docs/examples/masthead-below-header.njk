@@ -1,19 +1,22 @@
 ---
 eleventyExcludeFromCollections: true
 layout: example-full-width.njk
-title: Masthead example
+title: Masthead example below header
 ---
+<style>
+  .app-header--no-border {
+    border-bottom: 0;
+  }
+</style>
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  classes: "app-header--no-border"
+}) }}
+
 {% from "x-govuk/components/masthead/macro.njk" import xGovukMasthead %}
 {{ xGovukMasthead({
-  phaseBanner: {
-    text: "This is a new service"
-  },
-  breadcrumbs: {
-    items: [{
-      href: "/",
-      text: "Home"
-    }]
-  },
+  classes: "x-govuk-masthead--large",
   title: {
     text: "Design your service using GOV.UK styles, components and patterns"
   },
