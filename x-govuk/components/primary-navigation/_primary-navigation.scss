@@ -5,10 +5,6 @@
   margin-bottom: -1px;
 }
 
-.govuk-phase-banner + .x-govuk-primary-navigation {
-  margin-top: -1px;
-}
-
 .x-govuk-primary-navigation__list {
   @include govuk-clearfix;
   list-style: none;
