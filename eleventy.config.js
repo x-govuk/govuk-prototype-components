@@ -15,8 +15,6 @@ const getComponentContent = (componentName) => {
 module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(govukEleventyPlugin, {
-    brandColour: '#28a',
-    fontFamily: 'system-ui, sans-serif',
     icons: {
       mask: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-mask-icon.svg?raw=true',
       shortcut:
@@ -31,13 +29,12 @@ module.exports = function (eleventyConfig) {
       url: 'https://x-govuk.github.io/#projects',
       name: 'X-GOVUK projects'
     },
-    url: process.env.GITHUB_ACTIONS
-      ? 'https://x-govuk.github.io/govuk-prototype-components/'
-      : '/',
+    url:
+      process.env.GITHUB_ACTIONS &&
+      'https://x-govuk.github.io/govuk-prototype-components/',
     stylesheets: ['/styles/application.css'],
     header: {
-      organisationLogo: 'x-govuk',
-      organisationName: 'X-GOVUK',
+      logotype: 'x-govuk',
       productName: 'Prototype Components',
       search: {
         indexPath: '/search.json',
@@ -135,6 +132,6 @@ module.exports = function (eleventyConfig) {
       layouts: '_layouts',
       includes: '_components'
     },
-    pathPrefix: process.env.GITHUB_ACTIONS ? '/govuk-prototype-components' : '/'
+    pathPrefix: process.env.GITHUB_ACTIONS && '/govuk-prototype-components'
   }
 }
