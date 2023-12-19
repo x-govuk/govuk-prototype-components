@@ -1,34 +1,38 @@
 {%- from "govuk/components/tabs/macro.njk" import govukTabs -%}
 
-{%- set nunjucksHtml -%}
-
-```js
-{{ getNunjucksCode(params.example) }}
-```
-{%- endset -%}
-
 {%- set examplePath = "/examples/" + params.example -%}
 
-{%- set previewHtml -%}
-<iframe class="app-example__frame" data-module="app-example-frame" src="{{ examplePath | url }}"></iframe>
-<p class="app-example__toolbar">
-  <a class="app-example__new-window" href="{{ examplePath | url }}" target="_blank">Open this example in a new tab</a>
-</p>
-{%- endset -%}
-
-{{- govukTabs({
-  classes: "app-example__tabs",
-  items: [{
-    label: "Preview",
-    id: params.example + "-preview",
-    panel: {
-      html: previewHtml
-    }
-  }, {
-    label: "Nunjucks",
-    id: params.example + "-nunjucks",
-    panel: {
-      html: nunjucksHtml
-    }
-  }]
-}) -}}
+<div class="govuk-tabs app-example__tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#{{ params.example }}-preview">
+        Preview
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#{{ params.example }}-html">
+        HTML
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#{{ params.example }}-nunjucks">
+        Nunjucks
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="{{ params.example }}-preview">
+    <iframe class="app-example__frame" data-module="app-example-frame" src="{{ examplePath | url }}"></iframe>
+    <p class="app-example__toolbar">
+      <a class="app-example__new-window" href="{{ examplePath | url }}" target="_blank">Open this example in a new tab</a>
+    </p>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="{{ params.example }}-html">
+    {{ getHtmlCode(params.example) }}
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="{{ params.example }}-nunjucks">
+    {{ getNunjucksCode(params.example) }}
+  </div>
+</div>
