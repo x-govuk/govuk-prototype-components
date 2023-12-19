@@ -1,0 +1,7 @@
+$govuk-canvas-background-colour: transparent;
+
+// GOV.UK Frontend
+@import "govuk-frontend/dist/govuk/all";
+
+// GOV.UK Prototype components
+@import "@x-govuk/govuk-prototype-components/x-govuk/all";

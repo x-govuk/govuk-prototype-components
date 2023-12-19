@@ -1,14 +1,11 @@
-{% extends "layouts/base.njk" %}
+{% extends "govuk/template.njk" %}
 {% from "x-govuk/components/autocomplete/macro.njk" import xGovukAutocomplete %}
 
-{% set mainClasses = "govuk-!-padding-bottom-1" %}
-
 {% block head %}
-  {{ super() }}
-  <style>
-    .govuk-template { background-color: transparent; }
-  </style>
+  <link rel="stylesheet" href="/assets/example.css">
 {% endblock %}
+
+{% block skipLink %}{% endblock %}
 
 {% block header %}{% endblock %}
 
@@ -16,7 +13,7 @@
   {{ content }}
 {% endblock %}
 
-{% block scripts %}
+{% block bodyEnd %}
   <script src="/assets/iframeResizer.contentWindow.js"></script>
   <script src="/assets/x-govuk/all.js"></script>
   <script>
