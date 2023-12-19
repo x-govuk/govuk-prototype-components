@@ -29,15 +29,7 @@
 }
 
 .x-govuk-primary-navigation__item--current {
-  border-bottom: $govuk-border-width-narrow solid $govuk-link-colour;
-
-  &:hover {
-    border-bottom-color: $govuk-link-hover-colour;
-  }
-
-  &:active {
-    border-bottom-color: $govuk-link-active-colour;
-  }
+  border-bottom: $govuk-border-width-narrow solid $govuk-brand-colour;
 }
 
 .x-govuk-primary-navigation__item--align-right {
