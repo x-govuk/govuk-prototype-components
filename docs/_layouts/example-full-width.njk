@@ -1,8 +1,6 @@
 {% extends "layouts/base.njk" %}
 {% from "x-govuk/components/autocomplete/macro.njk" import xGovukAutocomplete %}
 
-{% set mainClasses = "govuk-!-padding-bottom-1" %}
-
 {% block head %}
   {{ super() }}
   <style>
@@ -12,7 +10,7 @@
 
 {% block header %}{% endblock %}
 
-{% block content %}
+{% block main %}
   {{ content }}
 {% endblock %}
 

@@ -3,7 +3,9 @@
   border: 0;
   border-right: 1px solid $govuk-border-colour;
   display: block;
-  max-width: 100%;
+  padding: govuk-spacing(4);
+  max-width: calc(100% - govuk-spacing(4) * 2);
+  resize: both;
   width: 100%;
 }
 
@@ -14,8 +16,12 @@
 .app-example__tabs {
   // stylelint-disable selector-max-id
   .govuk-tabs__panel#preview {
+    background: govuk-colour("light-grey");
     padding: 0;
-    padding-right: 1px;
+  }
+
+  .x-govuk-code {
+    margin: 0;
   }
 }
 
