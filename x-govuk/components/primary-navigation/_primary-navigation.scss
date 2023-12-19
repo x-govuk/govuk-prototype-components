@@ -1,7 +1,8 @@
 .x-govuk-primary-navigation {
   @include govuk-font(19, $weight: bold);
   background-color: govuk-colour("light-grey");
-  border-bottom: 1px solid $govuk-border-colour;
+  border-bottom: 1px solid transparent;
+  margin-bottom: -1px;
 }
 
 .govuk-phase-banner + .x-govuk-primary-navigation {
