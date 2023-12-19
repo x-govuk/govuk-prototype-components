@@ -3,8 +3,8 @@
   border: 0;
   border-right: 1px solid $govuk-border-colour;
   display: block;
-  padding: govuk-spacing(4);
   max-width: calc(100% - govuk-spacing(4) * 2);
+  padding: govuk-spacing(4);
   resize: both;
   width: 100%;
 }

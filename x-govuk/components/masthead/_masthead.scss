@@ -9,10 +9,10 @@ $x-govuk-masthead-colour: govuk-colour("white");
 
 .x-govuk-masthead {
   @include govuk-responsive-padding(7, "bottom");
-  padding-top: 0;
-  color: $x-govuk-masthead-colour;
   background-color: $x-govuk-masthead-background-colour;
+  color: $x-govuk-masthead-colour;
   margin-top: govuk-spacing(-2);
+  padding-top: 0;
 }
 
 .x-govuk-masthead__title {
