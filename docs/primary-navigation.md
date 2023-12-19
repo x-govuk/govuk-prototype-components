@@ -8,7 +8,7 @@ description: Link to the primary sections of your service.
 {% from "example/macro.njk" import appExample %}
 
 {{ appExample({
-  component: "primary-navigation"
+  example: "primary-navigation"
 }) }}
 
 ## Component options

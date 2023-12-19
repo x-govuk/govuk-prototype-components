@@ -8,7 +8,7 @@ description: Show related content when prototyping guidance pages.
 {% from "example/macro.njk" import appExample %}
 
 {{ appExample({
-  component: "related-navigation"
+  example: "related-navigation"
 }) }}
 
 This component, [based on one from GOV.UK Publishing components](https://components.publishing.service.gov.uk/component-guide/related_navigation), may be useful if you are prototyping guidance pages that could be published on GOV.UK, or if your service needs to show related navigation.

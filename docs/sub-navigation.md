@@ -8,7 +8,7 @@ description: Link to sibling pages in a multi-page section of your service.
 {% from "example/macro.njk" import appExample %}
 
 {{ appExample({
-  component: "sub-navigation"
+  example: "sub-navigation"
 }) }}
 
 ## Component options

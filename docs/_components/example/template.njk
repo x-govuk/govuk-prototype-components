@@ -3,11 +3,11 @@
 {%- set nunjucksHtml -%}
 
 ```js
-{{ getNunjucksCode(params.component) }}
+{{ getNunjucksCode(params.example) }}
 ```
 {%- endset -%}
 
-{%- set examplePath = "/examples/" + params.component -%}
+{%- set examplePath = "/examples/" + params.example -%}
 
 {%- set previewHtml -%}
 <iframe class="app-example__frame" data-module="app-example-frame" src="{{ examplePath | url }}"></iframe>
@@ -20,13 +20,13 @@
   classes: "app-example__tabs",
   items: [{
     label: "Preview",
-    id: "preview",
+    id: params.example + "-preview",
     panel: {
       html: previewHtml
     }
   }, {
     label: "Nunjucks",
-    id: "nunjucks",
+    id: params.example + "-nunjucks",
     panel: {
       html: nunjucksHtml
     }
