@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
     url:
       process.env.GITHUB_ACTIONS &&
       'https://x-govuk.github.io/govuk-prototype-components/',
-    stylesheets: ['/styles/application.css'],
+    stylesheets: ['/assets/application.css'],
     header: {
       logotype: 'x-govuk',
       productName: 'Prototype Components',
