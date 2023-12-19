@@ -30,9 +30,13 @@
     "build": "eleventy --quiet",
     "start": "eleventy --serve --quiet",
     "lint:prettier": "prettier . --check",
+    "lint:prettier:fix": "prettier . --write",
     "lint:js": "eslint '**/*.js'",
+    "lint:js:fix": "eslint '**/*.js' --fix",
     "lint:scss": "stylelint '**/*.scss'",
+    "lint:scss:fix": "stylelint '**/*.scss' --fix",
     "lint": "npm run lint:prettier && npm run lint:js && npm run lint:scss",
+    "lint:fix": "npm run lint:prettier:fix && npm run lint:js:fix && npm run lint:scss:fix",
     "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin",
     "release": "np"
   },
