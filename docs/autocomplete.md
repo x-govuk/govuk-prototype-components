@@ -8,7 +8,7 @@ description: Help users find and select from a number of options.
 {% from "example/macro.njk" import appExample %}
 
 {{ appExample({
-  component: "autocomplete"
+  example: "autocomplete"
 }) }}
 
 This component implements the [Accessible autocomplete pattern](https://github.com/alphagov/accessible-autocomplete) to enhance a fixed list of options provided by a `<select>` element.

@@ -8,7 +8,7 @@ description: Introduce users to your product or service.
 {% from "example/macro.njk" import appExample %}
 
 {{ appExample({
-  component: "masthead"
+  example: "masthead"
 }) }}
 
 This component, based on the component used on [GOV.UK product pages](https://github.com/alphagov/product-page-example), can be useful if you are prototyping product or marketing pages.
