@@ -1,6 +1,16 @@
+const fs = require('node:fs')
 const govukEleventyPlugin = require('@x-govuk/govuk-eleventy-plugin')
-const fs = require('fs')
+const beautify = require('js-beautify')
+const nunjucks = require('nunjucks')
 const matter = require('gray-matter')
+
+const getComponentContent = (componentName) => {
+  const componentPath = `docs/examples/${componentName}.njk`
+  const componentFile = fs.readFileSync(componentPath, 'utf-8')
+  const { content } = matter(componentFile)
+
+  return content
+}
 
 module.exports = function (eleventyConfig) {
   // Plugins
@@ -50,18 +60,45 @@ module.exports = function (eleventyConfig) {
    * This is needed as Nunjucks `include` tag parses included code, and
    * currently provides no way to fetch it un-rendered.
    * @param {string} componentName - Name of component
-   * @returns {string} - Rendered Nunjucks template
+   * @returns {string} - Nunjucks template rendered as raw template
    * @see {@link https://github.com/mozilla/nunjucks/issues/788}
    */
   eleventyConfig.addNunjucksGlobal('getNunjucksCode', (componentName) => {
-    const componentPath = `docs/examples/${componentName}.njk`
-    const componentFile = fs.readFileSync(componentPath, 'utf-8')
-    const { content } = matter(componentFile)
+    const content = getComponentContent(componentName)
 
     // Remove `{% from "..." import ... %}` line as this is not needed by users
     const nunjucksCode = content.replaceAll(/{%\sfrom\s[^\n]+\n/g, '')
 
-    return nunjucksCode
+    // Use configured Markdown filter to generate syntax highlighted HTML
+    const markdown = eleventyConfig.getFilter('markdown')
+    return markdown(`\`\`\`js\n${nunjucksCode}\n\`\`\``)
+  })
+
+  /**
+   * Fetch Nunjucks code for given `componentName` and return an HTML string.
+   * @param {string} componentName - Name of component
+   * @returns {string} - Nunjucks template rendered as HTML
+   */
+  eleventyConfig.addNunjucksGlobal('getHtmlCode', (componentName) => {
+    const content = getComponentContent(componentName)
+
+    // Create Nunjucks environment to render example as HTML
+    const nunjucksEnv = nunjucks.configure([
+      './node_modules/govuk-frontend/dist',
+      './node_modules/@x-govuk/govuk-prototype-components'
+    ])
+    const html = nunjucksEnv.renderString(content).trim()
+
+    // Beautify HTML code
+    const htmlCode = beautify.html(html, {
+      indent_size: 2,
+      max_preserve_newlines: 0,
+      wrap_attributes: 'preserve'
+    })
+
+    // Use configured Markdown filter to generate syntax highlighted HTML
+    const markdown = eleventyConfig.getFilter('markdown')
+    return markdown(`\`\`\`html\n${htmlCode}\n\`\`\``)
   })
 
   // Collections

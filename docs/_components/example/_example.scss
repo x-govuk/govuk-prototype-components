@@ -14,7 +14,6 @@
 }
 
 .app-example__tabs {
-  // stylelint-disable selector-max-id
   .govuk-tabs__panel[id$="-preview"] {
     background: govuk-colour("light-grey");
     padding: 0;
