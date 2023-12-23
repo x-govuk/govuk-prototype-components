@@ -24,8 +24,10 @@
   }
 }
 
+// stylelint-disable declaration-no-important
 .app-example__toolbar {
   background: $govuk-body-background-colour;
   border-top: 1px solid $govuk-border-colour;
+  max-width: initial !important;
   padding: govuk-spacing(2);
 }

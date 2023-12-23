@@ -13,13 +13,13 @@ startButton:
 
 <div class="govuk-grid-row">
 {% for item in collections.homepage %}
-  <section class="govuk-grid-column-one-third-from-desktop govuk-!-margin-bottom-8">
+  <section class="govuk-grid-column-one-quarter-from-desktop govuk-!-margin-bottom-8">
     <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
       <a class="govuk-link--no-visited-state" href="{{ item.url }}">{{ item.data.title | smart }}</a>
     </h2>
     <p class="govuk-body">{{ item.data.description | markdown("inline") }}</p>
   </section>
-{% if loop.index == 3 or loop.index == 6 %}
+{% if loop.index == 4 or loop.index == 8 %}
 </div>
 <div class="govuk-grid-row">
 {% endif %}
