@@ -1,2 +1,20 @@
 @import "govuk-frontend/dist/govuk/base";
 @import "../_components/example/example";
+
+@media screen and (min-width: 800px) {
+  .app-prose-scope .govuk-table:not([tabindex]) {
+    display: table;
+
+    .govuk-table__header:first-of-type {
+      width: 30%;
+    }
+
+    .govuk-table__header:nth-child(2) {
+      width: 15%;
+    }
+
+    .govuk-table__cell *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
