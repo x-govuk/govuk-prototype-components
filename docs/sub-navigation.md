@@ -19,12 +19,12 @@ Some options are required for the macro to work; these are marked as “Required
 
 If you’re using Nunjucks macros in production with `html` options, or ones ending with `html`, you must sanitise the HTML to protect against [cross-site scripting exploits](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting).
 
-| Name                    | Type   | Description                                                                                            |
-| :---------------------- | :----- | :----------------------------------------------------------------------------------------------------- |
-| **items**               | array  | **Required**. An array of navigation links within the sub navigation. See [items](#options-for-items). |
-| **classes**             | string | Classes to add to the related navigation.                                                              |
-| **attributes**          | object | HTML attributes (for example data attributes) to add to the related navigation.                        |
-| **visuallyHiddenTitle** | string | A hidden title for the sub navigation.                                                                 |
+| Name                    | Type   | Description                                                                       |
+| :---------------------- | :----- | :-------------------------------------------------------------------------------- |
+| **items**               | array  | **Required**. An array of navigation links. See [items](#options-for-items).      |
+| **classes**             | string | Classes to add to the related navigation.                                         |
+| **attributes**          | object | HTML attributes (for example data attributes) to add to the navigation container. |
+| **visuallyHiddenTitle** | string | A hidden title for the navigation.                                                |
 
 ### Options for items
 

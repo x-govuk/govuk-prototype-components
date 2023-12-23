@@ -45,11 +45,11 @@ You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you 
 
 | Name                    | Type   | Description                                                                                                                    |
 | :---------------------- | :----- | :----------------------------------------------------------------------------------------------------------------------------- |
-| **items**               | array  | **Required**. An array of navigation links within the secondary navigation. See [items](#options-for-items).                   |
+| **items**               | array  | **Required**. An array of navigation links. See [items](#options-for-items).                                                   |
 | **labelledBy**          | string | A reference to the id of an existing heading on a page which acts as the label for the navigation.                             |
 | **visuallyHiddenTitle** | text   | A visually-hidden label to describe the navigation. Defaults to ‘Secondary Menu’. Not included if `labelledBy` is set instead. |
 | **classes**             | string | Classes to add to the primary navigation container.                                                                            |
-| **attributes**          | object | HTML attributes (for example data attributes) to add to the primary navigation container.                                      |
+| **attributes**          | object | HTML attributes (for example data attributes) to add to the navigation container.                                              |
 
 #### Options for items
 
@@ -73,4 +73,4 @@ Versions of this component are currently used on these services:
 More research is needed on:
 
 - how best to display the items on narrow mobile screens
-- making the component as accessibile as possible
+- making the component as accessible as possible
