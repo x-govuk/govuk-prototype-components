@@ -69,7 +69,7 @@ If you’re using Nunjucks macros in production with `html` options, or ones end
     [
       { text: "description" },
       { text: "object" },
-      { text: "Description text shown in the masthead. See [description](#description)." | markdown }
+      { text: "Short description text shown below the title. See [description](#description)." | markdown }
     ],
     [
       { text: "startButton" },

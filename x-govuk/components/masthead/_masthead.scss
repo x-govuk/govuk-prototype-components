@@ -25,6 +25,7 @@ $x-govuk-masthead-text-colour: govuk-colour("white");
 .x-govuk-masthead__description {
   @include govuk-font($size: 24);
   @include govuk-responsive-margin(6, "bottom");
+  color: $x-govuk-masthead-text-colour;
 
   a {
     @include govuk-link-style-inverse;
