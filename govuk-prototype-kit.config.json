@@ -26,6 +26,10 @@
       "macroName": "xGovukRelatedNavigation"
     },
     {
+      "importFrom": "secondary-navigation/macro.njk",
+      "macroName": "xGovukSecondaryNavigation"
+    },
+    {
       "importFrom": "sub-navigation/macro.njk",
       "macroName": "xGovukSubNavigation"
     }
