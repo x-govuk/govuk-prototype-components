@@ -1,6 +1,6 @@
 ---
 layout: sub-navigation
-order: 3
+order: 4
 title: Masthead
 description: Introduce users to your product or service.
 ---

@@ -1,6 +1,6 @@
 ---
 layout: sub-navigation
-order: 4
+order: 5
 title: Primary navigation
 description: Link to the primary sections of your service.
 ---

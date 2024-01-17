@@ -1,6 +1,6 @@
 ---
 layout: sub-navigation
-order: 7
+order: 8
 title: Data attributes
 description: Use data attributes to help guide users during user research.
 ---

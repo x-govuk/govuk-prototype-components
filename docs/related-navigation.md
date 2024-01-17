@@ -1,6 +1,6 @@
 ---
 layout: sub-navigation
-order: 5
+order: 6
 title: Related navigation
 description: Show related content when prototyping guidance pages.
 ---

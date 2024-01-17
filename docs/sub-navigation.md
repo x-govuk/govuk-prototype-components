@@ -1,6 +1,6 @@
 ---
 layout: sub-navigation
-order: 6
+order: 7
 title: Sub navigation
 description: Link to sibling pages in a multi-page section of your service.
 ---
