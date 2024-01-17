@@ -1,6 +1,6 @@
 ---
 layout: sub-navigation
-order: 2
+order: 3
 title: Autocomplete
 description: Help users find and select from a number of options.
 ---

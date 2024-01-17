@@ -1,6 +1,6 @@
 ---
 layout: sub-navigation
-order: 5
+order: 6
 title: Secondary navigation
 description: Allow users to navigate between pages scoped to a section.
 ---
