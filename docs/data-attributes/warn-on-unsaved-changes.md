@@ -1,7 +1,7 @@
 ---
 layout: sub-navigation
 order: 2
-title: Warn on saved changes
+title: Warn on unsaved changes
 description: A data attribute to warn users if they try to leave a page without saving changes to a form.
 eleventyNavigation:
   parent: Data attributes
