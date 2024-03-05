@@ -63,7 +63,7 @@
     "eslint-plugin-promise": "^6.1.0",
     "iframe-resizer": "^4.3.9",
     "js-beautify": "^1.14.11",
-    "np": "^9.2.0",
+    "np": "^10.0.0",
     "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
     "rollup": "^4.4.0",
