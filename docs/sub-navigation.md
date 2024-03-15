@@ -38,7 +38,7 @@ If you’re using Nunjucks macros in production with `html` options, or ones end
     [
       { text: "visuallyHiddenTitle" },
       { text: "string" },
-      { text: "A hidden title for the navigation." }
+      { text: "A hidden title for the navigation. Defaults to ‘Pages in this section’." }
     ],
     [
       { text: "classes" },
