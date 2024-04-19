@@ -44,7 +44,7 @@
     "access": "public"
   },
   "dependencies": {
-    "accessible-autocomplete": "^2.0.4",
+    "accessible-autocomplete": "^3.0.0",
     "eventslibjs": "^1.2.0"
   },
   "devDependencies": {
