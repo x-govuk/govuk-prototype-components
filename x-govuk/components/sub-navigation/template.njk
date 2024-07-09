@@ -7,6 +7,7 @@
     {% endif %}
     <ul class="x-govuk-sub-navigation__section">
       {% for item in items %}
+        {% if item %}
         <li class="x-govuk-sub-navigation__section-item{% if item.parent or item.current %} x-govuk-sub-navigation__section-item--current{% endif %}">
           <a class="x-govuk-sub-navigation__link" href="{{ item.href }}"{% if item.current %} aria-current="true"{% endif %}>{{ item.text }}</a>
           {% if item.parent and item.children | length > 0 %}
@@ -19,6 +20,7 @@
             </ul>
           {% endif %}
         </li>
+        {% endif %}
       {% endfor %}
     </ul>
   {% endfor %}
