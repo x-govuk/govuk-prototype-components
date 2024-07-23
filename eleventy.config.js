@@ -25,6 +25,7 @@ module.exports = function (eleventyConfig) {
     opengraphImageUrl:
       'https://x-govuk.github.io/govuk-prototype-components/assets/opengraph-image.png',
     homeKey: 'GOV.UK Prototype Components',
+    titleSuffix: 'GOV.UK Prototype Components',
     parentSite: {
       url: 'https://x-govuk.github.io/#projects',
       name: 'X-GOVUK projects'
