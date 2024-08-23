@@ -9,11 +9,7 @@ $x-govuk-masthead-text-colour: govuk-colour("white");
   @include govuk-responsive-padding(4, "bottom");
   background-color: $x-govuk-masthead-background-colour;
   color: $x-govuk-masthead-text-colour;
-  display: flex; // Prevent margin collapse
-
-  > .govuk-width-container {
-    flex: 1;
-  }
+  padding-top: 0.1px; // Prevent margin collapse
 }
 
 .x-govuk-masthead__title {
