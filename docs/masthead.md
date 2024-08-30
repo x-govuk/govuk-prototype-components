@@ -36,10 +36,10 @@ To ensure there is no gap between the header and the masthead, create a modifier
   example: "masthead-below-header"
 }) }}
 
-If your service uses [the primary navigation component](primary-navigation), this should appear directly above the masthead:
+If your service uses [the service navigation component](https://design-system.service.gov.uk/components/service-navigation/), this should appear directly above the masthead:
 
 {{ appExample({
-  example: "masthead-below-primary-navigation"
+  example: "masthead-below-service-navigation"
 }) }}
 
 You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
