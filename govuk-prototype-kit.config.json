@@ -18,10 +18,6 @@
       "macroName": "xGovukMasthead"
     },
     {
-      "importFrom": "primary-navigation/macro.njk",
-      "macroName": "xGovukPrimaryNavigation"
-    },
-    {
       "importFrom": "related-navigation/macro.njk",
       "macroName": "xGovukRelatedNavigation"
     },
@@ -45,11 +41,6 @@
     {
       "name": "Masthead page",
       "path": "/govuk-prototype-kit/templates/masthead.html",
-      "type": "nunjucks"
-    },
-    {
-      "name": "Primary navigation page",
-      "path": "/govuk-prototype-kit/templates/primary-navigation.html",
       "type": "nunjucks"
     },
     {
