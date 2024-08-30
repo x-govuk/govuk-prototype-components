@@ -13,7 +13,7 @@ description: Allow users to navigate between pages scoped to a section.
 
 ## When to use this component
 
-Use the secondary navigation when you already have a [primary navigation](/primary-navigation) and need to let users navigate between pages that are scoped to a particular section or concept.
+Use the secondary navigation when you already have [service navigation](https://design-system.service.gov.uk/components/service-navigation/) and need to let users navigate between pages that are scoped to a particular section or concept.
 
 For example, if your service is a case management system, you might use the secondary navigation if there are multiple pages associated with a single case.
 
