@@ -108,7 +108,6 @@ export default function (eleventyConfig) {
       .getFilteredByGlob([
         'docs/autocomplete.md',
         'docs/masthead.md',
-        'docs/primary-navigation.md',
         'docs/secondary-navigation.md',
         'docs/sub-navigation.md',
         'docs/related-navigation.md',
