@@ -1,26 +1,19 @@
 ---
 eleventyExcludeFromCollections: true
 layout: example-full-width.njk
-title: Masthead example below primary navigation
+title: Masthead example below service navigation
 ---
-<style>
-  .app-header--full-width-border {
-    border-bottom: 10px solid #1f70b8;
-  }
-</style>
-
 {% from "govuk/components/header/macro.njk" import govukHeader %}
 {{ govukHeader({
-  classes: "app-header--full-width-border"
+  classes: "govuk-header--full-width-border"
 }) }}
 
-{% from "x-govuk/components/primary-navigation/macro.njk" import xGovukPrimaryNavigation %}
-{{ xGovukPrimaryNavigation({
-  visuallyHiddenTitle: "Navigation",
-  items: [{
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{{ govukServiceNavigation({
+  navigation: [{
     text: "Home",
     href: "#",
-    current: true
+    active: true
   }, {
     text: "Support",
     href: "#"
