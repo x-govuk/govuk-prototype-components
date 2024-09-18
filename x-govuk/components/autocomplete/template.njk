@@ -29,7 +29,8 @@
 {% for item in params.items %}
   {% set addItem = items.push({
     text: item.text,
-    value: item.value or item.text
+    value: item.value or item.text,
+    attributes: item.attributes
   }) %}
 {% endfor %}
 
