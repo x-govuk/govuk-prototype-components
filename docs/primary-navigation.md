@@ -9,7 +9,7 @@ description: Link to the primary sections of your service.
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
 {{ govukNotificationBanner({
-  html: "### This component will be removed in future\n\nUse the [service navigation component](https://design-system.service.gov.uk/components/service-navigation/) in the GOV.UK Design System instead." | markdown
+  html: "### This component will be removed in a future release\n\nUse the [service navigation component](https://design-system.service.gov.uk/components/service-navigation/) in the GOV.UK Design System instead." | markdown
 }) }}
 
 {{ appExample({
