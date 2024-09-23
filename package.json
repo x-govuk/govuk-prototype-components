@@ -71,9 +71,6 @@
     "stylelint-config-gds": "^2.0.0",
     "stylelint-order": "^6.0.4"
   },
-  "optionalDependencies": {
-    "govuk-prototype-kit": "^13.14.1"
-  },
   "peerDependencies": {
     "govuk-frontend": "^5.0.0"
   },
