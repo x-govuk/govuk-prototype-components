@@ -1,8 +1,8 @@
-const fs = require('node:fs')
-const govukEleventyPlugin = require('@x-govuk/govuk-eleventy-plugin')
-const beautify = require('js-beautify')
-const nunjucks = require('nunjucks')
-const matter = require('gray-matter')
+import fs from 'node:fs'
+import govukEleventyPlugin from '@x-govuk/govuk-eleventy-plugin'
+import beautify from 'js-beautify'
+import nunjucks from 'nunjucks'
+import matter from 'gray-matter'
 
 const getComponentContent = (componentName) => {
   const componentPath = `docs/examples/${componentName}.njk`
@@ -12,7 +12,7 @@ const getComponentContent = (componentName) => {
   return content
 }
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     icons: {
