@@ -49,9 +49,9 @@
   </g>
   <path fill="#FFF" fill-rule="nonzero" stroke="#0B0C0C" stroke-width="2" d="M179 280h258v148H179z"/>
   <path fill="#0B0C0C" fill-rule="nonzero" d="M179 280h258v28H179z"/>
-  <text fill="#FFF" font-family="GDSTransportWebsite, GDS Transport Website" font-size="16" font-weight="300" letter-spacing="-.1" transform="translate(179 280)">
-              <tspan x="16" y="20">Service</tspan>
-          </text>
+  <text fill="#FFF" font-family="system-ui, sans-serif" font-size="16" transform="translate(180 280)">
+    <tspan x="16" y="20">Service</tspan>
+  </text>
   <path fill="#B1B4B6" fill-rule="nonzero" d="M196 322h82v9h-82v-9Zm0 18h171v9H196v-9Zm0 18h171v9H196v-9Zm0 18h113v9H196v-9Z"/>
   <path fill="#00703C" fill-rule="nonzero" d="M196 397h96v15h-96z"/>
   <path fill="#0B0C0C" fill-rule="nonzero" d="M196 412h96v2h-96z"/>
