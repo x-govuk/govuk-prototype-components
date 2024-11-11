@@ -4,11 +4,29 @@ order: 7
 title: Sub navigation
 description: Link to sibling pages in a multi-page section of your service.
 ---
+{% from "example/macro.njk" import xGovukExample %}
 
-{% from "example/macro.njk" import appExample %}
-
-{{ appExample({
-  example: "sub-navigation"
+{{ xGovukExample({
+  idPrefix: "sub-navigation",
+  previewPath: "/examples/sub-navigation",
+  codeSamples: [
+    {
+      label: {
+        text: "HTML"
+      },
+      content: {
+        html: getHtmlCode("sub-navigation")
+      }
+    },
+    {
+      label: {
+        text: "Nunjucks"
+      },
+      content: {
+        html: getNunjucksCode("sub-navigation")
+      }
+    }
+  ]
 }) }}
 
 You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.

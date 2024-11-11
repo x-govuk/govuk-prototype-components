@@ -3,6 +3,10 @@
 {% block scripts %}
   <script src="/assets/iframeResizer.js"></script>
   <script>
-    iFrameResize({}, `[data-module="app-example-frame"]`)
+    iFrameResize({}, `[data-module="x-govuk-example-frame"]`)
+  </script>
+  <script src="/assets/x-govuk/all.js"></script>
+  <script>
+    window.GOVUKPrototypeComponents.initAll()
   </script>
 {% endblock %}
