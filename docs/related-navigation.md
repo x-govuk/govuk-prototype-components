@@ -4,11 +4,29 @@ order: 6
 title: Related navigation
 description: Show related content when prototyping guidance pages.
 ---
+{% from "example/macro.njk" import xGovukExample %}
 
-{% from "example/macro.njk" import appExample %}
-
-{{ appExample({
-  example: "related-navigation"
+{{ xGovukExample({
+  idPrefix: "related-navigation",
+  previewPath: "/examples/related-navigation",
+  codeSamples: [
+    {
+      label: {
+        text: "HTML"
+      },
+      content: {
+        html: getHtmlCode("related-navigation")
+      }
+    },
+    {
+      label: {
+        text: "Nunjucks"
+      },
+      content: {
+        html: getNunjucksCode("related-navigation")
+      }
+    }
+  ]
 }) }}
 
 This component, [based on one from GOV.UK Publishing components](https://components.publishing.service.gov.uk/component-guide/related_navigation), may be useful if you are prototyping guidance pages that could be published on GOV.UK, or if your service needs to show related navigation.

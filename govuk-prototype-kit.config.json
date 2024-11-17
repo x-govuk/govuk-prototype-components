@@ -14,6 +14,10 @@
       "macroName": "xGovukAutocomplete"
     },
     {
+      "importFrom": "example/macro.njk",
+      "macroName": "xGovukExample"
+    },
+    {
       "importFrom": "masthead/macro.njk",
       "macroName": "xGovukMasthead"
     },

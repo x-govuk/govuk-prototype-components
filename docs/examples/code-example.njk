@@ -1,0 +1,37 @@
+---
+eleventyExcludeFromCollections: true
+layout: example-full-width.njk
+title: Code example
+---
+{% from "x-govuk/components/example/macro.njk" import xGovukExample %}
+
+{% set htmlCode %}
+  &lt;p&gt;This is an  &ltstrong&gt;example &lt/strong&gt;. &lt/p&gt;
+{% endset %}
+{% set nunjucksCode %}
+  {% raw %}{{ paragraph({ html: "This is an &ltstrong&gt;example &lt/strong&gt;." }) }}{% endraw %}
+{% endset %}
+
+
+{{ xGovukExample({
+  idPrefix: "my-code",
+  previewPath: "/examples/code-example-output",
+  codeSamples: [
+    {
+      label: {
+        text: "HTML"
+      },
+      content: {
+        html: htmlCode
+      }
+    },
+    {
+      label: {
+        text: "Nunjucks"
+      },
+      content: {
+        html: nunjucksCode
+      }
+    }
+  ]
+}) }}

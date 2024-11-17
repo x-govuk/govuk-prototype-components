@@ -1,0 +1,23 @@
+<div class="x-govuk-example" data-module="x-govuk-example">
+  <p class="x-govuk-example__toolbar">
+    <a class="x-govuk-example__new-window" href="{{ params.previewPath }}" target="_blank">Open this example in a new tab</a>
+  </p>
+  <div class="x-govuk-example__frame-wrapper">
+    <iframe class="x-govuk-example__frame" data-module="x-govuk-example-frame" src="{{ params.previewPath }}"></iframe>
+  </div>
+  <div class="x-govuk-example__tabs">
+    <ul class="x-govuk-example__list">
+      {%- for codeSample in params.codeSamples -%}
+        <li class="x-govuk-example__list-item">
+          <a class="x-govuk-example__list-item-link" href="#{{ params.idPrefix }}-{{ loop.index }}" role="tab" aria-controls="{{ params.idPrefix }}-{{ loop.index }}">
+            {{ codeSample.label.text }}
+          </a>
+        </li>{%- endfor -%}
+    </ul>
+  </div>
+  {%- for codeSample in params.codeSamples -%}
+    <div class="x-govuk-example__code-container x-govuk-example__code-container--hidden" id="{{ params.idPrefix }}-{{ loop.index }}">
+      {{ codeSample.content.html | safe }}
+    </div>
+  {%- endfor -%}
+</div>

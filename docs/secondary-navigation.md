@@ -4,11 +4,29 @@ order: 6
 title: Secondary navigation
 description: Allow users to navigate between pages scoped to a section.
 ---
+{% from "example/macro.njk" import xGovukExample %}
 
-{% from "example/macro.njk" import appExample %}
-
-{{ appExample({
-  example: "secondary-navigation"
+{{ xGovukExample({
+  idPrefix: "secondary-navigation",
+  previewPath: "/examples/secondary-navigation",
+  codeSamples: [
+    {
+      label: {
+        text: "HTML"
+      },
+      content: {
+        html: getHtmlCode("secondary-navigation")
+      }
+    },
+    {
+      label: {
+        text: "Nunjucks"
+      },
+      content: {
+        html: getNunjucksCode("secondary-navigation")
+      }
+    }
+  ]
 }) }}
 
 ## When to use this component
@@ -25,8 +43,27 @@ You could also consider using the [tabs component](https://design-system.service
 
 ## How it works
 
-{{ appExample({
-  example: "secondary-navigation-with-header"
+{{ xGovukExample({
+  idPrefix: "secondary-navigation",
+  previewPath: "/examples/secondary-navigation-with-header",
+  codeSamples: [
+    {
+      label: {
+        text: "HTML"
+      },
+      content: {
+        html: getHtmlCode("secondary-navigation-with-header")
+      }
+    },
+    {
+      label: {
+        text: "Nunjucks"
+      },
+      content: {
+        html: getNunjucksCode("secondary-navigation-with-header")
+      }
+    }
+  ]
 }) }}
 
 Unlike [tabs](https://design-system.service.gov.uk/components/tabs/), secondary navigation does not use JavaScript. Each item within the navigation is a link to a separate full page.
