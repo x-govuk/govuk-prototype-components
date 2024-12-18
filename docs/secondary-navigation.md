@@ -13,13 +13,13 @@ description: Allow users to navigate between pages scoped to a section.
 
 ## When to use this component
 
-Use the secondary navigation when you already have a [primary navigation](primary-navigation) and need to let users navigate between pages that are scoped to a particular section or concept.
+Use the secondary navigation when you already have a [primary navigation](/primary-navigation) and need to let users navigate between pages that are scoped to a particular section or concept.
 
 For example, if your service is a case management system, you might use the secondary navigation if there are multiple pages associated with a single case.
 
 ## When not to use this component
 
-Do not use this component for the primary sections of your service, or if a [sub-navigation](sub-navigation) would be more appropriate.
+Do not use this component for the primary sections of your service, or if a [sub-navigation](/sub-navigation) would be more appropriate.
 
 You could also consider using the [tabs component](https://design-system.service.gov.uk/components/tabs/) if the amount of content in each sub-section is small.
 
