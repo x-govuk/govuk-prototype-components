@@ -67,3 +67,24 @@
 .x-govuk-secondary-navigation__list-item--current .x-govuk-secondary-navigation__link:visited {
   color: $govuk-text-colour;
 }
+
+// Responsive styles
+// Resizes navigation to equal width, center-aligned elements
+// Recommend 4 navigation items maximum
+@include govuk-media-query($until: tablet) {
+  .x-govuk-secondary-navigation__list {
+    display: table;
+    table-layout: fixed;
+    &::after {
+      content: none;
+    }
+  }
+  .x-govuk-secondary-navigation__list-item {
+    display: table-cell;
+    float: none;
+    padding-left: govuk-spacing(1);
+    padding-right: govuk-spacing(1);
+    text-align: center;
+    vertical-align: middle;
+  }
+}
