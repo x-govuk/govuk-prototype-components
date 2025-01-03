@@ -131,7 +131,7 @@ export default function (eleventyConfig) {
     dir: {
       input: 'docs',
       layouts: '_layouts',
-      includes: '_components'
+      includes: '../x-govuk/components/'
     },
     pathPrefix: process.env.GITHUB_ACTIONS && '/govuk-prototype-components'
   }

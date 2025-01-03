@@ -4,11 +4,29 @@ order: 4
 title: Masthead
 description: Introduce users to your product or service.
 ---
+{% from "example/macro.njk" import xGovukExample %}
 
-{% from "example/macro.njk" import appExample %}
-
-{{ appExample({
-  example: "masthead"
+{{ xGovukExample({
+  idPrefix: "masthead",
+  previewPath: "/examples/masthead",
+  codeSamples: [
+    {
+      label: {
+        text: "HTML"
+      },
+      content: {
+        html: getHtmlCode("masthead")
+      }
+    },
+    {
+      label: {
+        text: "Nunjucks"
+      },
+      content: {
+        html: getNunjucksCode("masthead")
+      }
+    }
+  ]
 }) }}
 
 ## When to use this component
@@ -32,14 +50,53 @@ It should appear directly below the header, and take up the full width of the pa
 
 To ensure there is no gap between the header and the masthead, create a modifier class to remove the bottom border from the header:
 
-{{ appExample({
-  example: "masthead-below-header"
+{{ xGovukExample({
+  idPrefix: "masthead-below-header",
+  previewPath: "/examples/masthead-below-header",
+  codeSamples: [
+    {
+      label: {
+        text: "HTML"
+      },
+      content: {
+        html: getHtmlCode("masthead-below-header")
+      }
+    },
+    {
+      label: {
+        text: "Nunjucks"
+      },
+      content: {
+        html: getNunjucksCode("masthead-below-header")
+      }
+    }
+  ]
 }) }}
+
 
 If your service uses [the primary navigation component](primary-navigation), this should appear directly above the masthead:
 
-{{ appExample({
-  example: "masthead-below-primary-navigation"
+{{ xGovukExample({
+  idPrefix: "masthead-below-primary-navigation",
+  previewPath: "/examples/masthead-below-primary-navigation",
+  codeSamples: [
+    {
+      label: {
+        text: "HTML"
+      },
+      content: {
+        html: getHtmlCode("masthead-below-primary-navigation")
+      }
+    },
+    {
+      label: {
+        text: "Nunjucks"
+      },
+      content: {
+        html: getNunjucksCode("masthead-below-primary-navigation")
+      }
+    }
+  ]
 }) }}
 
 You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.

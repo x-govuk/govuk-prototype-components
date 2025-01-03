@@ -5,15 +5,34 @@ title: Primary navigation
 description: Link to the primary sections of your service.
 ---
 
-{% from "example/macro.njk" import appExample %}
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "example/macro.njk" import xGovukExample %}
 
 {{ govukNotificationBanner({
   html: "### This component will be removed in a future release\n\nUse the [service navigation component](https://design-system.service.gov.uk/components/service-navigation/) in the GOV.UK Design System instead." | markdown
 }) }}
 
-{{ appExample({
-  example: "primary-navigation"
+{{ xGovukExample({
+  idPrefix: "primary-navigation",
+  previewPath: "/examples/primary-navigation",
+  codeSamples: [
+    {
+      label: {
+        text: "HTML"
+      },
+      content: {
+        html: getHtmlCode("primary-navigation")
+      }
+    },
+    {
+      label: {
+        text: "Nunjucks"
+      },
+      content: {
+        html: getNunjucksCode("primary-navigation")
+      }
+    }
+  ]
 }) }}
 
 ## When to use this component
@@ -26,8 +45,27 @@ You must use this component with [the header component](https://design-system.se
 
 The primary navigation component takes up the full width of the page. To ensure there is no gap between the header and this component, create a modifying class to make the bottom border on the header also take up the full width of the page:
 
-{{ appExample({
-  example: "primary-navigation-below-header"
+{{ xGovukExample({
+  idPrefix: "primary-navigation-below-header",
+  previewPath: "/examples/primary-navigation-below-header",
+  codeSamples: [
+    {
+      label: {
+        text: "HTML"
+      },
+      content: {
+        html: getHtmlCode("primary-navigation-below-header")
+      }
+    },
+    {
+      label: {
+        text: "Nunjucks"
+      },
+      content: {
+        html: getNunjucksCode("primary-navigation-below-header")
+      }
+    }
+  ]
 }) }}
 
 Only include links to top level sections within your service.
@@ -38,8 +76,27 @@ If your service uses [the phase banner component](https://design-system.service.
 
 To ensure there is no border between the phase banner and navigation, create a modifying class to remove the bottom border from the phase banner:
 
-{{ appExample({
-  example: "primary-navigation-below-phase-banner"
+{{ xGovukExample({
+  idPrefix: "primary-navigation-below-phase-banner",
+  previewPath: "/examples/primary-navigation-below-phase-banner",
+  codeSamples: [
+    {
+      label: {
+        text: "HTML"
+      },
+      content: {
+        html: getHtmlCode("primary-navigation-below-phase-banner")
+      }
+    },
+    {
+      label: {
+        text: "Nunjucks"
+      },
+      content: {
+        html: getNunjucksCode("primary-navigation-below-phase-banner")
+      }
+    }
+  ]
 }) }}
 
 You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.

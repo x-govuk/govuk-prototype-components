@@ -1,6 +1,7 @@
 import Autocomplete from './components/autocomplete/autocomplete.js'
 import Edge from './components/edge/edge.js'
 import WarnOnUnsavedChanges from './components/warn-on-unsaved-changes/warn-on-unsaved-changes.js'
+import Example from './components/example/example.js'
 
 function initAll(options) {
   // Set the options to an empty object by default if no options are passed.
@@ -20,6 +21,12 @@ function initAll(options) {
     new Edge($edge).init()
   })
 
+  const $examples = scope.querySelectorAll('[data-module="x-govuk-example"]')
+
+  $examples.forEach(function ($example) {
+    new Example($example).init()
+  })
+
   const $forms = scope.querySelectorAll(
     '[data-module="warn-on-unsaved-changes"]'
   )
@@ -28,4 +35,4 @@ function initAll(options) {
   })
 }
 
-export { initAll, Autocomplete, Edge, WarnOnUnsavedChanges }
+export { initAll, Autocomplete, Edge, WarnOnUnsavedChanges, Example }
