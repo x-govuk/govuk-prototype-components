@@ -75,10 +75,12 @@
   .x-govuk-secondary-navigation__list {
     display: table;
     table-layout: fixed;
+
     &::after {
       content: none;
     }
   }
+
   .x-govuk-secondary-navigation__list-item {
     display: table-cell;
     float: none;
