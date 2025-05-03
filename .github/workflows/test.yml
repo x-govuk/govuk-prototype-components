@@ -14,15 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        node: ['18', '20']
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version-file: '.nvmrc'
+          cache: 'npm'
       - name: Install dependencies
         # Can’t use `npm ci` due to https://github.com/npm/cli/issues/4828
         run: |
