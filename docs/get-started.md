@@ -6,7 +6,7 @@ title: Get started
 
 ## Requirements
 
-- Node.js v18 or later.
+- Node.js v20.19 or later.
 - GOV.UK Frontend v5 or later.
 
 See [supported versions](/supported-versions) for more details.

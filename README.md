@@ -4,7 +4,7 @@ Common and experimental components that are not yet part of the GOV.UK Design Sy
 
 ## Requirements
 
-Node.js v18 or later.
+Node.js v20.19 or later.
 
 ## Installation
 
