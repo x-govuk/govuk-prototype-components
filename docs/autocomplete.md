@@ -4,11 +4,29 @@ order: 3
 title: Autocomplete
 description: Help users find and select from a number of options.
 ---
+{% from "example/macro.njk" import xGovukExample %}
 
-{% from "example/macro.njk" import appExample %}
-
-{{ appExample({
-  example: "autocomplete"
+{{ xGovukExample({
+  idPrefix: "autocomplete",
+  previewPath: "/examples/autocomplete",
+  codeSamples: [
+    {
+      label: {
+        text: "HTML"
+      },
+      content: {
+        html: getHtmlCode("autocomplete")
+      }
+    },
+    {
+      label: {
+        text: "Nunjucks"
+      },
+      content: {
+        html: getNunjucksCode("autocomplete")
+      }
+    }
+  ]
 }) }}
 
 This component implements the [Accessible autocomplete pattern](https://github.com/alphagov/accessible-autocomplete) to enhance a fixed list of options provided by a `<select>` element.
