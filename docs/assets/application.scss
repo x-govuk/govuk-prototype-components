@@ -1,7 +1,7 @@
 $govuk-new-organisation-colours: true;
 
 @import "govuk-frontend/dist/govuk/base";
-@import "../_components/example/example";
+@import "../_components/example/index";
 
 @media screen and (min-width: 800px) {
   .app-prose-scope .govuk-table:not([tabindex]) {

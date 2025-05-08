@@ -72,7 +72,7 @@
   },
   "exports": {
     ".": {
-      "sass": "./x-govuk/all.scss",
+      "sass": "./x-govuk/index.scss",
       "import": "./x-govuk/all.mjs",
       "require": "./x-govuk/all.js"
     }
