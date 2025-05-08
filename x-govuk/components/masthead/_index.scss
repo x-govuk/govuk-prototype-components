@@ -1,23 +1,25 @@
-$x-govuk-masthead-background-colour: $govuk-brand-colour;
-$x-govuk-masthead-border-colour: govuk-tint($govuk-brand-colour, 25%);
-$x-govuk-masthead-text-colour: govuk-colour("white");
+@use "govuk-frontend/dist/govuk" as *;
+
+$_background-colour: $govuk-brand-colour;
+$_border-colour: govuk-tint($govuk-brand-colour, 25%);
+$_text-colour: govuk-colour("white");
 
 .x-govuk-masthead {
   @include govuk-responsive-padding(4, "bottom");
-  background-color: $x-govuk-masthead-background-colour;
-  color: $x-govuk-masthead-text-colour;
+  background-color: $_background-colour;
+  color: $_text-colour;
   padding-top: 0.1px; // Prevent margin collapse
 
   .govuk-phase-banner {
-    border-bottom-color: $x-govuk-masthead-border-colour;
+    border-bottom-color: $_border-colour;
 
     .govuk-phase-banner__content {
-      color: $x-govuk-masthead-text-colour;
+      color: $_text-colour;
     }
 
     .govuk-tag {
-      background-color: $x-govuk-masthead-text-colour;
-      color: $x-govuk-masthead-background-colour;
+      background-color: $_text-colour;
+      color: $_background-colour;
     }
   }
 }
@@ -31,7 +33,7 @@ $x-govuk-masthead-text-colour: govuk-colour("white");
 .x-govuk-masthead__description {
   @include govuk-font($size: 24);
   @include govuk-responsive-margin(6, "bottom");
-  color: $x-govuk-masthead-text-colour;
+  color: $_text-colour;
 
   a {
     @include govuk-link-style-inverse;

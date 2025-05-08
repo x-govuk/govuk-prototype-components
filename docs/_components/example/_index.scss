@@ -1,3 +1,5 @@
+@use "govuk-frontend/dist/govuk/base" as *;
+
 .app-example__frame {
   background: govuk-colour("white");
   border: 0;
