@@ -32,7 +32,7 @@ If you are using an earlier version of the GOV.UK Prototype Kit, or only want to
 To import all the Sass rules from GOV.UK Prototype Components, add the following to your Sass file:
 
 ```scss
-@import "node_modules/@x-govuk/govuk-prototype-components/x-govuk/all";
+@import "node_modules/@x-govuk/govuk-prototype-components/x-govuk/index";
 ```
 
 You can also import Sass rules for an individual component. For example, to import styles for the masthead component, add the following to your Sass file:
