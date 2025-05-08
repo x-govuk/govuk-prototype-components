@@ -30,7 +30,7 @@
       "macroName": "xGovukSubNavigation"
     }
   ],
-  "sass": ["/x-govuk/all.scss"],
+  "sass": ["/x-govuk/index.scss"],
   "scripts": ["/x-govuk/all.js", "/govuk-prototype-kit/init.js"],
   "templates": [
     {
