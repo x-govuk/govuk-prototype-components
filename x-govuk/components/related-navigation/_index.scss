@@ -1,3 +1,5 @@
+@use "govuk-frontend/dist/govuk" as *;
+
 .x-govuk-related-navigation {
   @include govuk-text-colour;
   border-top: 2px solid $govuk-brand-colour;

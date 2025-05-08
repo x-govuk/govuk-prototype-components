@@ -1,4 +1,6 @@
-$xgovuk-secondary-navigation-current-link-border-width: govuk-spacing(1);
+@use "govuk-frontend/dist/govuk" as *;
+
+$_current-link-border-width: govuk-spacing(1);
 
 .x-govuk-secondary-navigation {
   border-bottom: 1px solid $govuk-border-colour;
@@ -50,15 +52,15 @@ $xgovuk-secondary-navigation-current-link-border-width: govuk-spacing(1);
 
 .x-govuk-secondary-navigation__list-item--current {
   @include govuk-media-query($until: tablet) {
-    border-left-width: $xgovuk-secondary-navigation-current-link-border-width;
+    border-left-width: $_current-link-border-width;
     // Negative offset the left margin so we can place a current page indicator
     // to the left without misaligning the list item text.
-    margin-left: ((govuk-spacing(2) + $xgovuk-secondary-navigation-current-link-border-width) * -1);
+    margin-left: ((govuk-spacing(2) + $_current-link-border-width) * -1);
     padding-left: govuk-spacing(2);
   }
 
   @include govuk-media-query($from: tablet) {
-    border-bottom-width: $xgovuk-secondary-navigation-current-link-border-width;
-    padding-bottom: govuk-spacing(4) - $xgovuk-secondary-navigation-current-link-border-width;
+    border-bottom-width: $_current-link-border-width;
+    padding-bottom: govuk-spacing(4) - $_current-link-border-width;
   }
 }
