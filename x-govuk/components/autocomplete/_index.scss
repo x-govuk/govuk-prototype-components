@@ -1,4 +1,6 @@
-@import "node_modules/accessible-autocomplete/src/autocomplete";
+@use "govuk-frontend/dist/govuk" as *;
+
+@forward "accessible-autocomplete/src/autocomplete";
 
 // Ensure the autocomplete uses the correct typeface
 .autocomplete__wrapper {

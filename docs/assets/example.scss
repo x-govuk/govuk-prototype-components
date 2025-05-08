@@ -1,8 +1,7 @@
-$govuk-new-organisation-colours: true;
-$govuk-template-background-colour: transparent;
-
 // GOV.UK Frontend
-@import "govuk-frontend/dist/govuk/index";
+@use "govuk-frontend/dist/govuk" with (
+  $govuk-new-organisation-colours: true
+);
 
 // GOV.UK Prototype components
-@import "@x-govuk/govuk-prototype-components/x-govuk/index";
+@use "@x-govuk/govuk-prototype-components/x-govuk";
