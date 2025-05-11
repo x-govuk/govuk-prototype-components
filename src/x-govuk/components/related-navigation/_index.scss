@@ -1,4 +1,4 @@
-@use "govuk-frontend/dist/govuk" as *;
+@use "node_modules/govuk-frontend/dist/govuk" as *;
 
 @include govuk-exports("govuk-prototype-components/component/related-navigation") {
   .x-govuk-related-navigation {

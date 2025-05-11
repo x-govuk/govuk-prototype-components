@@ -1,4 +1,4 @@
-@use "govuk-frontend/dist/govuk" as *;
+@use "node_modules/govuk-frontend/dist/govuk" as *;
 
 $_background-colour: $govuk-brand-colour;
 $_border-colour: govuk-tint($govuk-brand-colour, 25%);
