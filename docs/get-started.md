@@ -1,13 +1,13 @@
 ---
 layout: sub-navigation
-order: 1
+order: 0
 title: Get started
 ---
 
 ## Requirements
 
-- Node.js v20.19 or later.
-- GOV.UK Frontend v5 or later.
+- [Node.js](https://nodejs.org/) v20.19 or later
+- [GOV.UK Frontend](https://frontend.design-system.service.gov.uk) v5 or later
 
 See [supported versions](/supported-versions) for more details.
 
