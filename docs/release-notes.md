@@ -8,6 +8,44 @@ This page documents the changes in major and minor releases, including upgrade n
 
 [[toc]]
 
+## Version 4.0
+
+May 2025
+
+### Breaking changes
+
+- Removes the primary navigation component. Use the [service navigation component](https://design-system.service.gov.uk/components/service-navigation/) in the GOV.UK Design System to help users navigate to the main sections of your service.
+- Minified JavaScript file is now provided at `/dist/govuk-prototype-components.min.js`.
+- The location of SCSS files has changed. For all components, update your import statement to:
+
+  ```diff
+  - @import "node_modules/@x-govuk/govuk-prototype-components/x-govuk/all";
+  + @import "node_modules/@x-govuk/govuk-prototype-components/src/x-govuk"
+  ```
+
+  For individual components, update your import statements to:
+
+  ```diff
+  - @import "node_modules/@x-govuk/govuk-prototype-components/x-govuk/components/masthead/masthead";";
+  + @import "node_modules/@x-govuk/govuk-prototype-components/src/x-govuk/components/masthead";"
+  ```
+
+### New features
+
+- Adds support for [Sass modules](https://sass-lang.com/documentation/modules/) and `pkg:` importing. You can now import component styles into your project like so:
+
+  ```diff
+  - @import "node_modules/@x-govuk/govuk-prototype-components/x-govuk/all";
+  + @import "pkg:@x-govuk/govuk-prototype-components"
+  ```
+
+  For individual components, use the following:
+
+  ```diff
+  - @import "node_modules/@x-govuk/govuk-prototype-components/x-govuk/components/masthead/masthead";
+  + @import "pkg:@x-govuk/govuk-prototype-components/masthead";"
+  ```
+
 ## Version 3.0
 
 December 2023
