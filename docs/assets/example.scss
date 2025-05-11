@@ -1,7 +1,7 @@
 // GOV.UK Frontend
-@use "govuk-frontend/dist/govuk" with (
+@use "pkg:govuk-frontend/dist/govuk" with (
   $govuk-new-organisation-colours: true
 );
 
 // GOV.UK Prototype components
-@use "@x-govuk/govuk-prototype-components/x-govuk";
+@use "pkg:@x-govuk/govuk-prototype-components";
