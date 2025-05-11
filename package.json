@@ -15,9 +15,8 @@
   "license": "MIT",
   "files": [
     "dist",
-    "govuk-prototype-kit.config.json",
-    "govuk-prototype-kit",
-    "x-govuk"
+    "src",
+    "govuk-prototype-kit.config.json"
   ],
   "main": "x-govuk/index.js",
   "module": "x-govuk/index.js",
@@ -76,9 +75,9 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./x-govuk/index.js",
-      "module-sync": "./x-govuk/index.js",
-      "sass": "./x-govuk/index.scss"
+      "import": "./src/x-govuk/index.js",
+      "module-sync": "./src/x-govuk/index.js",
+      "sass": "./src/x-govuk/index.scss"
     }
   }
 }

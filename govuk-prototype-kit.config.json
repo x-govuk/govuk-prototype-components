@@ -7,7 +7,7 @@
       "versionHistory": "https://github.com/x-govuk/govuk-prototype-components/releases"
     }
   },
-  "nunjucksPaths": ["/x-govuk/components/"],
+  "nunjucksPaths": ["/src/x-govuk/components/"],
   "nunjucksMacros": [
     {
       "importFrom": "autocomplete/macro.njk",
@@ -30,36 +30,36 @@
       "macroName": "xGovukSubNavigation"
     }
   ],
-  "sass": ["/x-govuk/index.scss"],
+  "sass": ["/src/x-govuk/index.scss"],
   "scripts": [
     {
       "path": "/dist/govuk-prototype-components.min.js",
       "type": "module"
     },
     {
-      "path": "govuk-prototype-kit/init.js",
+      "path": "/src/govuk-prototype-kit/init.js",
       "type": "module"
     }
   ],
   "templates": [
     {
       "name": "Autocomplete question page",
-      "path": "/govuk-prototype-kit/templates/autocomplete.html",
+      "path": "/src/govuk-prototype-kit/templates/autocomplete.html",
       "type": "nunjucks"
     },
     {
       "name": "Masthead page",
-      "path": "/govuk-prototype-kit/templates/masthead.html",
+      "path": "/src/govuk-prototype-kit/templates/masthead.html",
       "type": "nunjucks"
     },
     {
       "name": "Related navigation page",
-      "path": "/govuk-prototype-kit/templates/related-navigation.html",
+      "path": "/src/govuk-prototype-kit/templates/related-navigation.html",
       "type": "nunjucks"
     },
     {
       "name": "Sub navigation page",
-      "path": "/govuk-prototype-kit/templates/sub-navigation.html",
+      "path": "/src/govuk-prototype-kit/templates/sub-navigation.html",
       "type": "nunjucks"
     }
   ]
