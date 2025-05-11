@@ -28,4 +28,13 @@ function initAll(options) {
   })
 }
 
+if (typeof window !== 'undefined') {
+  window.GOVUKPrototypeComponents = {
+    initAll,
+    Autocomplete,
+    Edge,
+    WarnOnUnsavedChanges
+  }
+}
+
 export { initAll, Autocomplete, Edge, WarnOnUnsavedChanges }

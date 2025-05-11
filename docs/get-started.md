@@ -52,8 +52,8 @@ To import the JavaScript for the GOV.UK Prototype Components, you can either:
 
 If you decide to add the JavaScript to your HTML, first either:
 
-- set up your routing so that requests for the JavaScript file are served from `node_modules/@x-govuk/govuk-prototype-components/x-govuk/all.js`
-- copy the `node_modules/@x-govuk/govuk-prototype-components/x-govuk/all.js` file into your application
+- set up your routing so that requests for the JavaScript file are served from `node_modules/@x-govuk/govuk-prototype-components/dist/govuk-prototype-components.min.js`
+- copy the `node_modules/@x-govuk/govuk-prototype-components/dist/govuk-prototype-components.min.js` file into your application
 
 Then import the JavaScript file before the closing `</body>` tag of your HTML page or page template, and run the `initAll` function to initialise all the components.
 
@@ -85,15 +85,3 @@ import { Autocomplete } from '@x-govuk/govuk-prototype-components'
 const myAutocomplete = document.querySelector('#my-autocomplete')
 new Autocomplete(myAutocomplete).init()
 ```
-
-#### Import JavaScript using Common JS
-
-If you’re using a bundler that uses CommonJS (like [Browserify](http://browserify.org/)), use `require`:
-
-```js
-const GOVUKPrototypeComponents = require('@x-govuk/govuk-prototype-components')
-
-GOVUKPrototypeComponents.initAll()
-```
-
-It is not possible to import individual components using CommonJS.
