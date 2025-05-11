@@ -1,6 +1,6 @@
-@use "govuk-frontend/dist/govuk" as *;
+@use "node_modules/govuk-frontend/dist/govuk" as *;
 
-@forward "accessible-autocomplete/src/autocomplete";
+@forward "node_modules/accessible-autocomplete/src/autocomplete";
 
 @include govuk-exports("govuk-prototype-components/component/autocomplete") {
   // Ensure the autocomplete uses the correct typeface
