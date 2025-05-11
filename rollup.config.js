@@ -4,7 +4,7 @@ import terser from '@rollup/plugin-terser'
 
 export default [
   {
-    input: ['x-govuk/index.js'],
+    input: ['src/x-govuk/index.js'],
     output: {
       file: 'dist/govuk-prototype-components.min.js',
       format: 'es',

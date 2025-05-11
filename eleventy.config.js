@@ -93,7 +93,7 @@ export default function (eleventyConfig) {
     // Create Nunjucks environment to render example as HTML
     const nunjucksEnv = nunjucks.configure([
       './node_modules/govuk-frontend/dist',
-      './node_modules/@x-govuk/govuk-prototype-components'
+      './node_modules/@x-govuk/govuk-prototype-components/src'
     ])
     const html = nunjucksEnv.renderString(content).trim()
 
