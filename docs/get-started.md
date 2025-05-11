@@ -1,13 +1,13 @@
 ---
 layout: sub-navigation
-order: 1
+order: 0
 title: Get started
 ---
 
 ## Requirements
 
-- Node.js v18 or later.
-- GOV.UK Frontend v5 or later.
+- [Node.js](https://nodejs.org/) v22 or later
+- [GOV.UK Frontend](https://frontend.design-system.service.gov.uk) v5 or later
 
 See [supported versions](/supported-versions) for more details.
 
@@ -32,13 +32,25 @@ If you are using an earlier version of the GOV.UK Prototype Kit, or only want to
 To import all the Sass rules from GOV.UK Prototype Components, add the following to your Sass file:
 
 ```scss
-@import "node_modules/@x-govuk/govuk-prototype-components/x-govuk/all";
+@import "node_modules/@x-govuk/govuk-prototype-components/src/x-govuk";
+```
+
+or using the Sass module system and `pkg:` importing:
+
+```scss
+@forward "pkg:@x-govuk/govuk-prototype-components";
 ```
 
 You can also import Sass rules for an individual component. For example, to import styles for the masthead component, add the following to your Sass file:
 
 ```scss
-@import "node_modules/@x-govuk/govuk-prototype-components/x-govuk/components/masthead/masthead";
+@import "node_modules/@x-govuk/govuk-prototype-components/src/x-govuk/components/masthead";
+```
+
+or using the Sass module system and `pkg:` importing:
+
+```scss
+@forward "pkg:@x-govuk/govuk-prototype-components/masthead";
 ```
 
 ### JavaScript
@@ -52,8 +64,8 @@ To import the JavaScript for the GOV.UK Prototype Components, you can either:
 
 If you decide to add the JavaScript to your HTML, first either:
 
-- set up your routing so that requests for the JavaScript file are served from `node_modules/@x-govuk/govuk-prototype-components/x-govuk/all.js`
-- copy the `node_modules/@x-govuk/govuk-prototype-components/x-govuk/all.js` file into your application
+- set up your routing so that requests for the JavaScript file are served from `node_modules/@x-govuk/govuk-prototype-components/dist/govuk-prototype-components.min.js`
+- copy the `node_modules/@x-govuk/govuk-prototype-components/dist/govuk-prototype-components.min.js` file into your application
 
 Then import the JavaScript file before the closing `</body>` tag of your HTML page or page template, and run the `initAll` function to initialise all the components.
 
@@ -85,15 +97,3 @@ import { Autocomplete } from '@x-govuk/govuk-prototype-components'
 const myAutocomplete = document.querySelector('#my-autocomplete')
 new Autocomplete(myAutocomplete).init()
 ```
-
-#### Import JavaScript using Common JS
-
-If you’re using a bundler that uses CommonJS (like [Browserify](http://browserify.org/)), use `require`:
-
-```js
-const GOVUKPrototypeComponents = require('@x-govuk/govuk-prototype-components')
-
-GOVUKPrototypeComponents.initAll()
-```
-
-It is not possible to import individual components using CommonJS.

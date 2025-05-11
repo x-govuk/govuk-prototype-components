@@ -14,18 +14,15 @@
   },
   "license": "MIT",
   "files": [
-    "govuk-prototype-kit.config.json",
-    "govuk-prototype-kit",
-    "x-govuk"
+    "dist",
+    "src",
+    "govuk-prototype-kit.config.json"
   ],
-  "main": "x-govuk/all.js",
-  "module": "x-govuk/all.mjs",
   "repository": {
     "type": "git",
     "url": "https://github.com/x-govuk/govuk-prototype-components.git"
   },
   "scripts": {
-    "prepublishOnly": "rollup --config",
     "prebuild": "rimraf _site",
     "build": "eleventy --quiet",
     "start": "eleventy --serve --quiet",
@@ -38,6 +35,8 @@
     "lint": "npm run lint:prettier && npm run lint:js && npm run lint:scss",
     "lint:fix": "npm run lint:prettier:fix && npm run lint:js:fix && npm run lint:scss:fix",
     "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin",
+    "prepublishOnly": "npm run package",
+    "package": "rollup --config",
     "release": "np"
   },
   "publishConfig": {
@@ -51,8 +50,9 @@
     "@11ty/eleventy": "^3.0.0",
     "@rollup/plugin-commonjs": "^28.0.0",
     "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
     "@x-govuk/eslint-config": "^0.0.1",
-    "@x-govuk/govuk-eleventy-plugin": "^6.0.0",
+    "@x-govuk/govuk-eleventy-plugin": "github:x-govuk/govuk-eleventy-plugin#develop",
     "@x-govuk/govuk-prototype-components": "file:./",
     "iframe-resizer": "^4.3.9",
     "js-beautify": "^1.14.11",
@@ -68,13 +68,35 @@
     "govuk-frontend": "^5.0.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
+  "type": "module",
   "exports": {
     ".": {
-      "sass": "./x-govuk/all.scss",
-      "import": "./x-govuk/all.mjs",
-      "require": "./x-govuk/all.js"
+      "import": "./src/x-govuk/index.js",
+      "sass": "./src/x-govuk/index.scss"
+    },
+    "./autocomplete": {
+      "import": "./src/x-govuk/components/autocomplete/autocomplete.js",
+      "sass": "./src/x-govuk/components/autocomplete/_index.scss"
+    },
+    "./edge": {
+      "import": "./src/x-govuk/components/edge/edge.js"
+    },
+    "./masthead": {
+      "sass": "./src/x-govuk/components/masthead/_index.scss"
+    },
+    "./related-navigation": {
+      "sass": "./src/x-govuk/components/related-navigation/_index.scss"
+    },
+    "./secondary-navigation": {
+      "sass": "./src/x-govuk/components/secondary-navigation/_index.scss"
+    },
+    "./sub-navigation": {
+      "sass": "./src/x-govuk/components/sub-navigation/_index.scss"
+    },
+    "./warn-on-unsaved-changes": {
+      "import": "./src/x-govuk/components/warn-on-unsaved-change/warn-on-unsaved-change.js"
     }
   }
 }
