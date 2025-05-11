@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 
-import govukEleventyPlugin from '@x-govuk/govuk-eleventy-plugin'
+import { govukEleventyPlugin } from '@x-govuk/govuk-eleventy-plugin'
 import matter from 'gray-matter'
 import beautify from 'js-beautify'
 import nunjucks from 'nunjucks'
@@ -12,6 +12,8 @@ const getComponentContent = (componentName) => {
 
   return content
 }
+
+const serviceName = 'GOV.UK Prototype Components'
 
 export default function (eleventyConfig) {
   // Plugins
@@ -25,19 +27,23 @@ export default function (eleventyConfig) {
     },
     opengraphImageUrl:
       'https://x-govuk.github.io/govuk-prototype-components/assets/opengraph-image.png',
-    homeKey: 'GOV.UK Prototype Components',
-    titleSuffix: 'GOV.UK Prototype Components',
-    parentSite: {
-      url: 'https://x-govuk.github.io/#projects',
-      name: 'X-GOVUK projects'
-    },
+    themeColor: '#2288aa',
+    titleSuffix: serviceName,
+    homeKey: serviceName,
+    showBreadcrumbs: false,
+    headingPermalinks: true,
     url:
       process.env.GITHUB_ACTIONS &&
       'https://x-govuk.github.io/govuk-prototype-components/',
     stylesheets: ['/assets/application.css'],
     header: {
-      logotype: 'x-govuk',
-      productName: 'Prototype Components',
+      homepageUrl: 'https://x-govuk.github.io'
+    },
+    serviceNavigation: {
+      serviceName,
+      serviceUrl: process.env.GITHUB_ACTIONS
+        ? '/govuk-prototype-components/'
+        : '/',
       search: {
         indexPath: '/search.json',
         sitemapPath: '/sitemap'
@@ -50,7 +56,8 @@ export default function (eleventyConfig) {
       copyright: {
         text: '© X-GOVUK'
       }
-    }
+    },
+    rebrand: true
   })
 
   /**
@@ -126,6 +133,10 @@ export default function (eleventyConfig) {
     './node_modules/iframe-resizer/js/*.js': './assets'
   })
 
+  // Enable X-GOVUK brand
+  eleventyConfig.addNunjucksGlobal('xGovuk', true)
+
+  // Config
   return {
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',

@@ -1,4 +1,4 @@
-@use "govuk-frontend/dist/govuk/base" as *;
+@use "pkg:govuk-frontend/dist/govuk" as *;
 
 .app-example__frame {
   background: govuk-colour("white");
