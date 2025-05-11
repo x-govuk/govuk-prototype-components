@@ -1,8 +1,9 @@
 import fs from 'node:fs'
+
 import govukEleventyPlugin from '@x-govuk/govuk-eleventy-plugin'
+import matter from 'gray-matter'
 import beautify from 'js-beautify'
 import nunjucks from 'nunjucks'
-import matter from 'gray-matter'
 
 const getComponentContent = (componentName) => {
   const componentPath = `docs/examples/${componentName}.njk`
@@ -57,6 +58,7 @@ export default function (eleventyConfig) {
    *
    * This is needed as Nunjucks `include` tag parses included code, and
    * currently provides no way to fetch it un-rendered.
+   *
    * @param {string} componentName - Name of component
    * @returns {string} - Nunjucks template rendered as raw template
    * @see {@link https://github.com/mozilla/nunjucks/issues/788}
@@ -74,6 +76,7 @@ export default function (eleventyConfig) {
 
   /**
    * Fetch Nunjucks code for given `componentName` and return an HTML string.
+   *
    * @param {string} componentName - Name of component
    * @returns {string} - Nunjucks template rendered as HTML
    */
