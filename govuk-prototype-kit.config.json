@@ -31,7 +31,10 @@
     }
   ],
   "sass": ["/x-govuk/index.scss"],
-  "scripts": ["/x-govuk/all.js", "/govuk-prototype-kit/init.js"],
+  "scripts": [
+    "/dist/govuk-prototype-components.min.js",
+    "/govuk-prototype-kit/init.js"
+  ],
   "templates": [
     {
       "name": "Autocomplete question page",
