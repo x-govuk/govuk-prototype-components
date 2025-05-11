@@ -126,8 +126,8 @@ export default function (eleventyConfig) {
   // Passthrough
   eleventyConfig.addPassthroughCopy('./docs/assets')
   eleventyConfig.addPassthroughCopy({
-    './node_modules/@x-govuk/govuk-prototype-components/x-govuk/*.js':
-      './assets/x-govuk'
+    './node_modules/@x-govuk/govuk-prototype-components/dist/*.min.js':
+      './assets/'
   })
   eleventyConfig.addPassthroughCopy({
     './node_modules/iframe-resizer/js/*.js': './assets'

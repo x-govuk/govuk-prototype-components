@@ -14,18 +14,18 @@
   },
   "license": "MIT",
   "files": [
+    "dist",
     "govuk-prototype-kit.config.json",
     "govuk-prototype-kit",
     "x-govuk"
   ],
-  "main": "x-govuk/all.js",
-  "module": "x-govuk/all.mjs",
+  "main": "x-govuk/index.js",
+  "module": "x-govuk/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/x-govuk/govuk-prototype-components.git"
   },
   "scripts": {
-    "prepublishOnly": "rollup --config",
     "prebuild": "rimraf _site",
     "build": "eleventy --quiet",
     "start": "eleventy --serve --quiet",
@@ -38,6 +38,8 @@
     "lint": "npm run lint:prettier && npm run lint:js && npm run lint:scss",
     "lint:fix": "npm run lint:prettier:fix && npm run lint:js:fix && npm run lint:scss:fix",
     "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin",
+    "prepublishOnly": "npm run package",
+    "package": "rollup --config",
     "release": "np"
   },
   "publishConfig": {
@@ -51,6 +53,7 @@
     "@11ty/eleventy": "^3.0.0",
     "@rollup/plugin-commonjs": "^28.0.0",
     "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
     "@x-govuk/eslint-config": "^0.0.1",
     "@x-govuk/govuk-eleventy-plugin": "github:x-govuk/govuk-eleventy-plugin#develop",
     "@x-govuk/govuk-prototype-components": "file:./",
@@ -70,11 +73,12 @@
   "engines": {
     "node": "^20.19.0 || ^22.12.0 || >=24"
   },
+  "type": "module",
   "exports": {
     ".": {
-      "sass": "./x-govuk/index.scss",
-      "import": "./x-govuk/all.mjs",
-      "require": "./x-govuk/all.js"
+      "import": "./x-govuk/index.js",
+      "module-sync": "./x-govuk/index.js",
+      "sass": "./x-govuk/index.scss"
     }
   }
 }
