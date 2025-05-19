@@ -1,0 +1,35 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Secondary navigation page template – {{ serviceName }} – GOV.UK Prototype Components
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-l">
+    Heading goes here
+  </h1>
+
+  {{ xGovukSecondaryNavigation({
+    visuallyHiddenTitle: "Section navigation",
+    classes: "govuk-!-margin-bottom-6",
+    items: [{
+      text: "Page 1",
+      href: "#",
+      current: true
+    }, {
+      text: "Page 2",
+      href: "#"
+    }, {
+      text: "Page 3",
+      href: "#"
+    }]
+  }) }}
+
+  <p>Content goes here.</p>
+{% endblock %}
