@@ -22,7 +22,7 @@
   "module": "x-govuk/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/x-govuk/govuk-prototype-components.git"
+    "url": "git+https://github.com/x-govuk/govuk-prototype-components.git"
   },
   "scripts": {
     "prebuild": "rimraf _site",
