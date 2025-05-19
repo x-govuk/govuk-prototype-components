@@ -18,8 +18,8 @@
     "src",
     "govuk-prototype-kit.config.json"
   ],
-  "main": "x-govuk/index.js",
-  "module": "x-govuk/index.js",
+  "main": "src/x-govuk/index.js",
+  "module": "src/x-govuk/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/x-govuk/govuk-prototype-components.git"
