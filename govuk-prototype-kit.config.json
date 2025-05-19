@@ -58,6 +58,11 @@
       "type": "nunjucks"
     },
     {
+      "name": "Secondary navigation page",
+      "path": "/src/govuk-prototype-kit/templates/secondary-navigation.html",
+      "type": "nunjucks"
+    },
+    {
       "name": "Sub navigation page",
       "path": "/src/govuk-prototype-kit/templates/sub-navigation.html",
       "type": "nunjucks"
