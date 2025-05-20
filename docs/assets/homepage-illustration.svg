@@ -47,8 +47,8 @@
     <path fill="#0B0C0C" d="m260 90.5-3.5-3.5-12.9 12.8-5.1-5-3.5 3.6 8.6 8.6L260 90.5"/>
     <path fill="#FD0" d="M267 77v40h-40V77h40m3-3h-46v46h46V74Z"/>
   </g>
-  <path fill="#FFF" fill-rule="nonzero" stroke="#1F70B8" stroke-width="2" d="M179 280h258v148H179z"/>
-  <path fill="#1F70B8" fill-rule="nonzero" d="M179 280h258v28H179z"/>
+  <path fill="#FFF" fill-rule="nonzero" stroke="#1D70B8" stroke-width="2" d="M179 280h258v148H179z"/>
+  <path fill="#1D70B8" fill-rule="nonzero" d="M179 280h258v28H179z"/>
   <text fill="#FFF" font-family="system-ui, sans-serif" font-size="16" transform="translate(180 280)">
     <tspan x="16" y="20">Service</tspan>
   </text>
