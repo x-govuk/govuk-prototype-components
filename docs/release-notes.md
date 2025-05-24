@@ -26,8 +26,26 @@ May 2025
   For individual components, update your import statements to:
 
   ```diff
-  - @import "node_modules/@x-govuk/govuk-prototype-components/x-govuk/components/masthead/masthead";";
-  + @import "node_modules/@x-govuk/govuk-prototype-components/src/x-govuk/components/masthead";"
+  - @import "node_modules/@x-govuk/govuk-prototype-components/x-govuk/components/masthead/masthead";
+  + @import "node_modules/@x-govuk/govuk-prototype-components/src/x-govuk/components/masthead";
+  ```
+
+- The location of Nunjucks files has changed. Either update the path used in your templates:
+
+  ```diff
+  - {% raw %}{% from "node_modules/@x-govuk/govuk-prototype-components/x-govuk/components/masthead/macro.njk" import xGovukMasthead %}{% endraw %}
+  + {% raw %}{% from "node_modules/@x-govuk/govuk-prototype-components/src/x-govuk/components/masthead/macro.njk" import xGovukMasthead %}{% endraw %}
+  ```
+
+  or update the your **searchPaths** array to point to the `/src` directory:
+
+  ```diff
+    const nunjucks = new Nunjucks.Environment(
+      new Nunjucks.FileSystemLoader([
+  -     './node_modules/@x-govuk/govuk-prototype-components'
+  +     './node_modules/@x-govuk/govuk-prototype-components/src'
+      ])
+    )
   ```
 
 ### New features
