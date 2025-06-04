@@ -146,6 +146,6 @@ export default function (eleventyConfig) {
       layouts: '_layouts',
       includes: '_components'
     },
-    pathPrefix: process.env.GITHUB_ACTIONS && '/govuk-prototype-components'
+    pathPrefix: process.env.GITHUB_ACTIONS && '/govuk-prototype-components/'
   }
 }
