@@ -78,6 +78,21 @@
       "import": "./src/x-govuk/index.js",
       "module-sync": "./src/x-govuk/index.js",
       "sass": "./src/x-govuk/index.scss"
+    },
+    "autocomplete": {
+      "sass": "./src/x-govuk/autocomplete/index.scss"
+    },
+    "masthead": {
+      "sass": "./src/x-govuk/masthead/index.scss"
+    },
+    "related-navigation": {
+      "sass": "./src/x-govuk/related-navigation/index.scss"
+    },
+    "secondary-navigation": {
+      "sass": "./src/x-govuk/secondary-navigation/index.scss"
+    },
+    "sub-navigation": {
+      "sass": "./src/x-govuk/sub-navigation/index.scss"
     }
   }
 }
