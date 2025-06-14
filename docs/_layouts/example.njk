@@ -17,7 +17,9 @@
 {% block bodyEnd %}
   <script src="/assets/iframeResizer.contentWindow.js"></script>
   <script>
-    window.GOVUKPrototypeComponents.initAll()
+    document.addEventListener('DOMContentLoaded', () => {
+      window.GOVUKPrototypeComponents.initAll()
+    })
   </script>
 {% endblock %}
 
