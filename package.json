@@ -94,5 +94,8 @@
     "./sub-navigation": {
       "sass": "./src/x-govuk/components/sub-navigation/_index.scss"
     }
-  }
+  },
+  "workspaces": [
+    "."
+  ]
 }
