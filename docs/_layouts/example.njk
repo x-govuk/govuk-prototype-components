@@ -2,6 +2,7 @@
 {% from "x-govuk/components/autocomplete/macro.njk" import xGovukAutocomplete %}
 
 {% block head %}
+  <script src="/assets/govuk-prototype-components.min.js" type="module"></script>
   <link rel="stylesheet" href="/assets/example.css">
 {% endblock %}
 
@@ -15,7 +16,6 @@
 
 {% block bodyEnd %}
   <script src="/assets/iframeResizer.contentWindow.js"></script>
-  <script src="/assets/x-govuk/all.js"></script>
   <script>
     window.GOVUKPrototypeComponents.initAll()
   </script>
