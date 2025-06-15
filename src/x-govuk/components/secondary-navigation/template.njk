@@ -1,4 +1,7 @@
-<nav class="x-govuk-secondary-navigation {%- if params.classes %} {{ params.classes }}{% endif -%}" {% if params.labelledBy %}aria-labelledby="{{ params.labelledBy }}"{% else %}aria-label="{{ params.visuallyHiddenTitle or "Secondary menu" }}"{% endif %} {%- for attribute, value in params.attributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+{% from "govuk/macros/attributes.njk" import govukAttributes -%}
+
+<nav class="x-govuk-secondary-navigation {%- if params.classes %} {{ params.classes }}{% endif -%}" {% if params.labelledBy %}aria-labelledby="{{ params.labelledBy }}"{% else %}aria-label="{{ params.visuallyHiddenTitle or "Secondary menu" }}"{% endif %}
+  {{- govukAttributes(params.attributes) }}>
   <ul class="x-govuk-secondary-navigation__list">
   {% for item in params.items %}
     {% if item %}
