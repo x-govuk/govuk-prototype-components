@@ -4,7 +4,7 @@
   {% for section in params.sections %}
   {% set sectionTitle = section.title or "Related content" %}
   {% set sectionId = section.id or sectionTitle | lower | replace(" ", "-") %}
-  <nav class="x-govuk-related-navigation__nav-section" role="navigation" aria-labelledby="related-navigation-{{ sectionId }}">
+  <nav class="x-govuk-related-navigation__nav-section" aria-labelledby="related-navigation-{{ sectionId }}">
     <h{{ headingLevel }} class="x-govuk-related-navigation__main-heading" id="related-navigation-{{ sectionId }}">
       {{- sectionTitle -}}
     </h{{ headingLevel }}>
@@ -21,7 +21,7 @@
     {% endif %}
     {% for subsection in section.subsections %}
     {% set subsectionId = subsection.id or subsection.title | lower | replace(" ", "-") %}
-    <nav role="navigation" class="x-govuk-related-navigation__nav-section"{% if subsection.title %} aria-labelledby="related-navigation-{{ subsectionId }}"{% endif %}>
+    <nav class="x-govuk-related-navigation__nav-section"{% if subsection.title %} aria-labelledby="related-navigation-{{ subsectionId }}"{% endif %}>
       {% if subsection.title %}
       <h{{ headingLevel + 1 }} class="x-govuk-related-navigation__sub-heading" id="related-navigation-{{ subsectionId }}">
         {{- subsection.title -}}
