@@ -3,7 +3,9 @@
   <h2 class="govuk-visually-hidden" id="sub-navigation-heading">{{ params.visuallyHiddenTitle or "Pages in this section" }}</h2>
 {% for theme, items in params.items | groupby("theme") %}
   {% if theme != "undefined" %}
-  <h3 class="x-govuk-sub-navigation__theme">{{ theme }}</h3>
+  <h3 class="x-govuk-sub-navigation__theme">
+    {{- theme -}}
+  </h3>
   {% endif %}
   <ul class="x-govuk-sub-navigation__section">
   {% for item in items %}
@@ -14,7 +16,9 @@
       <ul class="x-govuk-sub-navigation__section x-govuk-sub-navigation__section--nested">
       {% for child in item.children %}
         <li class="x-govuk-sub-navigation__section-item">
-          <a class="x-govuk-sub-navigation__link" href="{{ child.href }}"{% if child.current %} aria-current="true"{% endif %}>{{ child.text }}</a>
+          <a class="x-govuk-sub-navigation__link" href="{{ child.href }}"{% if child.current %} aria-current="true"{% endif %}>
+            {{- child.text -}}
+          </a>
         </li>
       {% endfor %}
       </ul>

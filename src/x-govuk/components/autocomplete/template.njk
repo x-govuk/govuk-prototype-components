@@ -1,13 +1,13 @@
 {% from "govuk/components/select/macro.njk" import govukSelect %}
 
-{# Only select the first item if a value hasn’t already been given #}
-{% set selectFirstItem = true %}
-{% if params.value and params.value in params.items %}
+{#- Only select the first item if a value hasn’t already been given #}
+{%- set selectFirstItem = true %}
+{%- if params.value and params.value in params.items %}
   {% set selectFirstItem = false %}
 {% endif %}
 
-{# The first item should be either an empty option or an instruction #}
-{% if params.allowEmpty %}
+{#- The first item should be either an empty option or an instruction #}
+{%- if params.allowEmpty %}
   {% set firstItem = {
     value: "",
     text: "",
@@ -22,11 +22,11 @@
   } %}
 {% endif %}
 
-{% set items = [] %}
-{% set addFirstItem = items.push(firstItem) %}
+{%- set items = [] %}
+{%- set addFirstItem = items.push(firstItem) %}
 
-{# Use text for item value if none provided #}
-{% for item in params.items %}
+{#- Use text for item value if none provided #}
+{%- for item in params.items %}
   {% set addItem = items.push({
     text: item.text,
     value: item.value or item.text,
@@ -34,7 +34,7 @@
   }) %}
 {% endfor %}
 
-{{ govukSelect({
+{{- govukSelect({
   id: params.id,
   name: params.name,
   value: params.value,
