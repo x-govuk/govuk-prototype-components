@@ -126,11 +126,10 @@ export default function (eleventyConfig) {
   // Passthrough
   eleventyConfig.addPassthroughCopy('./docs/assets')
   eleventyConfig.addPassthroughCopy({
-    './node_modules/@x-govuk/govuk-prototype-components/dist/*.min.js':
-      './assets/'
+    './node_modules/@x-govuk/govuk-prototype-components/dist/': './assets/'
   })
   eleventyConfig.addPassthroughCopy({
-    './node_modules/iframe-resizer/js/*.js': './assets'
+    './node_modules/iframe-resizer/js/*.{map,min.js}': './assets'
   })
 
   // Enable X-GOVUK brand
