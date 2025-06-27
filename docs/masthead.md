@@ -2,7 +2,7 @@
 layout: sub-navigation
 order: 4
 title: Masthead
-description: Introduce users to your product or service.
+description: Introduce users to a major section or topic area, product or service
 ---
 
 {% from "example/macro.njk" import appExample %}
@@ -13,30 +13,74 @@ description: Introduce users to your product or service.
 
 ## When to use this component
 
-Use the masthead component on the landing page of non-transactional, product-orientated services.
+Use the masthead to
 
-Use this component to introduce users to your service and its primary benefits. Optionally provide a link to the primary call to action such as signing up or reading the instructions on how to get started.
+- introduce a major section or topic area
+- give greater emphasis to page headings
+- guide users into specific areas of functionality
+- create visual hierarchy for key landing pages within your service
+
+For example, use it on topic overview pages, category or collection pages, or to introduce a key workflow in your service.
+
+## When not to use this component
+
+Do not use the masthead:
+
+- on every page of your service – reserve it for key landing pages and section introductions
+- as a replacement for standard page headings
+- when a simple page title would be more appropriate
+- on transactional pages where users are completing tasks
 
 ## How it works
 
-The masthead uses your service’s brand colour (set using `$govuk-brand-colour`) and can include:
+The masthead uses a lighter tint of your service’s brand colour for its background. It works well for internal pages and section introductions, giving clear hierarchy without overwhelming the page content. It can include:
 
 - a [phase banner](https://design-system.service.gov.uk/components/phase-banner/)
 - [breadcrumbs](https://design-system.service.gov.uk/components/breadcrumbs/)
-- the product name or proposition
-- a description of key benefits
+- a title
+- a short description
 - a call to action button
 - a representative illustration
 
-It should appear directly below the header, and take up the full width of the page.
-
-If your service uses [the service navigation component](https://design-system.service.gov.uk/components/service-navigation/), this should appear directly above the masthead and use the `govuk-service-navigation--inverse` modifier class:
-
-{{ appExample({
-  example: "masthead-below-service-navigation"
-}) }}
+The masthead should appear directly below the header and take up the full width of the page.
 
 You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.
+
+## Masthead with a dark background
+
+If you need greater visual impact and brand presence, use the masthead with a dark background.
+
+{{ appExample({
+  example: "masthead-inverse"
+}) }}
+
+Use a masthead with a dark background to:
+
+- introduce users to your service for the first time
+- highlight your service’s core value proposition
+- create visual impact for your product homepage
+
+You can optionally provide a link to the primary call to action such as signing up or reading the instructions on how to get started.
+
+Make sure all users can see content in the masthead – the background colour must have a contrast ratio of at least 4.5:1 with white to [meet WCAG 2.2 success criterion 1.4.3 Contrast (minimum), level AA](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
+
+### Showing white links and buttons
+
+To configure the component to use a dark background with white text and links:
+
+- add a `x-govuk-masthead--inverse` modifier class to the outer `<div>` element of the component HTML
+- add the `govuk-breadcrumbs--inverse` modifier class to the breadcrumb (if you are using one inside the component)
+- add the `govuk-button--inverse` modifier class to the start button (if you are using one inside the component)
+
+Or if you’re using Nunjucks, add `inverse: true` to the Nunjucks macro.
+
+### Using alongside the service navigation component
+
+If your service uses [the service navigation component](https://design-system.service.gov.uk/components/service-navigation/), place it directly above the masthead and add the `govuk-service-navigation--inverse` modifier class. This creates a unified header area with the service navigation and masthead appearing as one section.
+
+{{ appExample({
+  example: "masthead-inverse-below-service-navigation"
+}) }}
 
 ## Nunjucks macro options
 
@@ -55,6 +99,11 @@ If you’re using Nunjucks macros in production with `html` options, or ones end
     { text: "Description" }
   ],
   rows: [
+    [
+      { text: "inverse" },
+      { text: "boolean" },
+      { text: "Use the masthead with a dark background. Defaults to `false`" | markdown }
+    ],
     [
       { text: "title" },
       { text: "object" },
