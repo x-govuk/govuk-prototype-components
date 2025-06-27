@@ -1,0 +1,57 @@
+---
+eleventyExcludeFromCollections: true
+layout: example-full-width.njk
+title: Inverse masthead example below header and service navigation
+---
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  productName: "Pay"
+}) }}
+
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{{ govukServiceNavigation({
+  classes: "govuk-service-navigation--inverse",
+  navigation: [{
+    text: "Features",
+    href: "#"
+  }, {
+    text: "Get started",
+    href: "#"
+  }, {
+    text: "Documentation",
+    href: "#"
+  }, {
+    text: "Support",
+    href: "#"
+  }, {
+    text: "Sign in",
+    href: "#"
+  }]
+}) }}
+
+{% from "x-govuk/components/masthead/macro.njk" import xGovukMasthead %}
+{{ xGovukMasthead({
+  inverse: true,
+  breadcrumbs: {
+    items: [{
+      href: "#",
+      text: "GOV.UK Services"
+    }, {
+      text: "GOV.UK Pay"
+    }]
+  },
+  title: {
+    text: "The best way to take payments for public services"
+  },
+  description: {
+    text: "GOV.UK Pay has contracts with payment providers so you can take payments quickly and easily. It’s used across central and local government, police and the NHS."
+  },
+  startButton: {
+    text: "Find out if you can use GOV.UK Pay",
+    href: "#"
+  },
+  image: {
+    src: "/assets/example-homepage-illustration.png",
+    alt: "Payment screen on mobile and dashboard with refund function."
+  }
+}) }}
