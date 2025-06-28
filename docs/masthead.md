@@ -30,7 +30,7 @@ The masthead uses your service’s brand colour (set using `$govuk-brand-colour`
 
 It should appear directly below the header, and take up the full width of the page.
 
-If your service uses [the service navigation component](https://design-system.service.gov.uk/components/service-navigation/), this should appear directly above the masthead:
+If your service uses [the service navigation component](https://design-system.service.gov.uk/components/service-navigation/), this should appear directly above the masthead and use the `govuk-service-navigation--inverse` modifier class:
 
 {{ appExample({
   example: "masthead-below-service-navigation"
