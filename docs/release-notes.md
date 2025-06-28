@@ -8,6 +8,16 @@ This page documents the changes in major and minor releases, including upgrade n
 
 [[toc]]
 
+## Version 5.0
+
+June 2025
+
+### Breaking changes
+
+- The masthead component now uses a design with a lighter background by default. To reinstate the design with a darker background, add the `x-govuk-masthead--inverse` modifier class to the outer `<div>` element of the component HTML. Or if you’re using Nunjucks, add `inverse: true` to the Nunjucks macro.
+
+- The image in the masthead is no longer hidden on the tablet breakpoint and below. To reinstate this behaviour, add the `x-govuk-masthead__image--hide-on-mobile` modifier class to the outer `<div>` element that surrounds the image. Or if you’re using Nunjucks, add `hideOnMobile: true` to the `image` option in the Nunjucks macro.
+
 ## Version 4.0
 
 May 2025
