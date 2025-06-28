@@ -40,7 +40,7 @@
       </div>
       {% if params.image %}
       <div class="govuk-grid-column-one-third-from-desktop">
-        <div class="x-govuk-masthead__image">
+        <div class="x-govuk-masthead__image{%- if params.image.hideOnMobile %} x-govuk-masthead__image--hide-on-mobile{% endif %}">
           <img src="{{ params.image.src }}" alt="{{ params.image.alt }}"{% if not params.image.alt %} role="presentation"{% endif %}>
         </div>
       </div>
