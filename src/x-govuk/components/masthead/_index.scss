@@ -65,7 +65,9 @@ $_text-colour-inverse: govuk-colour("white");
     img {
       max-width: 100%;
     }
+  }
 
+  .x-govuk-masthead__image--hide-on-mobile {
     @include govuk-media-query($until: desktop) {
       display: none;
     }

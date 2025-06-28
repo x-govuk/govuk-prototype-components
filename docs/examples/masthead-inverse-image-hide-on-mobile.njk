@@ -1,0 +1,37 @@
+---
+eleventyExcludeFromCollections: true
+layout: example-full-width.njk
+title: Inverse masthead example below header and service navigation
+---
+{% from "x-govuk/components/masthead/macro.njk" import xGovukMasthead %}
+{{ xGovukMasthead({
+  inverse: true,
+  phaseBanner: {
+    tag: {
+      text: "Beta"
+    },
+    html: "This is a new service – your <a href='#'>feedback (opens in a new tab)</a> will help us to improve it."
+  },
+  breadcrumbs: {
+    items: [{
+      href: "#",
+      text: "GOV.UK Services"
+    }, {
+      text: "GOV.UK Pay"
+    }]
+  },
+  title: {
+    text: "The best way to take payments for public services"
+  },
+  description: {
+    text: "GOV.UK Pay has contracts with payment providers so you can take payments quickly and easily. It’s used across central and local government, police and the NHS."
+  },
+  startButton: {
+    text: "Find out if you can use GOV.UK Pay",
+    href: "#"
+  },
+  image: {
+    src: "/assets/example-homepage-illustration.png",
+    hideOnMobile: true
+  }
+}) }}

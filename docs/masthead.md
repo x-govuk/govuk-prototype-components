@@ -82,6 +82,16 @@ If your service uses [the service navigation component](https://design-system.se
   example: "masthead-inverse-below-service-navigation"
 }) }}
 
+### Hiding the image on mobile devices
+
+If you have an image that is decorative and may not add value on smaller screens, you can configure the component to hide it on mobile devices.
+
+To do this, add the `x-govuk-masthead__image--hide-on-mobile` modifier class to the outer `<div>` element that surrounds the image. Or if you’re using Nunjucks, add `hideOnMobile: true` to the Nunjucks macro as shown in this example.
+
+{{ appExample({
+  example: "masthead-inverse-image-hide-on-mobile"
+}) }}
+
 ## Nunjucks macro options
 
 Use options to customise the appearance, content and behaviour of a component when using a macro, for example, changing the text.
@@ -269,6 +279,11 @@ If you’re using Nunjucks macros in production with `html` options, or ones end
       { text: "alt" },
       { text: "string" },
       { text: "Alternative text for masthead image." }
+    ],
+    [
+      { text: "hideOnMobile" },
+      { text: "boolean" },
+      { text: "When true, the image is hidden on tablet breakpoint and below." }
     ]
   ]
 }) }}
