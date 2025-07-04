@@ -58,5 +58,9 @@
     color: govuk-colour("dark-grey");
     margin: 0;
     padding: govuk-spacing(2) govuk-spacing(3) govuk-spacing(2) 0;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
   }
 }
