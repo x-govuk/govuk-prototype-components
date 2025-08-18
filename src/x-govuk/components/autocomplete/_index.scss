@@ -1,5 +1,4 @@
 @use "node_modules/govuk-frontend/dist/govuk" as *;
-
 @forward "node_modules/accessible-autocomplete/src/autocomplete";
 
 @include govuk-exports("govuk-prototype-components/component/autocomplete") {
