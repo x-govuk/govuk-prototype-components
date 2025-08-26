@@ -46,12 +46,15 @@ export default function (eleventyConfig) {
         ? '/govuk-prototype-components/'
         : '/',
       search: {
-        indexPath: '/search.json',
+        indexPath: '/search-index.json',
         sitemapPath: '/sitemap'
       }
     },
     showBreadcrumbs: false,
     stylesheets: ['/assets/application.css'],
+    templates: {
+      searchIndex: true
+    },
     themeColor: '#2288aa',
     titleSuffix: serviceName,
     url:

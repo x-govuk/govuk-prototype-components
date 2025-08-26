@@ -54,7 +54,7 @@
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@x-govuk/eslint-config": "^0.0.1",
-    "@x-govuk/govuk-eleventy-plugin": "^7.0.0",
+    "@x-govuk/govuk-eleventy-plugin": "^8.0.0",
     "@x-govuk/govuk-prototype-components": "file:./",
     "iframe-resizer": "^4.3.9",
     "js-beautify": "^1.14.11",
