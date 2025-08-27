@@ -100,193 +100,51 @@ Some options are required for the macro to work; these are marked as “Required
 
 If you’re using Nunjucks macros in production with `html` options, or ones ending with `html`, you must sanitise the HTML to protect against [cross-site scripting exploits](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting).
 
-{% from "govuk/components/table/macro.njk" import govukTable %}
-{{ govukTable({
-  firstCellIsHeader: true,
-  head: [
-    { text: "Name" },
-    { text: "Type" },
-    { text: "Description" }
-  ],
-  rows: [
-    [
-      { text: "inverse" },
-      { text: "boolean" },
-      { text: "Use the masthead with a dark background. Defaults to `false`" | markdown }
-    ],
-    [
-      { text: "title" },
-      { text: "object" },
-      { text: "Title text shown in the masthead. See [title](#title)." | markdown }
-    ],
-    [
-      { text: "description" },
-      { text: "object" },
-      { text: "Short description text shown below the title. See [description](#description)." | markdown }
-    ],
-    [
-      { text: "startButton" },
-      { text: "object" },
-      { text: "Options for start button. See [startButton](#start-button)." | markdown }
-    ],
-    [
-      { text: "image" },
-      { text: "object" },
-      { text: "Options for image displayed on the right of the masthead on desktop layouts. See [image](#image)." | markdown }
-    ],
-    [
-      { text: "phaseBanner" },
-      { text: "object" },
-      { text: "Options for the phase banner component. See [phase banner component](https://design-system.service.gov.uk/components/phase-banner/) in the GOV.UK Design System." | markdown }
-    ],
-    [
-      { text: "breadcrumbs" },
-      { text: "object" },
-      { text: "Options for the breadcrumbs component. See [breadcrumbs component](https://design-system.service.gov.uk/components/breadcrumbs/) in the GOV.UK Design System." | markdown }
-    ],
-    [
-      { text: "caller" },
-      { text: "nunjucks-block" },
-      { text: "Not strictly a parameter but [Nunjucks code convention](https://mozilla.github.io/nunjucks/templating.html#call). Using a `call` block enables you to call a macro with all the text inside the tag. This is helpful if you want to pass a lot of content into a macro. To use it, you will need to wrap the entire masthead component in a `call` block. Content called this way appears between the breadcrumbs (if present) and the title." | markdown }
-    ],
-    [
-      { text: "classes" },
-      { text: "string" },
-      { text: "Classes to add to the masthead container." }
-    ],
-    [
-      { text: "attributes" },
-      { text: "object" },
-      { text: "HTML attributes (for example data attributes) to add to the navigation container." }
-    ]
-  ]
-}) }}
+| Name        | Type           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ----------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| inverse     | boolean        | Use the masthead with a dark background (defaults is `false`)                                                                                                                                                                                                                                                                                                                                                                                 |
+| title       | object         | Title text shown in the masthead. See [options for title](#options-for-title-object).                                                                                                                                                                                                                                                                                                                                                         |
+| description | object         | Short description text shown below the title. See [options for description](#options-for-description-object).                                                                                                                                                                                                                                                                                                                                 |
+| startButton | object         | Options for start button. See [options for startButton](#options-for-start-button-object).                                                                                                                                                                                                                                                                                                                                                    |
+| image       | object         | Options for image displayed on the right of the masthead on desktop layouts. See [options for image](#options-for-image-object).                                                                                                                                                                                                                                                                                                              |
+| phaseBanner | object         | Options for the phase banner component. See [phase banner component](https://design-system.service.gov.uk/components/phase-banner/) in the GOV.UK Design System.                                                                                                                                                                                                                                                                              |
+| breadcrumbs | object         | Options for the breadcrumbs component. See [breadcrumbs component](https://design-system.service.gov.uk/components/breadcrumbs/) in the GOV.UK Design System.                                                                                                                                                                                                                                                                                 |
+| caller      | nunjucks-block | Not strictly a parameter but [Nunjucks code convention](https://mozilla.github.io/nunjucks/templating.html#call). Using a `call` block enables you to call a macro with all the text inside the tag. This is helpful if you want to pass a lot of content into a macro. To use it, you will need to wrap the entire masthead component in a `call` block. Content called this way appears between the breadcrumbs (if present) and the title. |
+| classes     | string         | Classes to add to the masthead container                                                                                                                                                                                                                                                                                                                                                                                                      |
+| attributes  | object         | HTML attributes (for example data attributes) to add to the masthead container                                                                                                                                                                                                                                                                                                                                                                |
 
-{{ govukTable({
-  attributes: { id: "title" },
-  caption: "Options for title",
-  captionClasses: "govuk-table__caption--m",
-  firstCellIsHeader: true,
-  head: [
-    { text: "Name" },
-    { text: "Type" },
-    { text: "Description" }
-  ],
-  rows: [
-    [
-      { text: "text" },
-      { text: "string" },
-      { text: "The title text that displays in the masthead. You can use any string with this option. If you set `title.html`, this option is not required and is ignored." | markdown }
-    ],
-    [
-      { text: "html" },
-      { text: "string" },
-      { text: "The title HTML that displays in the masthead. You can use any string with this option. Use this option to set text that contains HTML. If you set `title.html`, the `title.text` option is ignored." | markdown }
-    ]
-  ]
-}) }}
+### Options for `title` object
 
-{{ govukTable({
-  attributes: { id: "description" },
-  caption: "Options for description",
-  captionClasses: "govuk-table__caption--m",
-  firstCellIsHeader: true,
-  head: [
-    { text: "Name" },
-    { text: "Type" },
-    { text: "Description" }
-  ],
-  rows: [
-    [
-      { text: "text" },
-      { text: "string" },
-      { text: "The description text that displays in the masthead. You can use any string with this option. If you set `description.html`, this option is not required and is ignored." | markdown }
-    ],
-    [
-      { text: "html" },
-      { text: "string" },
-      { text: "The description HTML that displays in the masthead. You can use any string with this option. Use this option to set text that contains HTML. If you set `description.html`, the `description.text` option is ignored." | markdown }
-    ]
-  ]
-}) }}
+| Name | Type   | Description                                                                                                                                                                                                                                                                                                  |
+| ---- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| text | string | **Required**. If `html` is set, this is not required. The title text that displays in the masthead. If `html` is provided, the `text` option will be ignored.                                                                                                                                                |
+| html | string | **Required**. If `text` is set, this is not required. The title text that displays in the masthead. The header is inside the HTML an `<h1>` element, so you can only add [phrasing content](https://html.spec.whatwg.org/#phrasing-content) to it. If `html` is provided, the `text` option will be ignored. |
 
-{{ govukTable({
-  attributes: { id: "start-button" },
-  caption: "Options for startButton",
-  captionClasses: "govuk-table__caption--m",
-  firstCellIsHeader: true,
-  head: [
-    { text: "Name" },
-    { text: "Type" },
-    { text: "Description" }
-  ],
-  rows: [
-    [
-      { text: "text" },
-      { text: "string" },
-      { text: "**Required**. If `startButton.html` is set, this is not required. Text for the button or link. If html is provided, the text argument will be ignored and element will be automatically set to button unless href is also set, or it has already been defined. This argument has no effect if element is set to input." | markdown }
-    ],
-    [
-      { text: "html" },
-      { text: "string" },
-      { text: "**Required**. If `startButton.text` is set, this is not required. HTML for the button or link. If `startButton.html` is provided, the text argument will be ignored and element will be automatically set to button unless `href` is also set, or it has already been defined. This argument has no effect if element is set to input." | markdown }
-    ],
-    [
-      { text: "name" },
-      { text: "string" },
-      { text: "Name for the `button`. This has no effect on `a` elements." | markdown }
-    ],
-    [
-      { text: "type" },
-      { text: "string" },
-      { text: "Type of `button` – `button`, `submit` or `reset`. Defaults to `submit`. This has no effect on `a` elements." | markdown }
-    ],
-    [
-      { text: "href" },
-      { text: "string" },
-      { text: "The URL that the button should link to. If this is set, element will be automatically set to `a`." | markdown }
-    ],
-    [
-      { text: "classes" },
-      { text: "string" },
-      { text: "Classes to add to the button component." }
-    ],
-    [
-      { text: "attributes" },
-      { text: "object" },
-      { text: "HTML attributes (for example data attributes) to add to the button component." }
-    ]
-  ]
-}) }}
+### Options for `description` object
 
-{{ govukTable({
-  attributes: { id: "image" },
-  caption: "Options for image",
-  captionClasses: "govuk-table__caption--m",
-  firstCellIsHeader: true,
-  head: [
-    { text: "Name" },
-    { text: "Type" },
-    { text: "Description" }
-  ],
-  rows: [
-    [
-      { text: "src" },
-      { text: "string" },
-      { text: "**Required**. URL for the masthead image." | markdown }
-    ],
-    [
-      { text: "alt" },
-      { text: "string" },
-      { text: "Alternative text for masthead image." }
-    ],
-    [
-      { text: "hideOnMobile" },
-      { text: "boolean" },
-      { text: "When true, the image is hidden on tablet breakpoint and below." }
-    ]
-  ]
-}) }}
+| Name | Type   | Description                                                                                                                                                                                                                                                                                                       |
+| ---- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| text | string | **Required**. If `html` is set, this is not required. The description text that displays in the masthead. If `html` is provided, the `text` option will be ignored.                                                                                                                                               |
+| html | string | **Required**. If `text` is set, this is not required. The description text that displays in the masthead. The header is inside the HTML an `<p>` element, so you can only add [phrasing content](https://html.spec.whatwg.org/#phrasing-content) to it. If `html` is provided, the `text` option will be ignored. |
+
+### Options for `startButton` object
+
+| Name       | Type   | Description                                                                                                 |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------- |
+| text       | string | **Required**. Text for the start button or link (default is ‘Get started’)                                  |
+| name       | string | Name for the `button`. This has no effect on `a` elements.                                                  |
+| type       | string | Type of `button` – `button`, `submit` or `reset` (default is `submit`). This has no effect on `a` elements. |
+| href       | string | The URL that the button should link to. If this is set, element is automatically set to `a`.                |
+| classes    | string | Classes to add to the start button                                                                          |
+| attributes | object | HTML attributes (for example data attributes) to add to the start button                                    |
+
+### Options for `image` object
+
+| Name         | Type    | Description                                                   |
+| ------------ | ------- | ------------------------------------------------------------- |
+| src          | string  | **Required**. URL for the masthead image.                     |
+| alt          | string  | Alternative text for masthead image                           |
+| hideOnMobile | boolean | When true, the image is hidden on tablet breakpoint and below |
 
 ## Research on this component
 

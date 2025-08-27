@@ -49,76 +49,22 @@ Some options are required for the macro to work; these are marked as “Required
 
 If you’re using Nunjucks macros in production with `html` options, or ones ending with `html`, you must sanitise the HTML to protect against [cross-site scripting exploits](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting).
 
-{% from "govuk/components/table/macro.njk" import govukTable %}
-{{ govukTable({
-  firstCellIsHeader: true,
-  head: [
-    { text: "Name" },
-    { text: "Type" },
-    { text: "Description" }
-  ],
-  rows: [
-    [
-      { text: "items" },
-      { text: "Array" },
-      { text: "**Required**. An array of navigation links. See [items](#items)." | markdown }
-    ],
-    [
-      { text: "labelledBy" },
-      { text: "string" },
-      { text: "A reference to the id of an existing heading on a page which acts as the label for the navigation." }
-    ],
-    [
-      { text: "visuallyHiddenTitle" },
-      { text: "string" },
-      { text: "A visually-hidden label to describe the navigation (default is ‘Secondary Menu’). Not included if `labelledBy` is set instead." | markdown }
-    ],
-    [
-      { text: "classes" },
-      { text: "string" },
-      { text: "Classes to add to the secondary navigation container." }
-    ],
-    [
-      { text: "attributes" },
-      { text: "object" },
-      { text: "HTML attributes (for example data attributes) to add to the container." }
-    ]
-  ]
-}) }}
+| Name                | Type   | Description                                                                                                                    |
+| ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| items               | array  | **Required**. An array of navigation links. See [options for items](#options-for-items-array-objects).                         |
+| labelledBy          | string | A reference to the id of an existing heading on a page which acts as the label for the navigation                              |
+| visuallyHiddenTitle | string | A visually-hidden label to describe the navigation (default is ‘Secondary Menu’). Not included if `labelledBy` is set instead. |
+| classes             | string | Classes to add to the secondary navigation container                                                                           |
+| attributes          | object | HTML attributes (for example data attributes) to add to the container                                                          |
 
-{{ govukTable({
-  attributes: { id: "items" },
-  caption: "Options for items",
-  captionClasses: "govuk-table__caption--m",
-  firstCellIsHeader: true,
-  head: [
-    { text: "Name" },
-    { text: "Type" },
-    { text: "Description" }
-  ],
-  rows: [
-    [
-      { text: "text" },
-      { text: "string" },
-      { text: "**Required**. Text of the navigation link." | markdown }
-    ],
-    [
-      { text: "href" },
-      { text: "string" },
-      { text: "**Required**. The value of the navigation link’s `href` attribute." | markdown }
-    ],
-    [
-      { text: "current" },
-      { text: "boolean" },
-      { text: "Indicate that the item is the current page." }
-    ],
-    [
-      { text: "classes" },
-      { text: "string" },
-      { text: "Classes to add to the navigation item." }
-    ]
-  ]
-}) }}
+### Options for `items` array objects
+
+| Name    | Type    | Description                                                        |
+| ------- | ------- | ------------------------------------------------------------------ |
+| text    | string  | **Required**. Text of the navigation link.                         |
+| href    | string  | **Required**. The value of the navigation link’s `href` attribute. |
+| current | boolean | Indicate that the item is the current page                         |
+| classes | string  | Classes to add to the navigation item                              |
 
 ## Research on this component
 
