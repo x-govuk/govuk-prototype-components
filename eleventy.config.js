@@ -39,12 +39,10 @@ export default function (eleventyConfig) {
         'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-icon-180.png'
     },
     opengraphImageUrl:
-      'https://x-govuk.org/govuk-prototype-components/assets/opengraph-image.png',
+      'https://govuk-prototype-components.x-govuk.org/assets/opengraph-image.png',
     serviceNavigation: {
       serviceName,
-      serviceUrl: process.env.GITHUB_ACTIONS
-        ? '/govuk-prototype-components/'
-        : '/',
+      serviceUrl: '/',
       search: {
         indexPath: '/search-index.json',
         sitemapPath: '/sitemap'
@@ -56,10 +54,7 @@ export default function (eleventyConfig) {
       searchIndex: true
     },
     themeColor: '#2288aa',
-    titleSuffix: serviceName,
-    url:
-      process.env.GITHUB_ACTIONS &&
-      'https://x-govuk.org/govuk-prototype-components/'
+    titleSuffix: serviceName
   })
 
   /**
@@ -146,7 +141,6 @@ export default function (eleventyConfig) {
       input: 'docs',
       layouts: '_layouts',
       includes: '_components'
-    },
-    pathPrefix: process.env.GITHUB_ACTIONS && '/govuk-prototype-components/'
+    }
   }
 }
