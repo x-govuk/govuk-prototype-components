@@ -25,8 +25,8 @@
     "url": "git+https://github.com/x-govuk/govuk-prototype-components.git"
   },
   "scripts": {
-    "prebuild": "rimraf _site",
     "build": "eleventy --quiet",
+    "prestart": "npm run build",
     "start": "eleventy --serve --quiet",
     "lint:prettier": "prettier . --check",
     "lint:prettier:fix": "prettier . --write",
@@ -60,7 +60,6 @@
     "js-beautify": "^1.14.11",
     "np": "^10.0.0",
     "prettier": "^3.1.0",
-    "rimraf": "^6.0.0",
     "rollup": "^4.4.0",
     "stylelint": "^16.0.0",
     "stylelint-config-gds": "^2.0.0",

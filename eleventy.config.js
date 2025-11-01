@@ -1,13 +1,13 @@
-import fs from 'node:fs'
+import fs from 'node:fs/promises'
 
 import { govukEleventyPlugin } from '@x-govuk/govuk-eleventy-plugin'
 import matter from 'gray-matter'
 import beautify from 'js-beautify'
 import nunjucks from 'nunjucks'
 
-const getComponentContent = (componentName) => {
+const getComponentContent = async (componentName) => {
   const componentPath = `docs/examples/${componentName}.njk`
-  const componentFile = fs.readFileSync(componentPath, 'utf-8')
+  const componentFile = await fs.readFile(componentPath, { encoding: 'utf8' })
   const { content } = matter(componentFile)
 
   return content
@@ -69,8 +69,8 @@ export default function (eleventyConfig) {
    * @returns {string} - Nunjucks template rendered as raw template
    * @see {@link https://github.com/mozilla/nunjucks/issues/788}
    */
-  eleventyConfig.addNunjucksGlobal('getNunjucksCode', (componentName) => {
-    const content = getComponentContent(componentName)
+  eleventyConfig.addNunjucksGlobal('getNunjucksCode', async (componentName) => {
+    const content = await getComponentContent(componentName)
 
     // Remove `{% from "..." import ... %}` line as this is not needed by users
     const nunjucksCode = content.replaceAll(/{%\sfrom\s[^\n]+\n/g, '')
@@ -86,8 +86,8 @@ export default function (eleventyConfig) {
    * @param {string} componentName - Name of component
    * @returns {string} - Nunjucks template rendered as HTML
    */
-  eleventyConfig.addNunjucksGlobal('getHtmlCode', (componentName) => {
-    const content = getComponentContent(componentName)
+  eleventyConfig.addNunjucksGlobal('getHtmlCode', async (componentName) => {
+    const content = await getComponentContent(componentName)
 
     // Create Nunjucks environment to render example as HTML
     const nunjucksEnv = nunjucks.configure([
@@ -133,6 +133,16 @@ export default function (eleventyConfig) {
 
   // Enable X-GOVUK brand
   eleventyConfig.addNunjucksGlobal('xGovuk', true)
+
+  // Reset contents of output directory before each build
+  eleventyConfig.on('eleventy.before', async ({ directories, runMode }) => {
+    if (runMode === 'build') {
+      await fs.rm(directories.output, {
+        force: true,
+        recursive: true
+      })
+    }
+  })
 
   // Config
   return {
