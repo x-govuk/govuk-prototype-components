@@ -16,7 +16,7 @@ npm install @x-govuk/govuk-prototype-components
 
 If you are using version 13 or later of the GOV.UK Prototype Kit, the components will be immediately available for use in Nunjucks templates.
 
-Learn more about how to [get started](https://x-govuk.github.io/govuk-prototype-components/get-started/).
+Learn more about how to [get started](https://x-govuk.org/govuk-prototype-components/get-started/).
 
 > [!NOTE]
 > Prior to v1.0.0, this project included a collection of decorated form components. These can now be found in the [`govuk-decorated-components`](https://github.com/x-govuk/govuk-decorated-components) package.
