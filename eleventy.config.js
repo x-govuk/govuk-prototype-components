@@ -29,7 +29,6 @@ export default function (eleventyConfig) {
     header: {
       homepageUrl: 'https://x-govuk.org'
     },
-    headingPermalinks: true,
     homeKey: serviceName,
     icons: {
       mask: 'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-icon-mask.svg?raw=true',
@@ -37,6 +36,9 @@ export default function (eleventyConfig) {
         'https://raw.githubusercontent.com/x-govuk/logo/main/images/favicon.ico',
       touch:
         'https://raw.githubusercontent.com/x-govuk/logo/main/images/x-govuk-icon-180.png'
+    },
+    markdown: {
+      headingPermalinks: true
     },
     opengraphImageUrl:
       'https://govuk-prototype-components.x-govuk.org/assets/opengraph-image.png',
