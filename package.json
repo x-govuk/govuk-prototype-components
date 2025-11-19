@@ -36,7 +36,8 @@
     "lint:scss:fix": "stylelint '**/*.scss' --fix",
     "lint": "npm run lint:prettier && npm run lint:js && npm run lint:scss",
     "lint:fix": "npm run lint:prettier:fix && npm run lint:js:fix && npm run lint:scss:fix",
-    "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin",
+    "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin && npm run test:css",
+    "test:css": "npx sass --pkg-importer=node --load-path=. --quiet-deps src/x-govuk/index.scss ./tmp/output.css",
     "prepublishOnly": "npm run package",
     "package": "rollup --config",
     "release": "np"
