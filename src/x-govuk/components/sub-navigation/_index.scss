@@ -19,7 +19,7 @@
     padding-top: govuk-spacing(1);
 
     &:not(:focus):hover {
-      color: $govuk-link-colour;
+      color: govuk-functional-colour(link);
     }
   }
 
@@ -31,8 +31,8 @@
 
   .x-govuk-sub-navigation__section-item--current {
     $_current-indicator-width: 4px;
-    background-color: govuk-colour("white");
-    border-left: $_current-indicator-width solid $govuk-brand-colour;
+    background-color: govuk-functional-colour(body-background);
+    border-left: $_current-indicator-width solid govuk-functional-colour(brand);
     margin-left: -(govuk-spacing(2) + $_current-indicator-width);
     padding-left: govuk-spacing(2);
   }
@@ -48,14 +48,14 @@
   }
 
   .x-govuk-sub-navigation__section--nested .x-govuk-sub-navigation__section-item::before {
-    color: govuk-colour("dark-grey");
+    color: govuk-functional-colour(secondary-text);
     content: "—";
     margin-left: -(govuk-spacing(4));
   }
 
   .x-govuk-sub-navigation__theme {
     @include govuk-font(19);
-    color: govuk-colour("dark-grey");
+    color: govuk-functional-colour(secondary-text);
     margin: 0;
     padding: govuk-spacing(2) govuk-spacing(3) govuk-spacing(2) 0;
 

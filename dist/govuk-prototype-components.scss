@@ -13,11 +13,11 @@
   // Style the autocomplete if there’s an error
   .govuk-form-group--error {
     .autocomplete__input {
-      border-color: $govuk-error-colour;
+      border-color: govuk-functional-colour(error);
     }
 
     .autocomplete__input--focused {
-      border-color: $govuk-input-border-colour;
+      border-color: govuk-functional-colour(input-border);
     }
   }
 
@@ -30,33 +30,27 @@
   }
 }
 
-$_background-colour: govuk-tint($govuk-brand-colour, 80%);
-$_background-colour-inverse: $govuk-brand-colour;
-$_border-colour: govuk-tint($govuk-brand-colour, 50%);
-$_text-colour: $govuk-text-colour;
-$_text-colour-inverse: govuk-colour("white");
-
 @include govuk-exports("govuk-prototype-components/component/masthead") {
   .x-govuk-masthead {
     @include govuk-responsive-padding(4, "bottom");
-    background-color: $_background-colour;
+    background-color: govuk-functional-colour(surface-background);
     padding-top: 0.1px; // Prevent margin collapse
 
     .govuk-phase-banner {
-      border-bottom-color: $_border-colour;
+      border-bottom-color: govuk-functional-colour(surface-border);
     }
 
     .govuk-tag {
-      background-color: $_border-colour;
-      color: $_text-colour;
+      background-color: govuk-functional-colour(surface-border);
+      color: govuk-functional-colour(text);
     }
 
     &.x-govuk-masthead--inverse {
-      background-color: $_background-colour-inverse;
-      color: $_text-colour-inverse;
+      background-color: govuk-functional-colour(brand);
+      color: govuk-colour("white");
 
       .govuk-phase-banner__content {
-        color: $_text-colour-inverse;
+        color: govuk-colour("white");
       }
 
       .govuk-phase-banner__content a {
@@ -64,8 +58,8 @@ $_text-colour-inverse: govuk-colour("white");
       }
 
       .govuk-phase-banner .govuk-tag {
-        background-color: $_text-colour-inverse;
-        color: $_background-colour-inverse;
+        background-color: govuk-colour("white");
+        color: govuk-functional-colour(brand);
       }
     }
   }
@@ -81,7 +75,7 @@ $_text-colour-inverse: govuk-colour("white");
     @include govuk-responsive-margin(6, "bottom");
 
     .x-govuk-masthead--inverse & {
-      color: $_text-colour-inverse;
+      color: govuk-colour("white");
 
       a {
         @include govuk-link-style-inverse;
@@ -106,8 +100,8 @@ $_text-colour-inverse: govuk-colour("white");
 
 @include govuk-exports("govuk-prototype-components/component/related-navigation") {
   .x-govuk-related-navigation {
-    @include govuk-text-colour;
-    border-top: 2px solid $govuk-brand-colour;
+    border-top: 2px solid govuk-functional-colour(brand);
+    color: govuk-functional-colour(text);
   }
 
   .x-govuk-related-navigation__main-heading {
@@ -136,7 +130,7 @@ $_text-colour-inverse: govuk-colour("white");
   }
 
   .x-govuk-related-navigation__nav-section {
-    border-top: 1px solid govuk-colour("mid-grey");
+    border-top: 1px solid govuk-functional-colour(border);
     margin-bottom: govuk-spacing(6);
 
     &:first-child {
@@ -174,7 +168,7 @@ $_current-link-border-width: govuk-spacing(1);
 
 @include govuk-exports("govuk-prototype-components/component/secondary-navigation") {
   .x-govuk-secondary-navigation {
-    border-bottom: 1px solid $govuk-border-colour;
+    border-bottom: 1px solid govuk-functional-colour(border);
   }
 
   .x-govuk-secondary-navigation__link {
@@ -206,7 +200,7 @@ $_current-link-border-width: govuk-spacing(1);
   }
 
   .x-govuk-secondary-navigation__list-item {
-    border: 0 solid $govuk-link-colour;
+    border: 0 solid govuk-functional-colour(link);
     margin: govuk-spacing(2) 0;
     position: relative;
 
@@ -256,7 +250,7 @@ $_current-link-border-width: govuk-spacing(1);
     padding-top: govuk-spacing(1);
 
     &:not(:focus):hover {
-      color: $govuk-link-colour;
+      color: govuk-functional-colour(link);
     }
   }
 
@@ -268,8 +262,8 @@ $_current-link-border-width: govuk-spacing(1);
 
   .x-govuk-sub-navigation__section-item--current {
     $_current-indicator-width: 4px;
-    background-color: govuk-colour("white");
-    border-left: $_current-indicator-width solid $govuk-brand-colour;
+    background-color: govuk-functional-colour(body-background);
+    border-left: $_current-indicator-width solid govuk-functional-colour(brand);
     margin-left: -(govuk-spacing(2) + $_current-indicator-width);
     padding-left: govuk-spacing(2);
   }
@@ -285,14 +279,14 @@ $_current-link-border-width: govuk-spacing(1);
   }
 
   .x-govuk-sub-navigation__section--nested .x-govuk-sub-navigation__section-item::before {
-    color: govuk-colour("dark-grey");
+    color: govuk-functional-colour(secondary-text);
     content: "—";
     margin-left: -(govuk-spacing(4));
   }
 
   .x-govuk-sub-navigation__theme {
     @include govuk-font(19);
-    color: govuk-colour("dark-grey");
+    color: govuk-functional-colour(secondary-text);
     margin: 0;
     padding: govuk-spacing(2) govuk-spacing(3) govuk-spacing(2) 0;
 

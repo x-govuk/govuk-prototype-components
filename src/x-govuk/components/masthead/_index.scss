@@ -1,32 +1,26 @@
 @use "node_modules/govuk-frontend/dist/govuk" as *;
 
-$_background-colour: govuk-tint($govuk-brand-colour, 80%);
-$_background-colour-inverse: $govuk-brand-colour;
-$_border-colour: govuk-tint($govuk-brand-colour, 50%);
-$_text-colour: $govuk-text-colour;
-$_text-colour-inverse: govuk-colour("white");
-
 @include govuk-exports("govuk-prototype-components/component/masthead") {
   .x-govuk-masthead {
     @include govuk-responsive-padding(4, "bottom");
-    background-color: $_background-colour;
+    background-color: govuk-functional-colour(surface-background);
     padding-top: 0.1px; // Prevent margin collapse
 
     .govuk-phase-banner {
-      border-bottom-color: $_border-colour;
+      border-bottom-color: govuk-functional-colour(surface-border);
     }
 
     .govuk-tag {
-      background-color: $_border-colour;
-      color: $_text-colour;
+      background-color: govuk-functional-colour(surface-border);
+      color: govuk-functional-colour(text);
     }
 
     &.x-govuk-masthead--inverse {
-      background-color: $_background-colour-inverse;
-      color: $_text-colour-inverse;
+      background-color: govuk-functional-colour(brand);
+      color: govuk-colour("white");
 
       .govuk-phase-banner__content {
-        color: $_text-colour-inverse;
+        color: govuk-colour("white");
       }
 
       .govuk-phase-banner__content a {
@@ -34,8 +28,8 @@ $_text-colour-inverse: govuk-colour("white");
       }
 
       .govuk-phase-banner .govuk-tag {
-        background-color: $_text-colour-inverse;
-        color: $_background-colour-inverse;
+        background-color: govuk-colour("white");
+        color: govuk-functional-colour(brand);
       }
     }
   }
@@ -51,7 +45,7 @@ $_text-colour-inverse: govuk-colour("white");
     @include govuk-responsive-margin(6, "bottom");
 
     .x-govuk-masthead--inverse & {
-      color: $_text-colour-inverse;
+      color: govuk-colour("white");
 
       a {
         @include govuk-link-style-inverse;

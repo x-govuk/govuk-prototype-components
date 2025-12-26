@@ -14,11 +14,11 @@
   // Style the autocomplete if there’s an error
   .govuk-form-group--error {
     .autocomplete__input {
-      border-color: $govuk-error-colour;
+      border-color: govuk-functional-colour(error);
     }
 
     .autocomplete__input--focused {
-      border-color: $govuk-input-border-colour;
+      border-color: govuk-functional-colour(input-border);
     }
   }
 
