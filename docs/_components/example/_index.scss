@@ -3,7 +3,7 @@
 .app-example__frame {
   background: govuk-colour("white");
   border: 0;
-  border-right: 1px solid $govuk-border-colour;
+  border-right: 1px solid govuk-functional-colour(border);
   display: block;
   max-width: calc(100% - govuk-spacing(4) * 2);
   padding: govuk-spacing(4);
@@ -17,7 +17,7 @@
 
 .app-example__tabs {
   .govuk-tabs__panel[id$="-preview"] {
-    background: govuk-colour("light-grey");
+    background: govuk-colour("black", $variant: "tint-95");
     padding: 0;
   }
 
@@ -28,8 +28,8 @@
 
 // stylelint-disable declaration-no-important
 .app-example__toolbar {
-  background: $govuk-body-background-colour;
-  border-top: 1px solid $govuk-border-colour;
+  background: govuk-functional-colour(body-background);
+  border-top: 1px solid govuk-functional-colour(border);
   max-width: initial !important;
   padding: govuk-spacing(2);
 }
