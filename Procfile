@@ -1,1 +1,1 @@
-web: npx eleventy --serve --port $PORT
+web: eleventy --serve --port $PORT
