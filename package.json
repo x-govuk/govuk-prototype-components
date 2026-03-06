@@ -12,37 +12,57 @@
   "bugs": {
     "url": "https://github.com/x-govuk/govuk-prototype-components/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x-govuk/govuk-prototype-components.git"
+  },
   "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/x-govuk/index.js",
+      "module-sync": "./src/x-govuk/index.js",
+      "sass": "./src/x-govuk/index.scss"
+    },
+    "./autocomplete": {
+      "sass": "./src/x-govuk/components/autocomplete/_index.scss"
+    },
+    "./masthead": {
+      "sass": "./src/x-govuk/components/masthead/_index.scss"
+    },
+    "./related-navigation": {
+      "sass": "./src/x-govuk/components/related-navigation/_index.scss"
+    },
+    "./secondary-navigation": {
+      "sass": "./src/x-govuk/components/secondary-navigation/_index.scss"
+    },
+    "./sub-navigation": {
+      "sass": "./src/x-govuk/components/sub-navigation/_index.scss"
+    }
+  },
+  "main": "src/x-govuk/index.js",
+  "module": "src/x-govuk/index.js",
   "files": [
     "dist",
     "src",
     "govuk-prototype-kit.config.json"
   ],
-  "main": "src/x-govuk/index.js",
-  "module": "src/x-govuk/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/x-govuk/govuk-prototype-components.git"
-  },
   "scripts": {
     "build": "eleventy --quiet",
-    "prestart": "npm run build",
-    "start": "eleventy --serve --quiet",
-    "lint:prettier": "prettier . --check",
-    "lint:prettier:fix": "prettier . --write",
-    "lint:js": "eslint '**/*.js'",
-    "lint:js:fix": "eslint '**/*.js' --fix",
-    "lint:scss": "stylelint '**/*.scss'",
-    "lint:scss:fix": "stylelint '**/*.scss' --fix",
     "lint": "npm run lint:prettier && npm run lint:js && npm run lint:scss",
     "lint:fix": "npm run lint:prettier:fix && npm run lint:js:fix && npm run lint:scss:fix",
-    "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin",
-    "prepublishOnly": "npm run package",
+    "lint:js": "eslint '**/*.js'",
+    "lint:js:fix": "eslint '**/*.js' --fix",
+    "lint:prettier": "prettier . --check",
+    "lint:prettier:fix": "prettier . --write",
+    "lint:scss": "stylelint '**/*.scss'",
+    "lint:scss:fix": "stylelint '**/*.scss' --fix",
     "package": "rollup --config",
-    "release": "np"
-  },
-  "publishConfig": {
-    "access": "public"
+    "prepublishOnly": "npm run package",
+    "release": "np",
+    "prestart": "npm run build",
+    "start": "eleventy --serve --quiet",
+    "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin"
   },
   "dependencies": {
     "accessible-autocomplete": "^3.0.0",
@@ -71,27 +91,7 @@
   "engines": {
     "node": "^20.19.0 || ^22.12.0 || >=24"
   },
-  "type": "module",
-  "exports": {
-    ".": {
-      "import": "./src/x-govuk/index.js",
-      "module-sync": "./src/x-govuk/index.js",
-      "sass": "./src/x-govuk/index.scss"
-    },
-    "./autocomplete": {
-      "sass": "./src/x-govuk/components/autocomplete/_index.scss"
-    },
-    "./masthead": {
-      "sass": "./src/x-govuk/components/masthead/_index.scss"
-    },
-    "./related-navigation": {
-      "sass": "./src/x-govuk/components/related-navigation/_index.scss"
-    },
-    "./secondary-navigation": {
-      "sass": "./src/x-govuk/components/secondary-navigation/_index.scss"
-    },
-    "./sub-navigation": {
-      "sass": "./src/x-govuk/components/sub-navigation/_index.scss"
-    }
+  "publishConfig": {
+    "access": "public"
   }
 }
