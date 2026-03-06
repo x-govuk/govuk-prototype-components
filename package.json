@@ -66,7 +66,9 @@
   },
   "dependencies": {
     "accessible-autocomplete": "^3.0.0",
-    "eventslibjs": "^1.2.0"
+    "eventslibjs": "^1.2.0",
+    "gray-matter": "^4.0.3",
+    "nunjucks": "^3.2.4"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
