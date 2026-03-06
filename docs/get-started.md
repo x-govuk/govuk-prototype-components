@@ -7,7 +7,7 @@ title: Get started
 ## Requirements
 
 - [Node.js](https://nodejs.org/) v20.19 or later
-- [GOV.UK Frontend](https://frontend.design-system.service.gov.uk) v5 or later
+- [GOV.UK Frontend](https://frontend.design-system.service.gov.uk) v6 or later
 
 See [supported versions](/supported-versions) for more details.
 

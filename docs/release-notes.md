@@ -8,6 +8,14 @@ This page documents the changes in major and minor releases, including upgrade n
 
 [[toc]]
 
+## Version 6.0
+
+March 2026
+
+### Breaking changes
+
+- This release requires [GOV.UK Frontend](https://frontend.design-system.service.gov.uk) v6 or later.
+
 ## Version 5.0
 
 June 2025
