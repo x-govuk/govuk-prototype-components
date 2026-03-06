@@ -59,7 +59,7 @@
     "lint:scss:fix": "stylelint '**/*.scss' --fix",
     "package": "rollup --config",
     "prepublishOnly": "npm run package",
-    "release": "np",
+    "release": "np --no-publish",
     "prestart": "npm run build",
     "start": "eleventy --serve --quiet",
     "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin"
