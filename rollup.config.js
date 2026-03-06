@@ -14,6 +14,7 @@ import terser from '@rollup/plugin-terser'
  * @param {Array} [options.inputFiles] - Component SCSS files
  * @param {string} [options.lineToRemove] - SCSS line to remove
  * @param {string} [options.outputFileName] - Name of generated SCSS file
+ * @returns {import('rollup').Plugin} Rollup plugin
  * @see {@link https://github.com/x-govuk/govuk-prototype-components/issues/285}
  */
 function packageScss(options = {}) {
