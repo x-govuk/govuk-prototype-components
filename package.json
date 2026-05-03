@@ -65,27 +65,27 @@
     "test": "npm run lint && npx govuk-prototype-kit@latest validate-plugin"
   },
   "dependencies": {
-    "accessible-autocomplete": "^3.0.0",
+    "accessible-autocomplete": "^3.0.1",
     "eventslibjs": "^1.2.0",
     "gray-matter": "^4.0.3",
     "nunjucks": "^3.2.4"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@rollup/plugin-commonjs": "^29.0.0",
-    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@11ty/eleventy": "^3.1.5",
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^1.0.0",
     "@x-govuk/eslint-config": "^0.0.2",
     "@x-govuk/govuk-eleventy-plugin": "^9.0.1",
     "@x-govuk/govuk-prototype-components": "file:./",
-    "iframe-resizer": "^4.3.9",
-    "js-beautify": "^1.14.11",
-    "np": "^11.0.0",
-    "prettier": "^3.1.0",
-    "rollup": "^4.4.0",
-    "stylelint": "^16.0.0",
-    "stylelint-config-gds": "^2.0.0",
-    "stylelint-order": "^7.0.0"
+    "iframe-resizer": "^4.4.5",
+    "js-beautify": "^1.15.4",
+    "np": "^11.2.1",
+    "prettier": "^3.8.3",
+    "rollup": "^4.61.0",
+    "stylelint": "^17.12.0",
+    "stylelint-config-gds": "^3.0.0",
+    "stylelint-order": "^8.1.1"
   },
   "peerDependencies": {
     "govuk-frontend": "^6.0.0"
