@@ -1,4 +1,4 @@
-@use "node_modules/govuk-frontend/dist/govuk" as *;
+@use "pkg:govuk-frontend" as *;
 
 $_current-link-border-width: govuk-spacing(1);
 
